@@ -13,7 +13,7 @@
 | Success end state | The family member sees the current condition of the resident they selected from their linked residents, or is told that no condition has been recorded yet for that resident. Nothing is changed. |
 | Failure end state(s) | Access to the selected resident cannot be verified: no condition is shown and the family member sees an access-denied message (FR-04-01). |
 | FRs covered | `FR-04-01`, `FR-04-02` |
-| Business rules applied | None (W1 has no BR rows) |
+| Business rules applied | BR-04-01, BR-02-02 |
 | Version / status | v0.1 · Draft |
 | Author | Nguyen Tran Khanh Linh |
 
@@ -52,7 +52,7 @@ Reading notes:
 - No flow returns to an earlier node, so the diagram needs no merge node. Three flows end at `stop1` (`a2`, `a3`, `a4`); this is allowed because a final node is not an action.
 - The access is checked by FR-04-01 “Verify family access to resident”. `s0`, `d1` and `s2` trace to it, and the guards copy its IF clause.
 - The no-condition case stays inside FR-04-02 as an IF clause. `d2` and `s3` trace to it, and `a4` is the family member’s side of `s3`.
-- `o1` is read, not written. UC-05 writes the record in state `Saved`; this use case only reads it. “Current condition” is taken as the most recent record, because FR-02-03 keeps every earlier one.
+- `o1` is read, not written. UC-05 writes the record in state `Saved`; this use case only reads it. “Current condition” is taken as the most recent record (BR-02-02), because FR-02-03 keeps every earlier one.
 - One family account can link to several residents, so `a1` has the family member choose one. The link itself is created in Set up accounts and is not drawn here.
 
 ## 2. Node trace
@@ -60,12 +60,12 @@ Reading notes:
 | Node | Kind | Text | Traces to |
 | --- | --- | --- | --- |
 | s0 | Action | Verify the family member’s access to the selected resident | FR-04-01 |
-| d1 | Decision | Access verified? | FR-04-01 (IF clause) |
+| d1 | Decision | Access verified? | FR-04-01 (IF clause), BR-04-01 |
 | s2 | Action | Deny the request with an access-denied message | FR-04-01 |
 | d2 | Decision | Condition recorded? | FR-04-02 (IF clause) |
 | s3 | Action | Tell the family member that no condition has been recorded yet | FR-04-02 |
 | o1 | Object node | Resident Condition Record [Saved] | FR-04-02; state `Saved` agreed in AD-UC-05 |
-| s1 | Action | Display the current condition of the selected resident | FR-04-02 |
+| s1 | Action | Display the current condition of the selected resident | FR-04-02, BR-02-02 |
 
 ## 3. Branches and acceptance tests
 
