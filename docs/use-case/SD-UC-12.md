@@ -36,7 +36,7 @@ sequenceDiagram
   W->>S: assign role(account ID, role)
   S->>D: read the roles this Admin may assign
   D-->>S: assignable roles
-  alt selected role is outside the roles this Admin may assign (FR-06-03, BR-06-02)
+  alt selected role is outside the roles this Admin may assign (FR-06-02, BR-06-02)
     S-->>W: rejected: outside the permitted scope, no role changed, no log entry
   else selected role is within the permitted scope
     Note over S,D: one transaction: role change and log entry are saved together or not at all
