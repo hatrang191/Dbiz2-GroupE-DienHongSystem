@@ -13,7 +13,7 @@
 | Success end state | One new condition record, in state Saved, is stored for the resident with the time and the nurse’s name. Every earlier condition record of that resident is unchanged. |
 | Failure end state(s) | No condition record is saved while the condition is invalid and earlier records stay unchanged. The nurse is told why and may correct the condition and save again (FR-02-01). |
 | FRs covered | `FR-02-01` , `FR-02-02` , `FR-02-03` |
-| Business rules applied | None (W1 has no BR rows) |
+| Business rules applied | BR-02-01 |
 | Version / status | v0.2 · Draft |
 | Author | Nguyen Tran Khanh Linh |
 
@@ -56,7 +56,7 @@ Reading notes:
 | d1 | Decision | Condition valid? | FR-02-01 (IF clause) |
 | s0 | Action | Reject the save, leave earlier records unchanged, tell the nurse why and let the nurse correct the condition | FR-02-01 (THEN clause) |
 | s1 | Action | Store condition with time and nurse name | FR-02-02 |
-| s2 | Action | Keep it as a new record, earlier records unchanged | FR-02-03 |
+| s2 | Action | Keep it as a new record, earlier records unchanged | FR-02-03, BR-02-01 |
 | o1 | Object node | Resident Condition Record [Saved] | FR-02-03 (state value `Saved`) |
 
 ## 3. Branches and acceptance tests
