@@ -28,7 +28,7 @@ sequenceDiagram
   API->>API: Check session token and role permission
   API->>API: Validate changes (FR-01-02)
 
-  alt Changes are invalid
+  alt Changes are invalid (BR-01-02)
     API-->>W: Validation errors (FR-01-02)
     W-->>REC: Display validation errors
     REC->>W: Correct information and save again
