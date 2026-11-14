@@ -68,7 +68,7 @@ Reading notes:
 | S6 | Action | Identify current role and the roles Admin is allowed to assign | FR-06-02, FR-06-03 |
 | A3 | Action | Select role and confirm request | FR-06-02 |
 | D2 | Decision | Is the role assignment request within Admin's permissions? | FR-06-02, BR-06-02 |
-| S5 | Action | Reject role assignment request outside the permitted scope | FR-06-02,BR-06-02 |
+| S5 | Action | Reject role assignment request outside the permitted scope | FR-06-02, BR-06-02 |
 | S2 | Action | Replace the account's current role and permissions with the selected role and its permissions | FR-06-02 |
 | O1 | Object node | Role [Authorized] | FR-06-02 (state value) |
 | S7 | Action | Record the action in the action log | FR-06-08 |
