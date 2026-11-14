@@ -14,7 +14,7 @@
 | Failure end state(s) | A dangerous alert whose resident has no linked family member: the push is skipped. A dangerous alert whose first push failed after [n] retries: the failure is logged. In b[...]
 | FRs covered | `FR-03-09, FR-03-10, FR-03-11` |
 | Left out for now | none |
-| Business rules applied | `BR-03-01` An alert is dangerous when its severity is High [assumed, ask the client], 'BR-03-02', 'BR-03-03', 'BR-03-04', 'BR-03-05', 'BR-03-07' |
+| Business rules applied | `BR-03-01` An alert is dangerous when its severity is High [assumed, ask the client], `BR-03-02`, `BR-03-03`, `BR-03-04`, `BR-03-05`, `BR-03-07` |
 | Version / status | v1.3 · Draft |
 | Author | Nguyen Ha Linh Trang |
 
@@ -89,17 +89,17 @@ Reading notes:
 |---|---|---|---|
 | r1 | Action (radar lane) | Detect abnormal event | FR-03-01 (see AD-UC-06) |
 | s0 | Action | Receive radar event | FR-03-01 (see AD-UC-06) |
-| s8 | Action | Receive alert closed (from UC-06) | FR-03-10 |
-| d2 | Decision | Severity dangerous? | FR-03-09, BR-03-01 |
-| d5 | Decision | Resident has a linked family member? | FR-03-11 |
-| s11 | Action | Skip push | FR-03-11 |
+| s8 | Action | Receive alert closed (from UC-06) | FR-03-10, BR-03-03 |
+| d2 | Decision | Severity dangerous? | FR-03-09, BR-03-01, BR-03-02 |
+| d5 | Decision | Resident has a linked family member? | FR-03-11, BR-03-04 |
+| s11 | Action | Skip push | FR-03-11, BR-03-04 |
 | m1 | Merge | First send or retry | FR-03-11 |
-| s3 | Action | Send first notice to family, once per alert | FR-03-09 |
-| d6 | Decision | Push delivered? | FR-03-11 |
-| s13 | Action | Retry push, add 1 to retry count | FR-03-11 |
-| s12 | Action | Log failed push | FR-03-11 |
+| s3 | Action | Send first notice to family, once per alert | FR-03-09, BR-03-02, BR-03-07 |
+| d6 | Decision | Push delivered? | FR-03-11, BR-03-05 |
+| s13 | Action | Retry push, add 1 to retry count | FR-03-11, BR-03-05 |
+| s12 | Action | Log failed push | FR-03-11, BR-03-05 |
 | o1 | Object node | Family notice [First sent] | FR-03-09 (state value) |
-| s9 | Action | Send closed notice to family, once | FR-03-10 |
+| s9 | Action | Send closed notice to family, once | FR-03-10, BR-03-03 |
 | o2 | Object node | Family notice [Closed sent] | FR-03-10 (state value) |
 
 ## 3. Branches and acceptance tests
