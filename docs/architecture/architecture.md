@@ -18,7 +18,7 @@ Decisions are recorded as ADRs in [`adr/`](adr/).
 | SyR-03 | The system shall let a Nurse record a resident's condition. | UC-05 |
 | SyR-04 | The system shall receive abnormal events from the radar (its built-in AI decides what is abnormal), create an alert and notify the Nurse. | UC-06 |
 | SyR-05 | The system shall notify the Nurse again when an alert is not acknowledged within 1 minute, and shall record a failure when it is still not acknowledged after the 3rd notice. | UC-06 |
-| SyR-06 | The system shall send the Residents' Family one notice when an alert is dangerous and one more when the alert is closed. | UC-07 |
+| SyR-06 | The system shall send the Residents' Family one notice when an alert is dangerous and one more when the alert is closed, only if the first notice was sent. | UC-07 |
 | SyR-07 | The system shall let the Residents' Family view the current condition of their resident. | UC-08 |
 | SyR-08 | The system shall let the Residents' Family and the Nurses exchange messages. | UC-09 |
 | SyR-09 | The system shall let the BOD view reports. | UC-10 |
