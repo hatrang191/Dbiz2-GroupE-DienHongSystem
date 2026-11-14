@@ -19,7 +19,7 @@ sequenceDiagram
   A->>W: request radar status
   W->>S: get radar status
   Note over S: every request: check session token and role-based permission
-  break Admin has no permission to monitor radar status (FR-06-03)
+  break Admin has no permission to monitor radar status (FR-06-03, BR-06-01)
     S-->>W: rejected: insufficient permission
     W-->>A: home screen of the role with access-denied message
   end
