@@ -36,7 +36,7 @@ sequenceDiagram
   else Severity dangerous
     API->>DB: Read family accounts linked to the resident
     DB-->>API: Linked family accounts
-    alt No linked family member
+    alt No linked family member (BR-03-04)
       API->>API: Skip push (FR-03-11)
     else Has linked family member
       loop For each linked family account (BR-03-07)
