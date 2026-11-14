@@ -32,7 +32,7 @@ sequenceDiagram
   end
 
   alt Details are valid
-    API->>API: Generate unique resident ID (FR-01-01)
+    API->>API: Generate unique resident ID (FR-01-01, BR-01-01)
     API->>DB: Save Resident Profile with resident ID
     DB-->>API: Profile saved
     API-->>W: Created Resident Profile
