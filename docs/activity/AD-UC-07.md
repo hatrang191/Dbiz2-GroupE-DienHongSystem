@@ -14,7 +14,7 @@
 | Failure end state(s) | A dangerous alert whose resident has no linked family member: the push is skipped. A dangerous alert whose first push failed after [n] retries: the failure is logged. In b[...]
 | FRs covered | `FR-03-09, FR-03-10, FR-03-11` |
 | Left out for now | none |
-| Business rules applied | `BR-03-01` An alert is dangerous when its severity is High [assumed, ask the client] |
+| Business rules applied | `BR-03-01` An alert is dangerous when its severity is High [assumed, ask the client], BR-03-02, BR-03-03, BR-03-04, BR-03-05, BR-03-07 |
 | Version / status | v1.3 · Draft |
 | Author | Nguyen Ha Linh Trang |
 
