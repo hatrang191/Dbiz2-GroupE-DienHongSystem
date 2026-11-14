@@ -30,7 +30,7 @@ sequenceDiagram
     API-->>W: Rejected: reason (FR-02-01)
     W-->>NUR: Show why the condition was rejected, keep the form for correction
   else Condition is valid
-    API->>DB: Insert new Resident Condition Record [Saved] with time and nurse's name (FR-02-02)
+    API->>DB: Insert new Resident Condition Record [Saved] with time and nurse's name (FR-02-02, BR-02-01)
     Note over API,DB: Append only: earlier records of the resident stay unchanged (FR-02-03)
     DB-->>API: Record saved
     API-->>W: Saved condition record
