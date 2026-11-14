@@ -13,7 +13,7 @@
 | Success end state | One `Resident Profile` with a unique resident ID is saved, and the receptionist sees it. |
 | Failure end state(s) | No profile is saved while the details are invalid; the receptionist sees the validation errors and can correct them. |
 | FRs covered | FR-01-01 |
-| Business rules applied | None (W1 has no BR rows) |
+| Business rules applied | BR-01-01, BR-01-02 |
 | Version / status | v0.1 · Draft |
 | Author | Lê Hà Thanh |
 
@@ -64,9 +64,9 @@ Reading notes:
 | Node | Kind | Text | Traces to |
 | :---- | :---- | :---- | :---- |
 | validate | Action | Validate the details | FR-01-01 |
-| valid | Decision | Information valid? | FR-01-01 (IF clause) |
+| valid | Decision | Information valid? | FR-01-01 (IF clause), BR-01-02 |
 | errors | Action | Display the validation errors | FR-01-01 |
-| generate | Action | Generate a unique resident ID | FR-01-01 |
+| generate | Action | Generate a unique resident ID | FR-01-01, BR-01-01 |
 | save | Action | Save the resident profile | FR-01-01 |
 | profile | Object node | Resident Profile | FR-01-01 |
 
