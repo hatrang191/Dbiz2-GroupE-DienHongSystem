@@ -39,15 +39,15 @@ Selection basis for the use cases that get a diagram:
 
 | Use case | Reason it needs a diagram | Source |
 | :---- | :---- | :---- |
-| UC-01 | Decision: IF the information is invalid, return the validation errors; Receptionist lane plus system lane | FR-01-01 |
-| UC-02 | Receptionist lane plus system lane; decision: IF the changed information is invalid, display the validation errors and let the receptionist edit again; every valid change is stored with the time and the staff name | FR-01-02 |
-| UC-05 | Nurse lane plus system lane; every update is stored as a new record, never overwritten | FR-02-01, FR-02-02, FR-02-03 |
-| UC-06 | External lane (Radar Monitoring System) starts the flow; the alert is stored with severity, location and time | FR-03-01, FR-03-02, FR-03-03, FR-03-04, FR-03-05, FR-03-06, FR-03-07, FR-03-08 |
-| UC-07 | External lane (Radar) starts the flow, plus system lane and Residents' Family lane; decisions: only a dangerous alert (BR-03-01) gets a first notice, IF the resident has no linked family member skip the push, IF the push fails retry then log; one more notice when the alert is Closed | FR-03-09, FR-03-10, FR-03-11 |
-| UC-08 | Decision: IF the family member's access to that resident cannot be verified, deny the request | FR-04-01 |
+| UC-01 | Decision: IF the information is invalid, return the validation errors; Receptionist lane plus system lane | FR-01-01, BR-01-01, BR-01-02 |
+| UC-02 | Receptionist lane plus system lane; decision: IF the changed information is invalid, display the validation errors and let the receptionist edit again; every valid change is stored with the time and the staff name | FR-01-02, BR-01-02 |
+| UC-05 | Nurse lane plus system lane; every update is stored as a new record, never overwritten | FR-02-01, FR-02-02, FR-02-03, BR-02-01 |
+| UC-06 | External lane (Radar Monitoring System) starts the flow; the alert is stored with severity, location and time | FR-03-01, FR-03-02, FR-03-03, FR-03-04, FR-03-05, FR-03-06, FR-03-07, FR-03-08, BR-03-06 |
+| UC-07 | External lane (Radar) starts the flow, plus system lane and Residents' Family lane; decisions: only a dangerous alert (BR-03-01) gets a first notice, IF the resident has no linked family member skip the push, IF the push fails retry then log; one more notice when the alert is Closed | FR-03-09, FR-03-10, FR-03-11, BR-03-01, BR-03-02, BR-03-03, BR-03-04, BR-03-05, BR-03-07 |
+| UC-08 | Decision: IF the family member's access to that resident cannot be verified, deny the request | FR-04-01, 	BR-02-02, BR-04-01 |
 | UC-09 | Three lanes (Residents' Family, Dien Hong System, Nurses); decision: who starts the message (family member or nurse); a loop allows further messages in the same conversation | FR-04-03, FR-04-04 |
 | UC-11 | Admin lane plus system lane; the account is saved with name, role and credentials | FR-06-01, FR-06-03, FR-06-04, FR-06-05, FR-06-06, FR-06-07, FR-06-08 |
-| UC-12 | Decisions: Admin may assign roles; the requested role is within the Admin's permissions | FR-06-02, FR-06-03, FR-06-08 |
+| UC-12 | Decisions: Admin may assign roles; the requested role is within the Admin's permissions | FR-06-02, FR-06-03, FR-06-08, BR-06-02, BR-06-03 |
 
 Lane names:
 
