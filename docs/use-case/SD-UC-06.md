@@ -39,7 +39,7 @@ sequenceDiagram
   NS->>BP: Push notice
   BP-)W: Push notice on the nurse's phone
   W-->>NUR: Alert pop-up with sound, push notice
-  API->>DB: Save notice count 1 and next check due in 1 min (ADR-004)
+  API->>DB: Save notice count 1 and next check due in 1 min (ADR-004, BR-03-06)
 
   par Wait and escalate (ADR-004)
     loop Until a nurse acknowledged or the failure is logged
@@ -51,14 +51,14 @@ sequenceDiagram
       alt A nurse acknowledged
         API->>API: Send no more notices, the wait ends
       else No acknowledgement, fewer than 3 notices sent
-        API->>DB: Set Alert [Escalated], add 1 to notice count, next check due in 1 min (FR-03-04)
+        API->>DB: Set Alert [Escalated], add 1 to notice count, next check due in 1 min (FR-03-04, BR-03-06)
         API-)W: Repeated pop-up on every signed-in nurse screen, notice n of 3 (FR-03-04)
         API->>NS: Push notice to the nurses on duty again (FR-03-04)
         NS->>BP: Push notice
         BP-)W: Push notice on the nurse's phone
         W-->>NUR: Not acknowledged yet (notice n of 3)
       else No acknowledgement, 3 notices sent
-        API->>DB: Log failure of the alert, alert stays [Escalated], no more notices (FR-03-05)
+        API->>DB: Log failure of the alert, alert stays [Escalated], no more notices (FR-03-05, BR-03-06)
       end
     end
   and Acknowledgement, at any moment after the first notice
