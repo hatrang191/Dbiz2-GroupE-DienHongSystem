@@ -22,10 +22,10 @@ sequenceDiagram
   DB-->>API: Link found or not found
  
   alt Access not verified
-    API-->>W: Rejected: access denied (FR-04-01)
+    API-->>W: Rejected: access denied (FR-04-01, BR-04-01)
     W-->>FAM: Show the access-denied message
   else Access verified
-    API->>DB: Read the most recent Resident Condition Record of the resident (FR-04-02)
+    API->>DB: Read the most recent Resident Condition Record of the resident (FR-04-02, BR-02-02)
     DB-->>API: Latest record or none
  
     alt Condition recorded
