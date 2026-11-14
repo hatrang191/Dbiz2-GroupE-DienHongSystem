@@ -14,7 +14,7 @@
 | Failure end state(s) | The alert is still not acknowledged 1 minute after the third notice. The failure of this alert is logged and the alert stays `Escalated`. |
 | FRs covered | `FR-03-01`, `FR-03-02`, `FR-03-03`, `FR-03-04`, `FR-03-05`, `FR-03-06` |
 | Left out for now | `FR-03-07` (group repeated radar events) |
-| Business rules applied | none |
+| Business rules applied | BR-03-06 |
 | Version / status | v2.1 · Draft |
 | Author | Nguyen Ha Linh Trang |
 
@@ -74,7 +74,7 @@ Reading notes:
   The diagram shows the system looking at the result after the minute, then recording it (`s4`).
 - Decisions `d1` and `d3` have no question: their guards say it. The time expression is on the arrow
   going out of `t1`, as the profile asks.
-- FR-03-05 is **Could**, FR-03-07 is **Should**, the rest are **Must**. The diagram has 19 nodes.
+- FR-03-05 is **Should**, FR-03-07 is **Should**,, the rest are **Must**. The diagram has 19 nodes.
 
 ## 2. Node trace
 
@@ -84,17 +84,17 @@ Reading notes:
 | s1 | Action | Store alert (with resident, severity, location and time) | FR-03-01 |
 | o1 | Object node | Alert [New] | FR-03-01 (state value) |
 | s2 | Action | Notify nurses (online nurses on web, newest first), count 1 | FR-03-02 |
-| t1 | Time event | 1 min after notice | FR-03-04 |
+| t1 | Time event | 1 min after notice | FR-03-04, BR-03-06 |
 | d1 | Decision | A nurse acknowledged? | FR-03-03, FR-03-04 |
 | s4 | Action | Record acknowledgement (and show nurse name) | FR-03-03 |
 | o2 | Object node | Alert [Acknowledged] | FR-03-03 (state value) |
 | n2 | Action (nurse lane) | Handle and report outcome | FR-03-06 |
 | s6 | Action | Close alert (with outcome) | FR-03-06 |
 | o4 | Object node | Alert [Closed] | FR-03-06 (state value) |
-| d3 | Decision | 3 notices sent? | FR-03-04, FR-03-05 |
-| s5 | Action | Notify nurses again, add 1 to count | FR-03-04 |
+| d3 | Decision | 3 notices sent? | FR-03-04, FR-03-05, BR-03-06 |
+| s5 | Action | Notify nurses again, add 1 to count | FR-03-04, BR-03-06 |
 | o3 | Object node | Alert [Escalated] | FR-03-04 (state value) |
-| s10 | Action | Log failed alert | FR-03-05 |
+| s10 | Action | Log failed alert | FR-03-05, BR-03-06 |
 
 ## 3. Branches and acceptance tests
 
