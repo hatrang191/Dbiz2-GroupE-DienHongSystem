@@ -13,7 +13,7 @@
 | Success end state      | The Admin has seen the current status of every radar and the time of its last data; radars that are Offline are highlighted.                                                    |
 | Failure end state      | No radar status is shown; the Admin is told why (no permission, or the status cannot be obtained).                                                                              |
 | FRs covered            | FR-06-03, FR-06-09, FR-06-10, FR-06-11                                                                                                                                          |
-| Business rules applied |                                                                                                                                                                                 |
+| Business rules applied | BR-06-01                                                                                                                                                                                |
 | Version / status       | v0.1 · Draft                                                                                                                                                                    |
 | Author                 | Le Thi Thuy Linh                                                                                                                                                                |
 
@@ -68,7 +68,7 @@ Reading notes:
 | Node | Kind | Text | Traces to |
 | :---- | :---- | :---- | :---- |
 | A1 | Action | Request radar status | FR-06-09 |
-| D1 | Decision | Does Admin have permission to monitor radar status? | FR-06-03 |
+| D1 | Decision | Does Admin have permission to monitor radar status? | FR-06-03, BR-06-01 |
 | S1 | Action | Reject request due to insufficient permission | FR-06-03 |
 | O2 | Object node | Radar status [Rejected] | FR-06-03 (state value) |
 | S2 | Action | Get the latest status of each radar | FR-06-09 |
