@@ -22,7 +22,7 @@ sequenceDiagram
   API->>API: Check session token and role permission
   API->>API: Validate resident details (FR-01-01)
 
-  alt Details are invalid
+  alt Details are invalid (BR-01-02)
     API-->>W: Validation errors (FR-01-01)
     W-->>REC: Display validation errors
     REC->>W: Correct details and submit again
