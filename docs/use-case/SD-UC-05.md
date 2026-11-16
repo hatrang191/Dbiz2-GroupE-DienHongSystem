@@ -26,7 +26,7 @@ sequenceDiagram
   API->>API: Check session token and role permission
   API->>API: Validate condition (FR-02-01)
 
-  alt Condition is invalid (for example blank)
+  alt Condition is invalid
     API-->>W: Rejected: reason (FR-02-01)
     W-->>NUR: Show why the condition was rejected, keep the form for correction
   else Condition is valid
