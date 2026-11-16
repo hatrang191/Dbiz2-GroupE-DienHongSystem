@@ -66,19 +66,19 @@ The rules below consolidate business constraints currently stated or assumed in 
 
 | BR ID | Business rule | 
 |-------|---------------|
-| BR-01-01 | Each saved Resident Profile shall have a unique resident ID. | 
-| BR-01-02 | A resident profile shall be saved or updated only when its required information is valid. The required fields and validation criteria must be defined before implementation. |
-| BR-02-01 | Each valid condition update shall be saved as a new record; existing condition records shall not be overwritten. | 
-| BR-02-02 | The current condition shown to a family member shall be the resident's most recently saved condition record. | 
-| BR-03-01 | An alert is dangerous when its severity is High. |
-| BR-03-02 | Send one first notice to residents' family for a dangerous alert, and do not send a first notice for a non-dangerous alert. |
-| BR-03-03 | Send one closed notice to residents' family only if the first notice for that alert was sent. | 
-| BR-03-04 | If the resident has no linked family member, skip the family push notice. | 
-| BR-03-05 | If a family push notice fails, retry it up to 3 times, 1 minute apart, then log the failure. | 
-| BR-03-06 | Notify nurses again if an alert is not acknowledged within one minute; count the initial notice as one of three notices. If the alert is still unacknowledged after the third notice, log the failure and keep the alert Escalated. | 
-| BR-03-07 | Send family notices to all family members linked to the resident. | 
-| BR-04-01 | A family member may view a resident's condition only when the system verifies that the resident is linked to that family member's account. | 
-| BR-06-01 | Check the user's session token and role permissions on every request. | 
-| BR-06-02 | An Admin may assign only roles within the Admin's permitted scope. Replacing an account's role also replaces its permissions; permissions from the previous role shall no longer apply. | 
-| BR-06-03 | Only an Active account may be selected for role assignment. | 
+| BR-01 | Each saved Resident Profile shall have a unique resident ID. | 
+| BR-02 | A resident profile shall be saved or updated only when its required information is valid. The required fields and validation criteria must be defined before implementation. |
+| BR-03 | Each valid condition update shall be saved as a new record; existing condition records shall not be overwritten. | 
+| BR-04 | The current condition shown to a family member shall be the resident's most recently saved condition record. | 
+| BR-05 | An alert is dangerous when its severity is High. |
+| BR-06 | Send one first notice to residents' family for a dangerous alert, and do not send a first notice for a non-dangerous alert. |
+| BR-07 | Send one closed notice to residents' family only if the first notice for that alert was sent. | 
+| BR-08 | If the resident has no linked family member, skip the family push notice. | 
+| BR-09 | If a family push notice fails, retry it up to 3 times, 1 minute apart, then log the failure. | 
+| BR-10 | Notify nurses again if an alert is not acknowledged within one minute; count the initial notice as one of three notices. If the alert is still unacknowledged after the third notice, log the failure and keep the alert Escalated. | 
+| BR-11 | Send family notices to all family members linked to the resident. | 
+| BR-12 | A family member may view a resident's condition only when the system verifies that the resident is linked to that family member's account. | 
+| BR-13 | Check the user's session token and role permissions on every request. | 
+| BR-14 | An Admin may assign only roles within the Admin's permitted scope. Replacing an account's role also replaces its permissions; permissions from the previous role shall no longer apply. | 
+| BR-15 | Only an Active account may be selected for role assignment. | 
 
