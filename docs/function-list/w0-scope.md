@@ -28,14 +28,14 @@ UC-07 was added after the Lesson 7 Inputs check (see [activity-index](../activit
 | Feature ID | Feature name (business noun) | Scope in one sentence | Primary actors served | Owner | Use cases covered |
 |------------|------------------------------|-----------------------|-----------------------|-------|-------------------|
 | F-00 | Platform and Access | Every user signs in with their own account and reaches only the screens of their role. | Receptionist, Nurse, BOD, Admin, Residents’ Family | Nguyễn Trần Khánh Linh | none (platform function) |
-| F-01 | Resident Profile Management | Staff create, update and view resident profiles so every resident has accurate, up-to-date basic information. | Receptionist, Nurse | Nguyễn Thị Trúc Anh | UC-01, UC-02, UC-03 |
+| F-01 | Resident Profile Management | Staff create, update and view resident profiles so every resident has accurate, up-to-date basic information. | Receptionist | Nguyễn Thị Trúc Anh | UC-01, UC-02, UC-03 |
 | F-02 | Condition Tracking | Nurses record each resident's condition and review its history over time. | Nurse | Nguyễn Hà Linh Trang | UC-04, UC-05 |
-| F-03 | Abnormal Alert Handling | The radar system detects abnormal events and sends alerts that nurses and families receive immediately as push notifications. | Radar, Nurse, Residents' Family | Lê Hà Thanh | UC-06, UC-07 |
+| F-03 | Abnormal Alert Handling | The radar system detects abnormal events and sends alerts that nurses and families receive immediately as push notifications. | Nurse, Residents' Family | Lê Hà Thanh | UC-06, UC-07 |
 | F-04 | Family Communication | Families follow their relative's condition and chat directly with nurses through the web app on their phone. | Residents' Family, Nurse | Nguyễn Trần Khánh Linh | UC-08, UC-09 |
 | F-05 | Dashboard & Reporting | The Board of Directors views summary reports on care and operations. | BOD | Trần Lê Bảo An | UC-10 |
 | F-06 | System Administration | Admins set up accounts, assign role-based permissions, monitor radar devices and audit access and action logs. | Admin | Lê Thị Thùy Linh | UC-11, UC-12, UC-13, UC-14 |
 
-Feature count: 7 (allowed 3 to 6): REVIEW NEEDED. Coverage against the CVCA: all primary actors (Receptionist, Nurse, Residents' Family, BOD, Admin) are served.
+Feature count: 6 (exclude F-00) : PASS. Coverage against the CVCA: all primary actors (Receptionist, Nurse, Residents' Family, BOD, Admin) are served.
 
 ## Table 3. Won't-have (recorded, never dropped silently)
 
