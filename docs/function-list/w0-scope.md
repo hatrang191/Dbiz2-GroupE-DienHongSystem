@@ -71,8 +71,8 @@ The rules below consolidate business constraints currently stated or assumed in 
 | BR-02-01 | Each valid condition update shall be saved as a new record; existing condition records shall not be overwritten. | 
 | BR-02-02 | The current condition shown to a family member shall be the resident's most recently saved condition record. | 
 | BR-03-01 | An alert is dangerous when its severity is High. |
-| BR-03-02 | Send one first notice for a dangerous alert, and do not send a first notice for a non-dangerous alert. |
-| BR-03-03 | Send one closed notice only if the first notice for that alert was sent. | 
+| BR-03-02 | Send one first notice to residents' family for a dangerous alert, and do not send a first notice for a non-dangerous alert. |
+| BR-03-03 | Send one closed notice to residents' family only if the first notice for that alert was sent. | 
 | BR-03-04 | If the resident has no linked family member, skip the family push notice. | 
 | BR-03-05 | If a family push notice fails, retry it up to 3 times, 1 minute apart, then log the failure. | 
 | BR-03-06 | Notify nurses again if an alert is not acknowledged within one minute; count the initial notice as one of three notices. If the alert is still unacknowledged after the third notice, log the failure and keep the alert Escalated. | 
