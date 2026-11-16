@@ -40,7 +40,6 @@ sequenceDiagram
     API->>W: Deliver the new message to the family's Web App (FR-04-04)
     W-->>FAM: Show the new message on Chat with nurse (S-F04-03)
    end
-  end
 ```
 
 The two branches are the two directions of the use case. In AD-UC-09 they are the decision `d1`
