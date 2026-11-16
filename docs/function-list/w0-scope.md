@@ -62,7 +62,7 @@ The data group names are the names Screen Specs use as data sources (Lesson 8).
 
 ## Business rules
 
-The rules below consolidate business constraints currently stated or assumed in W0/W1, the activity diagrams, and architecture documents. Items marked **Needs confirmation** are provisional defaults, not approved client rules. Confirm them with the client and update the status and linked requirements when resolved.
+The rules below consolidate business constraints currently stated or assumed in W0/W1, the activity diagrams, and architecture documents.
 
 | BR ID | Business rule | 
 |-------|---------------|
