@@ -11,6 +11,7 @@ message is shown in the activity diagram [AD-UC-09](../activity/AD-UC-09.md), no
 | Version | v2 (storing a message and delivering it to the recipient are now separate messages) |
 | FRs | FR-04-03, FR-04-04 |
 
+```mermaid
 sequenceDiagram
   actor FAM as Residents' Family
   participant W as Web App
