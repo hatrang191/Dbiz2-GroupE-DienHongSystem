@@ -64,21 +64,21 @@ The data group names are the names Screen Specs use as data sources (Lesson 8).
 
 The rules below consolidate business constraints currently stated or assumed in W0/W1, the activity diagrams, and architecture documents. Items marked **Needs confirmation** are provisional defaults, not approved client rules. Confirm them with the client and update the status and linked requirements when resolved.
 
-| BR ID | Business rule | Applies to | Source / trace | Status |
-|-------|---------------|------------|----------------|--------|
-| BR-01-01 | Each saved Resident Profile shall have a unique resident ID. | UC-01 | FR-01-01; [AD-UC-01](../activity/AD-UC-01.md) | Stated in the use-case activity; confirm against the approved requirement. |
-| BR-01-02 | A resident profile shall be saved or updated only when its required information is valid. The required fields and validation criteria must be defined before implementation. | UC-01, UC-02 | FR-01-01, FR-01-02; open questions in [AD-UC-01](../activity/AD-UC-01.md) and [AD-UC-02](../activity/AD-UC-02.md) | Needs confirmation: validation criteria are not specified. |
-| BR-02-01 | Each valid condition update shall be saved as a new record; existing condition records shall not be overwritten. | UC-05 | FR-02-03; [AD-UC-05](../activity/AD-UC-05.md) | Stated in the activity diagram. |
-| BR-02-02 | The current condition shown to a family member shall be the resident's most recently saved condition record. | UC-08 | [AD-UC-08](../activity/AD-UC-08.md), reading note and acceptance tests | Needs confirmation: documented as the interpretation of “current condition.” |
-| BR-03-01 | An alert is dangerous when its severity is High. | UC-07 | FR-03-09; [AD-UC-07](../activity/AD-UC-07.md) | Needs client confirmation; currently an assumption. |
-| BR-03-02 | Send one first notice for a dangerous alert, and do not send a first notice for a non-dangerous alert. | UC-07 | FR-03-09; SyR-06; [AD-UC-07](../activity/AD-UC-07.md) | Depends on confirmation of BR-03-01. “Once” is specified in AD-UC-07. |
-| BR-03-03 | Send one closed notice only if the first notice for that alert was sent. | UC-07 | FR-03-10; ADR-005; [AD-UC-07](../activity/AD-UC-07.md) | Documented in ADR-005, AD-UC-07 and SyR-06. |
-| BR-03-04 | If the resident has no linked family member, skip the family push notice. | UC-07 | FR-03-11; [AD-UC-07](../activity/AD-UC-07.md) | Stated in the activity diagram. |
-| BR-03-05 | If a family push notice fails, retry it up to 3 times, 1 minute apart, then log the failure. | UC-07 | FR-03-11; [AD-UC-07](../activity/AD-UC-07.md), open questions 5–6 | Needs confirmation: the number of retries and the 1-minute interval are assumptions (AD-UC-07 open question 5; W5 open question 7). |
-| BR-03-06 | Notify nurses again if an alert is not acknowledged within one minute; count the initial notice as one of three notices. If the alert is still unacknowledged after the third notice, log the failure and keep the alert Escalated. | UC-06 | FR-03-04, FR-03-05; [AD-UC-06](../activity/AD-UC-06.md); SyR-05 | Needs confirmation: check the notice count and what happens after the third notice against the open questions in AD-UC-06. The "log the failure" part depends on FR-03-05, which is Should in W4. If it is not built, the failed alert is not recorded, but the alert still stays on every nurse's screen as Escalated until a nurse closes it, so no alert is missed. |
-| BR-03-07 | Send family notices to all family members linked to the resident. | UC-07 | FR-03-09; [AD-UC-07](../activity/AD-UC-07.md), acceptance tests and open question 4 | Needs confirmation: currently an assumption. |
-| BR-04-01 | A family member may view a resident's condition only when the system verifies that the resident is linked to that family member's account. | UC-08 | FR-04-01; [AD-UC-08](../activity/AD-UC-08.md) | Access check is required; confirm the exact verification rule. |
-| BR-06-01 | Check the user's session token and role permissions on every request. | All authenticated use cases | FR-06-03; ADR-003; [architecture](../architecture/architecture.md) | Accepted architecture decision. |
-| BR-06-02 | An Admin may assign only roles within the Admin's permitted scope. Replacing an account's role also replaces its permissions; permissions from the previous role shall no longer apply. | UC-12 | FR-06-02, FR-06-03; [AD-UC-12](../activity/AD-UC-12.md) | Stated in the activity diagram; confirm against approved W1 requirements. |
-| BR-06-03 | Only an Active account may be selected for role assignment. | UC-12 | [AD-UC-12](../activity/AD-UC-12.md), precondition and open question 3 | Needs confirmation: currently the diagram's default. |
+| BR ID | Business rule | 
+|-------|---------------|
+| BR-01-01 | Each saved Resident Profile shall have a unique resident ID. | 
+| BR-01-02 | A resident profile shall be saved or updated only when its required information is valid. The required fields and validation criteria must be defined before implementation. |
+| BR-02-01 | Each valid condition update shall be saved as a new record; existing condition records shall not be overwritten. | 
+| BR-02-02 | The current condition shown to a family member shall be the resident's most recently saved condition record. | 
+| BR-03-01 | An alert is dangerous when its severity is High. |
+| BR-03-02 | Send one first notice for a dangerous alert, and do not send a first notice for a non-dangerous alert. |
+| BR-03-03 | Send one closed notice only if the first notice for that alert was sent. | 
+| BR-03-04 | If the resident has no linked family member, skip the family push notice. | 
+| BR-03-05 | If a family push notice fails, retry it up to 3 times, 1 minute apart, then log the failure. | 
+| BR-03-06 | Notify nurses again if an alert is not acknowledged within one minute; count the initial notice as one of three notices. If the alert is still unacknowledged after the third notice, log the failure and keep the alert Escalated. | 
+| BR-03-07 | Send family notices to all family members linked to the resident. | 
+| BR-04-01 | A family member may view a resident's condition only when the system verifies that the resident is linked to that family member's account. | 
+| BR-06-01 | Check the user's session token and role permissions on every request. | 
+| BR-06-02 | An Admin may assign only roles within the Admin's permitted scope. Replacing an account's role also replaces its permissions; permissions from the previous role shall no longer apply. | 
+| BR-06-03 | Only an Active account may be selected for role assignment. | 
 
