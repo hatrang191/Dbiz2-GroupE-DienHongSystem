@@ -105,7 +105,7 @@ Lesson 5 (block W2). Fully derived from [W1](w1-function-list.md), the effective
 | In-scope effort vs team capacity | 236.0 p-h | at most 240 p-h | PASS |
 | Hidden technical work, share of effort | 15.4% | at least 10% | PASS |
 | L3 rows above 16 hours | 0 | 0 | PASS |
-| Feature count | 7 | 3 to 6 | REVIEW (F-00 is the platform feature) |
+| Feature count | 6 | 3 to 6 | PASS |
 | Function-point cross-check: 96 transactional FP x 3 h = 288 h vs 304 bottom-up base h | 5.3% apart | at most 30% | PASS |
 
 Three observations the team carries into W4:
