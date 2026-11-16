@@ -19,7 +19,7 @@ sequenceDiagram
   participant API as API Server
   participant DB as Database
 
-  NUR->>W: Select resident, open Update resident condition (S-F02-02)
+  NUR->>W: Select resident, open Update resident condition 
   W-->>NUR: Show condition form with the resident's name and room
   NUR->>W: Select or enter the condition and save
   W->>API: saveConditionUpdate(residentId, condition)
