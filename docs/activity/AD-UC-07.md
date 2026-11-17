@@ -15,7 +15,7 @@
 | FRs covered | `FR-03-09, FR-03-10, FR-03-11` |
 | Left out for now | none |
 | Business rules applied | `BR-03-01` An alert is dangerous when its severity is High [assumed, ask the client], `BR-03-02`, `BR-03-03`, `BR-03-04`, `BR-03-05`, `BR-03-07` |
-| Version / status | v1.3 · Draft |
+| Version / status | v1.3 |
 | Author | Nguyen Ha Linh Trang |
 
 ## 1. Diagram
