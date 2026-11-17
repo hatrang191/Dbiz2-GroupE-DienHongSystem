@@ -80,7 +80,6 @@ flowchart LR
 | StR-07 | Residents' Family shall be able to send a message to the staff and read the answer.                  | P-4      | FAM -> DH            |
 | StR-08 | Receptionists shall be able to record and update resident and family information.                    | P-5      | REC -> DH            |
 | StR-09 | The BOD shall be able to view reports on residents' condition and care activity.                     | P-6      | DH -> BOD            |
-| StR-10 | Admins shall be able to create and manage user accounts and access rights.                           | P-7      | ADM -> DH            |
 
 ## Change log
 
