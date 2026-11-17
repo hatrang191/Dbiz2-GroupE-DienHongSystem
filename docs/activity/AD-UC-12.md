@@ -13,8 +13,8 @@
 | Success end state | The selected account holds the assigned role and only the permissions that come with it; the permissions of the previous role no longer apply. The change takes effect on the account's next request, with no sign-out needed. The Admin has seen a confirmation. The action is recorded in the action log.|
 | Failure end state | No role is changed; the Admin is told why (not enough permission, or the request is outside the permitted scope). |
 | FRs covered | FR-06-02, FR-06-03, FR-06-08 |
-| Business rules applied | BR-06-01, BR-06-02, BR-06-03 |
-| Version / status | v0.2 · Draft |
+| Business rules applied | BR-13, BR-14, BR-15 |
+| Version / status | v0.2  |
 | Author | Le Thi Thuy Linh |
 
 ## 1. Diagram
@@ -61,14 +61,14 @@ Reading notes:
 
 | Node | Kind | Text | Traces to |
 | :---- | :---- | :---- | :---- |
-| A1 | Action | Identify the active account to assign a role to | FR-06-02, BR-06-03 |
-| D1 | Decision | Does Admin have permission to assign roles? | FR-06-03, BR-06-01 |
+| A1 | Action | Identify the active account to assign a role to | FR-06-02, BR-15 |
+| D1 | Decision | Does Admin have permission to assign roles? | FR-06-03, BR-13 |
 | S1 | Action | Reject request due to insufficient permission | FR-06-03 |
 | M1 | Merge | (no text) | n/a |
 | S6 | Action | Identify current role and the roles Admin is allowed to assign | FR-06-02, FR-06-03 |
 | A3 | Action | Select role and confirm request | FR-06-02 |
-| D2 | Decision | Is the role assignment request within Admin's permissions? | FR-06-02, BR-06-02 |
-| S5 | Action | Reject role assignment request outside the permitted scope | FR-06-02, BR-06-02 |
+| D2 | Decision | Is the role assignment request within Admin's permissions? | FR-06-02, BR-14 |
+| S5 | Action | Reject role assignment request outside the permitted scope | FR-06-02, BR-14 |
 | S2 | Action | Replace the account's current role and permissions with the selected role and its permissions | FR-06-02 |
 | O1 | Object node | Role [Authorized] | FR-06-02 (state value) |
 | S7 | Action | Record the action in the action log | FR-06-08 |
@@ -108,7 +108,7 @@ Proposed FRs that are not yet in W1:
 | :-- | :------------------------------------------------------------------------------------------------------------------------------------------------ | :-------- | :------------------------------------------------------------------------------ |
 | 1   | [NEEDS CLARIFICATION: after a request is rejected as outside the permitted scope (S5), can the Admin pick a different role for the same account?] | No        | Yes: the flow goes from S5 through M1 back to S6 so the Admin can choose again. |
 | 2   | [NEEDS CLARIFICATION: are rejected requests (S1, S5) also recorded in the action log?]                                                            | No        | No. Only completed assignments are recorded (FR-06-08).                         |
-| 3   | [NEEDS CLARIFICATION: can a role be assigned to an Inactive account?] (BR-06-03)                                                                            | No        | No. Only Active accounts are offered in A1.                                     |
+| 3   | [NEEDS CLARIFICATION: can a role be assigned to an Inactive account?] (BR-15)                                                                            | No        | No. Only Active accounts are offered in A1.                                     |
 
 ## 7. Verification log
 
