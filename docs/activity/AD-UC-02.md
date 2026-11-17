@@ -108,14 +108,11 @@ swimlane-beta TB
 
 ## 5. Screens touched
 
-To be completed from the project Screen List.
+Filled in during Lesson 8, from the Screen List.
 
 | Actor action | Screen ID |
-|---|---|
-| Select the resident | Not provided |
-| Edit or correct the resident's information | Not provided |
-| Save the changes | Not provided |
-| See the updated information | Not provided |
+| :---- | :---- |
+|  |  |
 
 ## 6. Open questions
 
