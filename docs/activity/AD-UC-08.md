@@ -7,14 +7,14 @@
 | Feature | `F-04 Family Communication` |
 | Primary actor | Residents’ Family |
 | Lanes | Residents’ Family · Dien Hong system |
-| Inputs (L3-L5) | Context Diagram (Residents’ Family ↔︎ Dien Hong system: Current status, status history, incident alerts) · Use Case Diagram (View resident’s condition, in the Family web app) · W1 rows FR-04-01 FE “Verify family access to resident” FR-04-02-FE, FR-04-02-BE (View resident’s condition) |
+| Inputs (L3-L5) | Context Diagram (Residents’ Family ↔ Dien Hong system: current condition) · Use Case Diagram (UC-08, Residents’ Family) · W1 rows FR-04-01-FE, FR-04-01-BE “Verify family access to resident”, FR-04-02-FE, FR-04-02-BE “View resident’s condition” |
 | Trigger | A family member opens the web app on their phone to see the condition of one of their residents (FR-04-02) |
 | Preconditions | The family member is signed in and their account is linked to one or more residents when the account is created (UC-11). A condition may or may not have been recorded for a resident (UC-05). |
 | Success end state | The family member sees the current condition of the resident they selected from their linked residents, or is told that no condition has been recorded yet for that resident. Nothing is changed. |
 | Failure end state(s) | Access to the selected resident cannot be verified: no condition is shown and the family member sees an access-denied message (FR-04-01). |
 | FRs covered | `FR-04-01`, `FR-04-02` |
 | Business rules applied | BR-04, BR-12 |
-| Version / status | v0.1 · Draft |
+| Version / status | v0.2 · Draft |
 | Author | Nguyen Tran Khanh Linh |
 
 ## 1. Diagram
@@ -93,15 +93,15 @@ Filled in during Lesson 8, from the Screen List.
 | --- | --- |
 | `a1` Select one of own linked residents | S-F04-02 Resident condition |
 | `a2` Read the current condition | S-F04-02 Resident condition |
-| `a3` Read the access-denied message | 	S-F04-02 Resident condition (error state) |
+| `a3` Read the access-denied message | S-F04-02 Resident condition (error state) |
 | `a4` Read that no condition has been recorded yet | S-F04-02 Resident condition (empty state) |
 
 ## 6. Open questions
 
 | # | Question | Blocking? | Default applied |
 | --- | --- | --- | --- |
-| 1 | [NEEDS CLARIFICATION: how can the system know if the family access is valid or not?] (nodes `s0`, `d1`) | No | The system verifies access by checking that the selected resident is one of the residents linked to that family account (the link created in UC-11). If it is not linked, access is denied. |
-| 2 | [NEEDS CLARIFICATION: what must the family see when no condition has been recorded for the selected resident yet? FR-04-02 only describes a resident with a condition.] (nodes `d2`, `n1`) | No | The family member is told that no condition has been recorded yet; nothing else is shown. |
+| 1 | [NEEDS CLARIFICATION: how can the system know if the family access is valid or not?] (nodes `s0`, `d1`) | No | Resolved: BR-12 and FR-04-01: access is valid when the selected resident is linked to the family account. |
+| 2 | [NEEDS CLARIFICATION: what must the family see when no condition has been recorded for the selected resident yet? FR-04-02 only describes a resident with a condition.] Nodes d2, s3 | No | Resolved: FR-04-02 tells the family member that no condition has been recorded yet. |
 
 ## 7. Verification log
 
@@ -114,7 +114,7 @@ Filled in during Lesson 8, from the Screen List.
 | Every system action cites an FR | Pass for `s0`, `s1`, `s2` and `s3`. Both decisions cite an FR. |  |  |
 | Every FR of this use case appears in the diagram | Pass (2 of 2: FR-04-01, FR-04-02) |  |  |
 | Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass (“Residents’ Family” from the Context Diagram and Use Case Diagram, “Dien Hong system” from the Context Diagram) |  |  |
-| Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | To check |  |  |
+| Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | Pass (SD-UC-08: same names, FR-04-01 and FR-04-02; its two alt fragments are d1 and d2 here) |  |  |
 | AI critic prompt run, findings resolved or logged as open questions | Not run yet |  |  |
 
 ## Notes for the integrator: changes needed in W1
@@ -123,8 +123,8 @@ An action that cannot be traced is a missing FR. These are the changes the UC-08
 
 | FR | Function | Change |
 | --- | --- | --- |
-| FR-04-01 (proposed ID) | Verify family access to resident | **New function answering the open question #1** (F-04, same priority as View resident’s condition; FP type NC, a rule inside another transaction): “IF the family member’s access to the selected resident cannot be verified, THEN the system SHALL deny the request with an access-denied message.” This covers `s0`, `d1`, `s2` and `a3`.  |
-| FR-04-02 (FR-04-01 previously) | View resident’s condition | Adjusting the old function to  answer open question #2. One family account can link to several residents, so name the selected resident: “WHEN a family member selects one of their linked residents, the system SHALL display the current condition of that resident. IF no condition has been recorded for that resident, THEN the system SHALL tell the family member that no condition has been recorded yet.” This covers `a1`, `d2`, `n1`, `a4`, `s1` and `o1.` |
+| FR-04-01 (proposed ID) | Verify family access to resident | **New function answering the open question #1**: “IF the family member’s access to the selected resident cannot be verified, THEN the system SHALL deny the request with an access-denied message.” (Done in W1). |
+| FR-04-02 (FR-04-01 previously) | View resident’s condition | Adjusting the old function to  answer open question #2. One family account can link to several residents, so name the selected resident: “WHEN a family member selects one of their linked residents, the system SHALL display the current condition of that resident. IF no condition has been recorded for that resident, THEN the system SHALL tell the family member that no condition has been recorded yet.” (Done in W1) |
 
 ---
 
