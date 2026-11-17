@@ -105,7 +105,7 @@ Filled in during Lesson 8, from the Screen List.
 | Every FR of this use case appears in the diagram | Pass (3 of 3: FR-02-01, FR-02-02, FR-02-03) |  |  |
 | Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass (“Nurse” from the Use Case Diagram, “Dien Hong system” from the Context Diagram) |  |  |
 | Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | Pass (SD-UC-05: same names, FR-02-01 to FR-02-03; its alt invalid/valid is d1 here) |  |  |
-| AI critic prompt run, findings resolved or logged as open questions | Run on v0.1; findings logged as open questions #1 and #2 (#2 now resolved). Re-run on this version before review. |  |  |
+| AI critic prompt run, findings resolved or logged as open questions | Run on v0.3, resolved open questions |  |  |
 
 ## Notes for the integrator: changes needed in W1
 
