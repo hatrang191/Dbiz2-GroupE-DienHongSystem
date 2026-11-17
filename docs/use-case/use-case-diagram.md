@@ -73,20 +73,20 @@ the API Server checks the session token and the role-based permission on every r
 
 | Use case | Sequence diagram | Status |
 |---|---|---|
-| UC-01 Create new resident profile | [SD-UC-01](#sd-uc-01-create-new-resident-profile) | Draft |
-| UC-02 Update resident information | [SD-UC-02](#sd-uc-02-update-resident-information) | Draft |
-| UC-03 View resident's profile | [SD-UC-03](#sd-uc-03-view-residents-profile) | Draft |
-| UC-04 View condition history | [SD-UC-04](#sd-uc-04-view-condition-history) | Draft |
-| UC-05 Update condition | [SD-UC-05](#sd-uc-05-update-condition) | Draft |
-| UC-06 Send and acknowledge alert | [SD-UC-06](#sd-uc-06-send-and-acknowledge-alert) | Draft |
-| UC-07 Receive alert notice | [SD-UC-07](#sd-uc-07-receive-alert-notice) | Draft |
-| UC-08 View resident's condition | [SD-UC-08](#sd-uc-08-view-residents-condition) | Draft |
+| UC-01 Create new resident profile | [SD-UC-01](#sd-uc-01-create-new-resident-profile) | Done |
+| UC-02 Update resident information | [SD-UC-02](#sd-uc-02-update-resident-information) | Done |
+| UC-03 View resident's profile | [SD-UC-03](#sd-uc-03-view-residents-profile) | Done |
+| UC-04 View condition history | [SD-UC-04](#sd-uc-04-view-condition-history) | Done |
+| UC-05 Update condition | [SD-UC-05](#sd-uc-05-update-condition) | Done |
+| UC-06 Send and acknowledge alert | [SD-UC-06](#sd-uc-06-send-and-acknowledge-alert) | Done |
+| UC-07 Receive alert notice | [SD-UC-07](#sd-uc-07-receive-alert-notice) | Done |
+| UC-08 View resident's condition | [SD-UC-08](#sd-uc-08-view-residents-condition) | Done |
 | UC-09 Exchange messages between family and nurses | [SD-UC-09](#sd-uc-09-exchange-messages-between-family-and-nurses) | Done |
-| UC-10 View reports | [SD-UC-10](#sd-uc-10-view-reports) | Draft |
-| UC-11 Set up accounts | [SD-UC-11](#sd-uc-11-set-up-accounts) | Draft |
-| UC-12 Assign role-based permissions | [SD-UC-12](#sd-uc-12-assign-role-based-permissions) | Draft |
-| UC-13 Monitor radar status | [SD-UC-13](#sd-uc-13-monitor-radar-status) | Draft |
-| UC-14 View access and action logs | [SD-UC-14](#sd-uc-14-view-access-and-action-logs) | Draft |
+| UC-10 View reports | [SD-UC-10](#sd-uc-10-view-reports) | Done |
+| UC-11 Set up accounts | [SD-UC-11](#sd-uc-11-set-up-accounts) | Done |
+| UC-12 Assign role-based permissions | [SD-UC-12](#sd-uc-12-assign-role-based-permissions) | Done |
+| UC-13 Monitor radar status | [SD-UC-13](#sd-uc-13-monitor-radar-status) | Done |
+| UC-14 View access and action logs | [SD-UC-14](#sd-uc-14-view-access-and-action-logs) | Done |
 
 ## Change log
 
