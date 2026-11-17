@@ -13,8 +13,8 @@
 | Success end state      | The Admin has seen the current status of every radar and the time of its last data; radars that are Offline are highlighted.                                                    |
 | Failure end state      | No radar status is shown; the Admin is told why (no permission, or the status cannot be obtained).                                                                              |
 | FRs covered            | FR-06-03, FR-06-09, FR-06-10, FR-06-11                                                                                                                                          |
-| Business rules applied | BR-06-01                                                                                                                                                                                |
-| Version / status       | v0.1 · Draft                                                                                                                                                                    |
+| Business rules applied | BR-13                                                                                                                                                                                |
+| Version / status       | v0.1                                                                                                                                                                    |
 | Author                 | Le Thi Thuy Linh                                                                                                                                                                |
 
 ## 1. Diagram
@@ -68,7 +68,7 @@ Reading notes:
 | Node | Kind | Text | Traces to |
 | :---- | :---- | :---- | :---- |
 | A1 | Action | Request radar status | FR-06-09 |
-| D1 | Decision | Does Admin have permission to monitor radar status? | FR-06-03, BR-06-01 |
+| D1 | Decision | Does Admin have permission to monitor radar status? | FR-06-03, BR-13 |
 | S1 | Action | Reject request due to insufficient permission | FR-06-03 |
 | O2 | Object node | Radar status [Rejected] | FR-06-03 (state value) |
 | S2 | Action | Get the latest status of each radar | FR-06-09 |
@@ -114,8 +114,8 @@ Filled in during Lesson 8, from the Screen List.
 
 | Admin action | Screen ID |
 | :---- | :---- |
-| Request radar status |  |
-| Review the status of the radars |  |
+| Request radar status | S-F06-04 |
+| Review the status of the radars | S-F06-04 |
 
 ## 6. Open questions
 
