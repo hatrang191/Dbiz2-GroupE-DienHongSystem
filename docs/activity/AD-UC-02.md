@@ -127,15 +127,15 @@ Filled in during Lesson 8, from the Screen List.
 
 | Check | Result | By | Date |
 |---|---|---|---|
-| Diagram uses `swimlane-beta` and the two supplied lanes | Pass (source-level review) | — | — |
-| Decision has guards on all outgoing flows | Pass: `[invalid information]` and `[valid information]` | — | — |
-| Merge node is in the Receptionist lane | Pass (matches the supplied UC-02 diagram) | — | — |
-| System actions cite an FR | Pass: system actions use `FR-01-02` | — | — |
-| BR-02 is traced to the validation and save flow | Pass (based on the supplied BR-02 wording) | — | — |
-| All requirements for UC-02 are represented | Not independently verified; only the supplied diagram was available as the UC-02 source | — | — |
-| Diagram renders on Mermaid 11.16 or later | Not run in this document | — | — |
-| Screen IDs confirmed against Screen List | Pending | — | — |
-| Validation rules confirmed against FR-01-02 | Pending | — | — |
+| Diagram uses `swimlane-beta` and the two supplied lanes | Pass (source-level review) |  |  |
+| Decision has guards on all outgoing flows | Pass: `[invalid information]` and `[valid information]` |  |  |
+| Merge node is in the Receptionist lane | Pass (matches the supplied UC-02 diagram) |  |  |
+| System actions cite an FR | Pass: system actions use `FR-01-02` |  |  |
+| BR-02 is traced to the validation and save flow | Pass (based on the supplied BR-02 wording) |  |  |
+| All requirements for UC-02 are represented | Not independently verified; only the supplied diagram was available as the UC-02 source |  |  |
+| Diagram renders on Mermaid 11.16 or later | Not run in this document |  |  |
+| Screen IDs confirmed against Screen List | Pending |  |  |
+| Validation rules confirmed against FR-01-02 | Pending |  |  |
 
 ---
 
