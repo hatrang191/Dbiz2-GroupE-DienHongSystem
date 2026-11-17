@@ -67,9 +67,6 @@ flowchart LR
 | P-4 | Residents' Family  | There is no simple way to send a question or message to the staff and get an answer.                                            |
 | P-5 | Receptionist       | Resident and family information is recorded by hand and is hard to keep up to date.                                             |
 | P-6 | BOD                | No summary of residents' condition and care activity, so management decisions rely on verbal reports.                           |
-| P-7 | Admin              | User accounts and access rights are not managed in one place.                                                                   |
-| P-8 | Nurse, Radar       | Radar already produces information about the resident, but nothing turns it into an alert the nurse can act on.                 |
-
 ## 3. Stakeholder requirements
 
 | ID     | Stakeholder requirement                                                                              | From     | CVCA flow            |
