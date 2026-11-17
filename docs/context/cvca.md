@@ -11,7 +11,7 @@ the system is designed, to find the problems and opportunities.
 
 ## 1. Value chain (with the new system)
 
-The dashed box is the Dien Hong Nursing House. Everything outside it is an outside stakeholder.
+The dashed box is the Dien Hong Nursing Home. Everything outside it is an outside stakeholder.
 
 ```mermaid
 flowchart LR
@@ -21,8 +21,8 @@ flowchart LR
   EXT["External Service Providers<br>(Traditional Medicine, ...)"]
 
   subgraph NH["Dien Hong Nursing House"]
-    BOD["Dien Hong Nursing House - BOD"]
-    REC["Receptionist<br>(also Accountant)"]
+    BOD["Dien Hong Nursing Home - BOD"]
+    REC["Receptionist"]
     ADM["Admin"]
     DH(["Dien Hong system"])
     NUR["Nurse"]
