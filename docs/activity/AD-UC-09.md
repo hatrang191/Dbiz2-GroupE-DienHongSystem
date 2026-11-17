@@ -75,18 +75,16 @@ Reading notes:
 | d2 \[yes\] | a message has been added to a conversation | a family member or a nurse initiates another message | the flow returns through merge m0 and is handled as above; no reply is required from the recipient |
 | d2 \[no\] | a message has been added to a conversation | no further message is initiated | the activity ends; no reply is required from the recipient |
 
-# **4\. Object states used**
-
-No object states have been specified for UC-08 in the current W0/W1.
-
-# **5\. Screens touched**
+# **4\. Screens touched**
 
 | Actor action | Related FR row (W1) | Screen ID |
 | :---- | :---- | :---- |
 | Send message to nurses | FR-04-03-FE chat on the phone (web app) | S-F04-03 |
 | Send message to resident's family | FR-04-04-FE (chat on web system) | S-F04-01 |
 
-# **6\. Open questions**
+# **5\. Open questions**
+
+> **Note:** All default decisions below have been discussed and confirmed by the team.
 
 |  | Question | Blocking? | Default applied (Confirmed) |
 | :---- | :---- | :---- | :---- |
@@ -94,7 +92,7 @@ No object states have been specified for UC-08 in the current W0/W1.
 | 2 | \[NEEDS CLARIFICATION: Does a nurse need to be assigned to a resident, or linked to the resident's family, before they can exchange messages? FR-04-03 and FR-04-04 do not specify this requirement.\] | Yes | No access restrictions are included in the diagram. Any family member and any nurse can exchange messages. |
 | 3 | \[NEEDS CLARIFICATION: If the system fails to add a sent message to the conversation, is the message considered sent, or should the sender be notified that the message was not added?\] | No | No failure flow is modelled. If the system fails to add the message to the conversation, the message is not added. |
 
-# 7\. Verification log
+# 6\. Verification log
 
 | Check | Result | By | Date |
 | :---- | :---- | :---- | :---- |
