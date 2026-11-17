@@ -14,7 +14,7 @@
 | Failure end state | No message is added to the conversation |
 | FRs covered | FR-04-03, FR-04-04 |
 | Business rules applied | None |
-| Version / status | v1.0 · Draft |
+| Version / status | v1.0 |
 | Author | Trần Lê Bảo An |
 
 1\. Diagram
