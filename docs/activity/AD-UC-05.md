@@ -66,7 +66,7 @@ The condition values below are examples. W1 does not list the allowed conditions
 | Branch | Given | When | Then |
 | --- | --- | --- | --- |
 | d1 [yes] | the nurse has selected resident “Nguyễn Văn An” and entered the condition “Stable” | the nurse saves at 08:00 | one condition record in state Saved is stored for the resident with the time 08:00 and the nurse’s name |
-| d1 [yes] (history kept) | the resident already has the 08:00 record “Stable” | the nurse saves “Fever” at 14:00 | the resident has two records; the 08:00 record is unchanged (FR-02-03) |
+| d1 [yes] (history kept) | the resident already has the 08:00 record “Stable” | the nurse saves “Fever” at 14:00 | the resident has two records; the 08:00 record is unchanged (FR-02-03, BR-03) |
 | d1 [no] | the nurse has selected the resident but left the condition empty | the nurse saves | no condition record is stored, earlier records are unchanged, the nurse is told why the condition was rejected and can correct it (FR-02-01) |
 | d1 [no] → d1 [yes] | a save was rejected because the condition was empty | the nurse enters “Stable” and saves again | exactly one condition record is stored |
 
