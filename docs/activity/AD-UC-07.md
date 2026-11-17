@@ -14,7 +14,7 @@
 | Failure end state(s) | A dangerous alert whose resident has no linked family member: the push is skipped. A dangerous alert whose first push failed after [n] retries: the failure is logged. In b[...]
 | FRs covered | `FR-03-09, FR-03-10, FR-03-11` |
 | Left out for now | none |
-| Business rules applied | `BR-03-01` An alert is dangerous when its severity is High [assumed, ask the client], `BR-03-02`, `BR-03-03`, `BR-03-04`, `BR-03-05`, `BR-03-07` |
+| Business rules applied | `BR-05`, `BR-06`, `BR-07`, `BR-08`, `BR-09`, `BR-11` |
 | Version / status | v1.3 |
 | Author | Nguyen Ha Linh Trang |
 
@@ -89,17 +89,17 @@ Reading notes:
 |---|---|---|---|
 | r1 | Action (radar lane) | Detect abnormal event | FR-03-01 (see AD-UC-06) |
 | s0 | Action | Receive radar event | FR-03-01 (see AD-UC-06) |
-| s8 | Action | Receive alert closed (from UC-06) | FR-03-10, BR-03-03 |
-| d2 | Decision | Severity dangerous? | FR-03-09, BR-03-01, BR-03-02 |
-| d5 | Decision | Resident has a linked family member? | FR-03-11, BR-03-04 |
-| s11 | Action | Skip push | FR-03-11, BR-03-04 |
+| s8 | Action | Receive alert closed (from UC-06) | FR-03-10, BR-07 |
+| d2 | Decision | Severity dangerous? | FR-03-09, BR-05, BR-06 |
+| d5 | Decision | Resident has a linked family member? | FR-03-11, BR-08 |
+| s11 | Action | Skip push | FR-03-11, BR-08 |
 | m1 | Merge | First send or retry | FR-03-11 |
-| s3 | Action | Send first notice to family, once per alert | FR-03-09, BR-03-02, BR-03-07 |
-| d6 | Decision | Push delivered? | FR-03-11, BR-03-05 |
-| s13 | Action | Retry push, add 1 to retry count | FR-03-11, BR-03-05 |
-| s12 | Action | Log failed push | FR-03-11, BR-03-05 |
+| s3 | Action | Send first notice to family, once per alert | FR-03-09, BR-06, BR-11 |
+| d6 | Decision | Push delivered? | FR-03-11, BR-09 |
+| s13 | Action | Retry push, add 1 to retry count | FR-03-11, BR-09 |
+| s12 | Action | Log failed push | FR-03-11, BR-09 |
 | o1 | Object node | Family notice [First sent] | FR-03-09 (state value) |
-| s9 | Action | Send closed notice to family, once | FR-03-10, BR-03-03 |
+| s9 | Action | Send closed notice to family, once | FR-03-10, BR-07 |
 | o2 | Object node | Family notice [Closed sent] | FR-03-10 (state value) |
 
 ## 3. Branches and acceptance tests
@@ -143,7 +143,7 @@ Filled in during Lesson 8, from the Screen List.
 
 | # | Question | Blocking? | Default applied |
 |---|---|---|---|
-| 1 | [NEEDS CLARIFICATION: Which severity levels count as dangerous (BR-03-01)? Does the radar give levels such as Low, Medium, High?] | Yes | Only High |
+| 1 | [NEEDS CLARIFICATION: Which severity levels count as dangerous (BR-05)? Does the radar give levels such as Low, Medium, High?] | Yes | Only High |
 | 2 | [NEEDS CLARIFICATION: Does the closed notice show the outcome (real event or false alarm)?] | No | Yes |
 | 3 | [NEEDS CLARIFICATION: When an alert was not dangerous, does the family get a closed notice anyway?] | No | No, only if the first notice was sent |
 | 4 | [NEEDS CLARIFICATION: Which family members get the notice: all linked members or only the main contact?] | No | All linked members |
@@ -172,10 +172,10 @@ Filled in during Lesson 8, from the Screen List.
 |---|---|
 | Use case inventory (W0 Table 1) | UC-07 is in W0 Table 1 and the Use Case Diagram (Must, F-03) |
 | Priority | Resolved: UC-07 is Must because FR-03-09 is Must (W4) |
-| FR-03-09 | Receive alert notice (family), Must. EARS: “WHEN a new alert is dangerous (BR-03-01: severity High) and its resident has at least one linked family member, the system SHALL send one first notice to every linked family account as a push notice to their phone.” ([...] |
+| FR-03-09 | Receive alert notice (family), Must. EARS: “WHEN a new alert is dangerous (BR-05: severity High) and its resident has at least one linked family member, the system SHALL send one first notice to every linked family account as a push notice to their phone.” ([...] |
 | FR-03-10 | **New**, Send closed notice to family, Could: "WHEN an alert whose first notice was delivered is closed, the system SHALL send one closed notice with the outcome to the linked family accounts." |
 | FR-03-11 | **New**, Skip or retry family push, Could: “IF the resident of a dangerous alert has no linked family member, THEN the system SHALL skip the push. IF a push to the family fails, THEN the system SHALL retry it up to 3 times and then log the failure.”. Now in the diagram (`d5`, `s11`, `s13`, `s12`) |
-| BR-03-01 | **New**: an alert is dangerous when its severity is High |
+| BR-05 | **New**: an alert is dangerous when its severity is High |
 
 
 
