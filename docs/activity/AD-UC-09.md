@@ -83,8 +83,8 @@ No object states have been specified for UC-08 in the current W0/W1.
 
 | Actor action | Related FR row (W1) | Screen ID |
 | :---- | :---- | :---- |
-| Send message to nurses | FR-04-03-FE chat on the phone (web app) |  |
-| Send message to resident's family | FR-04-04-FE (chat on web system) |  |
+| Send message to nurses | FR-04-03-FE chat on the phone (web app) | S-F04-03 |
+| Send message to resident's family | FR-04-04-FE (chat on web system) | S-F04-01 |
 
 # **6\. Open questions**
 
