@@ -61,7 +61,7 @@ flowchart LR
 
 | #   | Stakeholder        | Problem or opportunity                                                                                                          |
 | --- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| P-1 | Nurse              | A resident's condition is spread over paper notes, so the nurse has no quick overview and may learn of a problem late.          |
+| P-1 | Nurse              | Nurses are overloaded: There are many residents but only a limited number of nurses, making it difficult for nurses to monitor every resident effectively. |
 | P-2 | Nurse              | Care given and condition changes are written down inconsistently, so the next shift lacks reliable information.                 |
 | P-3 | Residents' Family  | The family only hears about their relative's condition when they call or visit, and alerts reach them late.                     |
 | P-4 | Residents' Family  | There is no simple way to send a question or message to the staff and get an answer.                                            |
@@ -71,7 +71,7 @@ flowchart LR
 
 | ID     | Stakeholder requirement                                                                              | From     | CVCA flow            |
 | ------ | ---------------------------------------------------------------------------------------------------- | -------- | -------------------- |
-| StR-01 | Nurses shall be able to see a resident's current condition and care information in one place.        | P-1      | DH -> NUR            |
+| StR-01 | Nurses shall be able to see the current condition of all residents in their care in one place, and which residents need attention first. | P-1      | DH -> NUR            |
 | StR-02 | Nurses shall be able to receive an alert when a resident's condition needs attention.                | P-1      | RAD -> DH -> NUR     |
 | StR-03 | Nurses shall be able to record the care they gave and any change in a resident's condition.          | P-2      | NUR -> DH            |
 | StR-04 | Nurses shall be able to see what was recorded in earlier shifts when they take over.                 | P-2      | DH -> NUR            |
