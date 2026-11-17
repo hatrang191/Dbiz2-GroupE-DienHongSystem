@@ -137,7 +137,8 @@ Filled in during Lesson 8, from the Screen List.
 
 | Actor action | Screen ID |
 |---|---|
-| | |
+| Open the push notification and read the first alert notice | S-F03-02 |
+| Read the closed notice with the outcome | S-F03-02 |
 
 ## 6. Open questions
 
@@ -162,9 +163,9 @@ Filled in during Lesson 8, from the Screen List.
 | Every fork has a matching join | Pass (no fork in this diagram) | | |
 | Every system action cites an FR | Pass (7 of 7: `s0` FR-03-01, `s8` FR-03-10; `s3` FR-03-09, `s9` FR-03-10, `s11`, `s12`, `s13` FR-03-11) | | |
 | Every FR of this use case appears in the diagram | 3 of 3 | | |
-| Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | To check: system name "Dien Hong System" | | |
-| Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | To check | | |
-| AI critic prompt run, findings resolved or logged as open questions | To run | | |
+| Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass | | |
+| Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | Pass | | |
+| AI critic prompt run, findings resolved or logged as open questions | Pass | | |
 
 ## Notes for the integrator: changes needed in W1 and the use case list
 
@@ -177,52 +178,3 @@ Filled in during Lesson 8, from the Screen List.
 | FR-03-11 | **New**, Skip or retry family push, Could: “IF the resident of a dangerous alert has no linked family member, THEN the system SHALL skip the push. IF a push to the family fails, THEN the system SHALL retry it up to 3 times and then log the failure.”. Now in the diagram (`d5`, `s11`, `s13`, `s12`) |
 | BR-05 | **New**: an alert is dangerous when its severity is High |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-n/a
