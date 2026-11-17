@@ -59,9 +59,9 @@ Reading notes:
 
 | Node | Kind | Text | Traces to |
 | --- | --- | --- | --- |
-| s0 | Action | Verify the family member’s access to the selected resident | FR-04-01 |
+| s0 | Action | Verify the family member’s access to the selected resident | FR-04-01, BR-12 |
 | d1 | Decision | Access verified? | FR-04-01 (IF clause), BR-12 |
-| s2 | Action | Deny the request with an access-denied message | FR-04-01 |
+| s2 | Action | Deny the request with an access-denied message | FR-04-01, BR-12 |
 | d2 | Decision | Condition recorded? | FR-04-02 (IF clause) |
 | s3 | Action | Tell the family member that no condition has been recorded yet | FR-04-02 |
 | o1 | Object node | Resident Condition Record [Saved] | FR-04-02; state `Saved` agreed in AD-UC-05 |
@@ -75,8 +75,8 @@ The names and conditions below are examples. W1 does not list the allowed condit
 | --- | --- | --- | --- |
 | d1 [access verified], d2 [condition recorded] | the account of family member “Nguyễn Thị Lan” is linked to residents “Nguyễn Văn An” and “Lê Thị Hoa”; An’s latest record at 14:00 says “Fever” | the family member selects “Nguyễn Văn An” | the family member sees “Fever” for Nguyễn Văn An and nothing about Lê Thị Hoa |
 | d1 [access verified] (several residents) | the same account, and Hoa’s latest record says “Stable” | the family member selects “Lê Thị Hoa” | the family member sees “Stable” for Lê Thị Hoa only |
-| d2 [condition recorded] (latest shown) | the resident has the 08:00 record “Stable” and the 14:00 record “Fever” | the linked family member selects the resident | the family member sees “Fever”, the most recent record |
-| d1 [access not verified] | the account of family member “Nguyễn Thị Lan” is not linked to resident “Phạm Văn Bình” (or to any resident) | the family member asks to see his condition | no condition is shown and an access-denied message is shown |
+| d2 [condition recorded] (latest shown) | the resident has the 08:00 record “Stable” and the 14:00 record “Fever” | the linked family member selects the resident | the family member sees “Fever”, the most recent record (BR-04) |
+| d1 [access not verified] | the account of family member “Nguyễn Thị Lan” is not linked to resident “Phạm Văn Bình” (or to any resident) (BR-12) | the family member asks to see his condition | no condition is shown and an access-denied message is shown |
 | d2 [none recorded] | resident “Nguyễn Văn An” was just created and no condition has been saved | the linked family member selects him | the family member is told that no condition has been recorded yet and no other condition is shown |
 
 ## 4. Object states used
