@@ -13,7 +13,7 @@
 | **Success end state** | The resident profile is updated and the receptionist sees the updated information. The system stores the changes with the time and staff name. |
 | **Failure end state(s)** | If the changes are invalid, the system displays validation errors and no successful update is completed; the receptionist can return to editing the information. |
 | **FRs covered** | FR-01-02 |
-| **Business rules applied** | BR-01-02 |
+| **Business rules applied** | BR-02, BR-03, BR-04 |
 | **Version / status** | v0.1 · Draft |
 | **Author** | Trúc Anh |
 
