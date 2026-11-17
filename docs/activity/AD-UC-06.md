@@ -14,7 +14,7 @@
 | Failure end state(s) | The alert is still not acknowledged 1 minute after the third notice. The failure of this alert is logged and the alert stays `Escalated`. |
 | FRs covered | `FR-03-01`, `FR-03-02`, `FR-03-03`, `FR-03-04`, `FR-03-05`, `FR-03-06` |
 | Left out for now | `FR-03-07` (group repeated radar events) |
-| Business rules applied | BR-03-06 |
+| Business rules applied | BR-10 |
 | Version / status | v2.1|
 | Author | Nguyen Ha Linh Trang |
 
@@ -91,10 +91,10 @@ Reading notes:
 | n2 | Action (nurse lane) | Handle and report outcome | FR-03-06 |
 | s6 | Action | Close alert (with outcome) | FR-03-06 |
 | o4 | Object node | Alert [Closed] | FR-03-06 (state value) |
-| d3 | Decision | 3 notices sent? | FR-03-04, FR-03-05, BR-03-06 |
-| s5 | Action | Notify nurses again, add 1 to count | FR-03-04, BR-03-06 |
+| d3 | Decision | 3 notices sent? | FR-03-04, FR-03-05, BR-10 |
+| s5 | Action | Notify nurses again, add 1 to count | FR-03-04, BR-10 |
 | o3 | Object node | Alert [Escalated] | FR-03-04 (state value) |
-| s10 | Action | Log failed alert | FR-03-05, BR-03-06 |
+| s10 | Action | Log failed alert | FR-03-05, BR-10 |
 
 ## 3. Branches and acceptance tests
 
@@ -134,7 +134,9 @@ Filled in during Lesson 8, from the Screen List.
 
 | Actor action | Screen ID |
 |---|---|
-| | |
+| Nurse receives/views the alert in the real-time alert pop-up | S-F01-01, S-F01-02, S-F02-01, S-F02-02, S-F03-01, S-F04-01 (Real-time alert pop-up overlay) |
+| Nurse acknowledges the alert from the pop-up or alert list | S-F01-01, S-F01-02, S-F02-01, S-F02-02, S-F03-01, S-F04-01 (Real-time alert pop-up overlay); S-F03-01 (Alert list) |
+| Nurse handles the alert and reports the outcome | S-F03-01 (Close alert with outcome modal) |
 
 ## 6. Open questions
 
