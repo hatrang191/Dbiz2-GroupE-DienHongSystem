@@ -72,7 +72,7 @@ flowchart LR
 | ID     | Stakeholder requirement                                                                              | From     | CVCA flow            |
 | ------ | ---------------------------------------------------------------------------------------------------- | -------- | -------------------- |
 | StR-01 | Nurses shall be able to see a resident's current condition and care information in one place.        | P-1      | DH -> NUR            |
-| StR-02 | Nurses shall be able to receive an alert when a resident's condition needs attention.                | P-1, P-8 | RAD -> DH -> NUR     |
+| StR-02 | Nurses shall be able to receive an alert when a resident's condition needs attention.                | P-1      | RAD -> DH -> NUR     |
 | StR-03 | Nurses shall be able to record the care they gave and any change in a resident's condition.          | P-2      | NUR -> DH            |
 | StR-04 | Nurses shall be able to see what was recorded in earlier shifts when they take over.                 | P-2      | DH -> NUR            |
 | StR-05 | Residents' Family shall be able to see their relative's condition updates.                           | P-3      | DH -> FAM            |
