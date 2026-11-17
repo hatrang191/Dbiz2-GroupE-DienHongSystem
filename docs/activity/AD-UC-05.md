@@ -81,6 +81,7 @@ The condition values below are examples. W1 does not list the allowed conditions
 Filled in during Lesson 8, from the Screen List.
 
 | Actor action | Screen ID |
+| --- | --- |
 | a1 Select resident | S-F01-01 Resident list (the nurse selects the resident from the resident list) |
 | a2 Select or enter resident condition and save | S-F02-02 Update resident condition |
 | a3 Correct condition | S-F02-02 Update resident condition (error state) |
