@@ -15,7 +15,7 @@
 | FRs covered | `FR-03-01`, `FR-03-02`, `FR-03-03`, `FR-03-04`, `FR-03-05`, `FR-03-06` |
 | Left out for now | `FR-03-07` (group repeated radar events) |
 | Business rules applied | BR-03-06 |
-| Version / status | v2.1 · Draft |
+| Version / status | v2.1|
 | Author | Nguyen Ha Linh Trang |
 
 ## 1. Diagram
