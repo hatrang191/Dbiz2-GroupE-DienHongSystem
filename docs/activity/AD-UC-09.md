@@ -17,7 +17,7 @@
 | Version / status | v1.0 |
 | Author | Trần Lê Bảo An |
 
-# **1\. Diagram
+# 1\. Diagram
 
 Mermaid source:
 
