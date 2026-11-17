@@ -90,10 +90,11 @@ The names and conditions below are examples. W1 does not list the allowed condit
 Filled in during Lesson 8, from the Screen List.
 
 | Actor action | Screen ID |
-| a1 Select one of own linked residents | S-F04-02 Resident condition |
-| a2 Read the current condition | S-F04-02 Resident condition |
-| a3 Read the access-denied message | 	S-F04-02 Resident condition (error state) |
-| a4 Read that no condition has been recorded yet | S-F04-02 Resident condition (empty state) |
+| --- | --- |
+| `a1` Select one of own linked residents | S-F04-02 Resident condition |
+| `a2` Read the current condition | S-F04-02 Resident condition |
+| `a3` Read the access-denied message | 	S-F04-02 Resident condition (error state) |
+| `a4` Read that no condition has been recorded yet | S-F04-02 Resident condition (empty state) |
 
 ## 6. Open questions
 
