@@ -134,9 +134,11 @@ Filled in during Lesson 8, from the Screen List.
 
 | Actor action | Screen ID |
 |---|---|
-| Nurse receives/views the alert in the real-time alert pop-up | S-F01-01, S-F01-02, S-F02-01, S-F02-02, S-F03-01, S-F04-01 (Real-time alert pop-up overlay) |
-| Nurse acknowledges the alert from the pop-up or alert list | S-F01-01, S-F01-02, S-F02-01, S-F02-02, S-F03-01, S-F04-01 (Real-time alert pop-up overlay); S-F03-01 (Alert list) |
-| Nurse handles the alert and reports the outcome | S-F03-01 (Close alert with outcome modal) |
+| See the new alert in the alert list | S-F03-01 |
+| Acknowledge the alert | S-F03-01 |
+| See the alert as acknowledged | S-F03-01 |
+| Handle the alert and report the outcome in the Close alert with outcome modal | S-F03-01 |
+| See the alert closed with the reported outcome | S-F03-01 |
 
 ## 6. Open questions
 
