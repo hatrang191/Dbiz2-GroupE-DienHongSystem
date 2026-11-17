@@ -6,7 +6,7 @@ The Admin only requests and reads the status, so there is no Admin choice to sho
 |---|---|
 | Use case | UC-13 Monitor radar status |
 | Actor | Admin |
-| Version | v1 (aligned with AD-UC-13 v0.1) |
+| Version | v1 |
 | FRs | FR-06-03, FR-06-09, FR-06-10, FR-06-11 |
 
 ```mermaid
@@ -19,7 +19,7 @@ sequenceDiagram
   A->>W: request radar status
   W->>S: get radar status
   Note over S: every request: check session token and role-based permission
-  break Admin has no permission to monitor radar status (FR-06-03, BR-06-01)
+  break Admin has no permission to monitor radar status (FR-06-03, BR-13)
     S-->>W: rejected: insufficient permission
     W-->>A: home screen of the role with access-denied message
   end
