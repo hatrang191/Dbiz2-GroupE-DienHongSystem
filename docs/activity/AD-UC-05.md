@@ -14,7 +14,7 @@
 | Failure end state(s) | No condition record is saved while the condition is invalid and earlier records stay unchanged. The nurse is told why and may correct the condition and save again (FR-02-01). |
 | FRs covered | `FR-02-01` , `FR-02-02` , `FR-02-03` |
 | Business rules applied | BR-03 |
-| Version / status | v0.2 · Draft |
+| Version / status | v0.3 · Draft |
 | Author | Nguyen Tran Khanh Linh |
 
 ## 1. Diagram
@@ -90,8 +90,8 @@ Filled in during Lesson 8, from the Screen List.
 
 | # | Question | Blocking? | Default applied |
 | --- | --- | --- | --- |
-| 1 | [NEEDS CLARIFICATION: what makes a condition invalid? FR-02-01 says what the system does with an invalid condition, but not which values are invalid.] (nodes `d1`, `s0`) | Yes | Tests use “condition left empty” as the invalid case; nothing is saved. |
-| 2 | [NEEDS CLARIFICATION: may the nurse correct the condition and submit it again after a rejected save?] (nodes `s0`, `a3`) | No | The nurse may correct and save again. Nothing is saved in between. |
+| 1 | [NEEDS CLARIFICATION: what makes a condition invalid? FR-02-01 says what the system does with an invalid condition, but not which values are invalid.] (nodes `d1`, `s0`) | No | Resolved: a blank condition is invalid (FR-02-01: ‘such as a blank condition’). Other invalid values can be added later. |
+| 2 | [NEEDS CLARIFICATION: may the nurse correct the condition and submit it again after a rejected save?] (nodes `s0`, `a3`) | No | Resolved: yes (FR-02-01: ‘let the nurse correct the condition and save it again’). |
 
 ## 7. Verification log
 
@@ -104,7 +104,7 @@ Filled in during Lesson 8, from the Screen List.
 | Every system action cites an FR | Pass for `s0`, `s1` and `s2`; the object node `o1` cites FR-02-03. `d1` cites FR-02-01 (IF clause). |  |  |
 | Every FR of this use case appears in the diagram | Pass (3 of 3: FR-02-01, FR-02-02, FR-02-03) |  |  |
 | Lane names match the Context Diagram and the use case actors; no Web App, API or database lanes | Pass (“Nurse” from the Use Case Diagram, “Dien Hong system” from the Context Diagram) |  |  |
-| Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | To check |  |  |
+| Related sequence diagram uses the same names and FR IDs; its alt fragments appear here as decisions | Pass (SD-UC-05: same names, FR-02-01 to FR-02-03; its alt invalid/valid is d1 here) |  |  |
 | AI critic prompt run, findings resolved or logged as open questions | Run on v0.1; findings logged as open questions #1 and #2 (#2 now resolved). Re-run on this version before review. |  |  |
 
 ## Notes for the integrator: changes needed in W1
@@ -113,8 +113,8 @@ An action that cannot be traced is a missing FR. These are the changes the UC-05
 
 | FR | Function | Change |
 | --- | --- | --- |
-| FR-02-01 | Validate condition | New function, answering open question #1, #2. EARS criterion: “IF a nurse saves a condition that is invalid, such as a blank condition, THEN the system SHALL reject the save, leave earlier records unchanged, tell the nurse why, and let the nurse correct the condition and save it again.” This covers `d1`, `s0` and `a3`. |
-| FR-02-02 | Update condition | **Change** the EARS criterion: “WHEN a nurse selects an existing resident, enters the resident’s condition and saves, the system SHALL store it for that resident with the time and the nurse’s name.” This covers `a1` and `s1`. |
+| FR-02-01 | Validate condition | New function (Done in W1: FR-02-01 ‘Validate condition’), answering open question #1, #2. EARS criterion: “IF a nurse saves a condition that is invalid, such as a blank condition, THEN the system SHALL reject the save, leave earlier records unchanged, tell the nurse why, and let the nurse correct the condition and save it again.” This covers `d1`, `s0` and `a3`. |
+| FR-02-02 | Update condition | **Change** the EARS criterion (Done in W1): “WHEN a nurse selects an existing resident, enters the resident’s condition and saves, the system SHALL store it for that resident with the time and the nurse’s name.” This covers `a1` and `s1`. |
 | FR-02-03 | Keep condition history | No change. |
 
 ---
