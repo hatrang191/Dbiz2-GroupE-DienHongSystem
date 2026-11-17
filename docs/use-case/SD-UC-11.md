@@ -18,7 +18,7 @@ sequenceDiagram
   A->>W: request account management
   W->>S: list accounts
   Note over S: every request: check session token and role-based permission
-  break role has no permission to manage accounts (FR-06-03, BR-06-01)
+  break role has no permission to manage accounts (FR-06-03, BR-13)
     S-->>W: rejected: access denied
     W-->>A: home screen with access-denied message
   end
