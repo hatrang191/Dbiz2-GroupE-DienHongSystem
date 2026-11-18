@@ -105,7 +105,7 @@ These results are conditional on the assumptions. In particular, time saved is t
 - Present value (PV) in year *t* = Net cash flow in year *t* ÷ (1 + *r*)^*t*.
 - NPV = Sum of present values from Year 0 to Year 4.
 - IRR = Discount rate at which NPV equals zero.
-- Simple payback = Full years before recovery + unrecovered investment at the start of the recovery year ÷ net cash flow in the recovery year.
+- Simple payback = Full years before recovery + (unrecovered investment at the start of the recovery year ÷ net cash flow in the recovery year).
 - Profitability index = Present value of future net cash inflows ÷ initial investment.
 
 ## 7. Limitations and items to validate
