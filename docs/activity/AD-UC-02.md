@@ -14,7 +14,7 @@
 | **Failure end state(s)** | If the changes are invalid, the system displays validation errors and no successful update is completed; the receptionist can return to editing the information. |
 | **FRs covered** | FR-01-02 |
 | **Business rules applied** | BR-02 — A resident profile shall be saved or updated only when its required information is valid. The required fields and validation criteria must be defined before implementation. |
-| **Version / status** | v0.2 · |
+| **Version / status** | v0.2 |
 | **Author** | Trúc Anh |
 
 ## 1. Diagram
