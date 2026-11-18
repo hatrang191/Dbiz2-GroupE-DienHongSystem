@@ -18,11 +18,11 @@ sequenceDiagram
   A->>W: request role assignment
   W->>S: list Active accounts
   Note over S: every request: check session token and role-based permission
-  break Admin has no permission to assign roles (FR-06-03, BR-13)
+  break Admin has no permission to assign roles (FR-06-03)
     S-->>W: rejected: insufficient permission
     W-->>A: home screen of the role with access-denied message
   end
-  S->>D: read Active accounts with current role (BR-15)
+  S->>D: read Active accounts with current role 
   D-->>S: accounts
   S-->>W: accounts
   W-->>A: account list
@@ -36,7 +36,7 @@ sequenceDiagram
   W->>S: assign role(account ID, role)
   S->>D: read the roles this Admin may assign
   D-->>S: assignable roles
-  alt selected role is outside the roles this Admin may assign (FR-06-02, BR-14)
+  alt selected role is outside the roles this Admin may assign (FR-06-02)
     S-->>W: rejected: outside the permitted scope, no role changed, no log entry
   else selected role is within the permitted scope
     Note over S,D: one transaction: role change and log entry are saved together or not at all
@@ -52,7 +52,6 @@ The `break` is the system's refusal when the Admin's role has no permission to a
 The `alt` is an outcome decided inside the system: the API Server checks again, on its own, that the selected role is one this Admin may assign (D2), so the check does not depend on what the screen offered. The Admin's own choices are not drawn: after a rejection as outside the permitted scope the Admin can choose another role, which is a new run of the second half of this diagram from "select role, confirm".
 
 Notes:
-
 - The role is read from the Database on every request, so the change applies at
   the account's next request and the account does not have to sign out. 
 - A rejected request changes nothing and writes no action log entry.
