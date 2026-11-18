@@ -19,7 +19,7 @@ sequenceDiagram
   A->>W: request radar status
   W->>S: get radar status
   Note over S: every request: check session token and role-based permission
-  break Admin has no permission to monitor radar status (FR-06-03, BR-13)
+  break Admin has no permission to monitor radar status (FR-06-03)
     S-->>W: rejected: insufficient permission
     W-->>A: home screen of the role with access-denied message
   end
@@ -48,7 +48,6 @@ sequenceDiagram
 The `alt` fragments here are outcomes decided inside the system (no radar registered, Radar Gateway not reachable, radar Offline or not), so they belong in a sequence diagram. The `break` is the system's refusal when the Admin's role has no permission (D1 [No]). The API Server asks the Radar Gateway for the status every time the Admin requests it and keeps no copy, so an old status is never shown as the current one (FR-06-11).
 
 Notes:
-
 - UC-13 only reads. No data is changed and no action log entry is written by this diagram.
 - A radar only sends abnormal events (UC-06), so a quiet radar may have no recent data. For this reason Online or Offline is worked out from the time of the last successful check or data, whichever is later, and the time of the last data is only shown to the Admin.
 - The 5-minute limit comes from the W1 row FR-06-09-BE and is still an assumption.
