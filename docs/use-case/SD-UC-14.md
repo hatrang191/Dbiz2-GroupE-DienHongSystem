@@ -8,7 +8,7 @@ The entries that the Admin reads are written by other use cases (sign-in, FR-06-
 | Use case | UC-14 View access and action logs                                |
 | Actor    | Admin                                                            |
 | Version  | v1                                                               |
-| FRs      | FR-06-03, FR-06-12 (the entries come from FR-06-08 and FR-06-13) |
+| FRs      | FR-06-03, FR-06-12 |
 
 ```mermaid
 sequenceDiagram
