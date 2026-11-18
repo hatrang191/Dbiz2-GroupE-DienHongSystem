@@ -30,7 +30,7 @@ flowchart LR
   S00_01["S-F00-01<br>Sign in"]
   S01_01["S-F01-01<br>Resident list"]
   S01_02["S-F01-02<br>Resident profile detail"]
-  S02_01["S-F02-01<br>Condition history timeline"]
+  S02_01["S-F02-01<br>Condition history"]
   S02_02["S-F02-02<br>Update resident condition"]
   S03_01["S-F03-01<br>Alert list"]
   S04_01["S-F04-01<br>Nurse chat with family"]
@@ -38,6 +38,7 @@ flowchart LR
   S00_01 -->|"[signed in as nurse]"| S01_01
   alert -->|"[nurses notified] taps the notice"| S03_01
   S01_01 -->|"selects a resident to view the profile"| S01_02
+  S01_01 -->|"selects a resident to view the condition history"| S02_01
   S01_01 -->|"selects a resident to update the condition"| S02_02
   S01_01 -->|"taps Alerts in the menu"| S03_01
   S01_01 -->|"taps Chat in the menu"| S04_01
@@ -47,16 +48,16 @@ flowchart LR
   S01_02 -->|"taps Back"| S01_01
   S02_01 -->|"taps Update condition"| S02_02
   S02_01 -->|"taps Message family"| S04_01
-  S02_01 -->|"taps Back"| S01_02
-  S02_02 -->|"taps Save [condition valid]"| S01_02
+  S02_01 -->|"taps Back [opened from the profile]"| S01_02
+  S02_01 -->|"taps Back [opened from Resident list]"| S01_01
   S02_02 -->|"taps Save [condition valid]"| S02_01
+  S02_02 -->|"taps Save [condition valid, opened from the profile]"| S01_02
   S02_02 -->|"taps Back"| S01_01
   S03_01 -->|"taps Home"| S01_01
   S04_01 -->|"taps Back"| S02_01
   S04_01 -->|"taps Back [opened from a resident]"| S01_02
   S04_01 -->|"taps Home"| S01_01
 ```
-
 ## 3. Residents' Family
 
 ```mermaid
@@ -134,9 +135,11 @@ flowchart LR
 
 | Actor             | Usage-flow arrow | Path on this diagram                                                                                                                                                                     |
 | ----------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Nurse             | UC-03 to UC-04   | S-F01-02 Resident profile detail → S-F02-01 Condition history timeline ("taps Condition history")                                                                                        |
-| Nurse             | UC-04 to UC-05   | S-F02-01 Condition history timeline → S-F02-02 Update resident condition ("taps Update condition")                                                                                       |
-| Nurse             | UC-04 to UC-09   | S-F02-01 Condition history timeline → S-F04-01 Nurse chat with family ("taps Message family")                                                                                            |
+| Nurse             | UC-03 to UC-04   | S-F01-02 Resident profile detail → S-F02-01 Condition history ("taps Condition history"); S-F02-01 can also be opened directly from S-F01-01 Resident list ("selects a resident to view the condition history")   |
+| Nurse             | UC-04 to UC-05   | S-F02-01 Condition history → S-F02-02 Update resident condition ("taps Update condition") |
+| Nurse             | UC-04 to UC-09   | S-F02-01 Condition history → S-F04-01 Nurse chat with family ("taps Message family") |
+| Nurse             | UC-06 to UC-05  | S-F03-01 Alert list → S-F01-01 Resident list ("taps Home") → S-F02-02 Update resident condition ("selects a resident to update the condition" |
+| Residents' Family | UC-07 to UC-08   | S-F03-02 Alert notice and closed notice with outcome → S-F04-02 Resident condition ("taps Back") |
 | Residents' Family | UC-08 to UC-09   | S-F04-02 Resident condition → S-F04-03 Chat with nurse ("taps Chat with nurse")                                                                                                          |
 | Admin             | UC-11 to UC-12   | S-F06-02 Create or edit account → S-F06-01 Account management ("[account saved] taps Back") → S-F06-03 Assign role to account ("taps Assign role"); S-F06-01 serves both UC-11 and UC-12 |
 | Admin             | UC-14 to UC-12   | S-F06-05 Log list with filters → S-F06-01 Account management ("taps Account management in the menu") → S-F06-03 Assign role to account ("taps Assign role")                              |
