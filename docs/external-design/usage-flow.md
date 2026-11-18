@@ -25,37 +25,24 @@ flowchart LR
 | 2    | UC-02 Update resident information  | `AD-UC-02.md` |  S-F01-02, S-F01-03       |
 
 
-## Nurse: keep a resident's condition up to date
+## Nurse: review and keep a resident's condition updated
 
 ```mermaid
 flowchart LR
- A(["Nurse checks on a resident"]) --> U3["UC-03: View resident's profile"]
- U3 --> U4["UC-04 View condition history"]
- U4 --> U5["UC-05 Update condition"]
- U5 --> Z(["New condition saved in the history"])
-```
-
-| Step | Use case                      | Activity diagram | Screens |
-| ---- | ----------------------------- | ---------------- | ------- |
-| 1    | UC-03 View resident's profile | `not needed`     |  	S-F01-01, S-F01-02       |
-| 2    | UC-04 View condition history  | `not needed`     | 	S-F02-01        |
-| 3    | UC-05 Update condition        | `AD-UC-05.md`    |  	S-F02-02       |
-
-## Nurse: answer a family's question
-
-```mermaid
-flowchart LR
-  A(["Nurse needs to answer a family's question about a resident"]) --> UC03["UC-03: View resident's profile"]
-  UC03 --> UC04["UC-04: View condition history"]
-  UC04 --> UC09["UC-09: Exchange messages between family and nurses"]
-  UC09 --> Z(["The family's question is answered"])
+  A(["Nurse checks on a resident"]) --> U3["UC-03: View resident's profile"]
+  U3 --> U4["UC-04: View condition history"]
+  U4 -->|"Condition has changed"| U5["UC-05: Update condition"]
+  U4 -->|"Family has a question"| U9["UC-09: Exchange messages between family and nurses"]
+  U5 --> Z1(["New condition saved in the history"])
+  U9 --> Z2(["The family's question is answered"])
 ```
 
 | Step | Use case                                          | Activity diagram | Screens            |
 | ---- | ------------------------------------------------- | ---------------- | ------------------ |
 | 1    | UC-03 View resident's profile                     | `not needed`     | S-F01-01, S-F01-02 |
 | 2    | UC-04 View condition history                      | `not needed`     | S-F02-01           |
-| 3    | UC-09 Exchange messages between family and nurses | `AD-UC-09.md`    | S-F04-01           |
+| 3a   | UC-05 Update condition (if the condition changed) | `AD-UC-05.md`    | S-F02-02           |
+| 3b   | UC-09 Exchange messages between family and nurses (if the family has a question) | `AD-UC-09.md`    | S-F04-01           |
 
 ## Nurse: respond to an alert
 
@@ -156,16 +143,6 @@ flowchart LR
 | ---- | --------------------------------- | ---------------- | ------------------------------- |
 | 1    | UC-13 Monitor radar status        | `AD-UC-13.md`    |     	S-F06-04                            |
 | 2    | UC-14 View access and action logs | `not needed`     |       	S-F06-05                          |
-
-
-## Use cases without a flow
-
-| Use case | Started by | Described in  |
-| -------- | ---------- | ------------- |
-| UC-06 Send and acknowledge alert   | Radar, when it detects an abnormal event      | `AD-UC-06.md` |
-| UC-07 Receive alert notice   | Radar, through a dangerous alert of UC-06     | `AD-UC-07.md` |
-
-S-F00-01 Sign in is shared by every flow above: each actor passes through it before the first step.
 
 ## Checks before you save
 
