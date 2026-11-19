@@ -123,8 +123,8 @@ An action that cannot be traced is a missing FR. These are the changes the UC-08
 
 | FR | Function | Change |
 | --- | --- | --- |
-| FR-04-01 (proposed ID) | Verify family access to resident | **New function answering the open question #1**: “IF the family member’s access to the selected resident cannot be verified, THEN the system SHALL deny the request with an access-denied message.” (Done in W1) |
-| FR-04-02 (FR-04-01 previously) | View resident’s condition | Adjusting the old function to  answer open question #2. One family account can link to several residents, so name the selected resident: “WHEN a family member selects one of their linked residents, the system SHALL display the current condition of that resident. IF no condition has been recorded for that resident, THEN the system SHALL tell the family member that no condition has been recorded yet.” (Done in W1) |
+| FR-04-01 | Verify family access to resident | **New function answering the open question #1**: “IF the family member’s access to the selected resident cannot be verified, THEN the system SHALL deny the request with an access-denied message.” (Done in W1) |
+| FR-04-02 | View resident’s condition | Adjusting the old function to  answer open question #2. One family account can link to several residents, so name the selected resident: “WHEN a family member selects one of their linked residents, the system SHALL display the current condition of that resident. IF no condition has been recorded for that resident, THEN the system SHALL tell the family member that no condition has been recorded yet.” (Done in W1) |
 
 ---
 
