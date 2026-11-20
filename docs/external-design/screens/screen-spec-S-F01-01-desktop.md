@@ -1,4 +1,4 @@
-# Screen Spec: S-F01-01 Resident list (web)
+# Screen Spec: S-F01-01 Resident list (desktop)
 
 | Field | Value |
 |---|---|
