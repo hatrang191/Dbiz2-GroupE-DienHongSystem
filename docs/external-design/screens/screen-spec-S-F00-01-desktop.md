@@ -1,4 +1,4 @@
-# Screen Spec: S-F00-01 Sign in (web)
+# Screen Spec: S-F00-01 Sign in (desktop)
 
 | Field | Value |
 |---|---|
