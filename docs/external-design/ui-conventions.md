@@ -1,6 +1,6 @@
 # UI Conventions: Dien Hong System
 
-> Version 3 (18/11/2026). Layout taken from the reference screens of an existing nursing-home
+> Version 3.1 (20/11/2026). Layout taken from the reference screens of an existing nursing-home
 > system (EHS: the "presence in the ward" list and the vital-signs dialog) and adapted to this
 > repository. Content, wording and dates aligned with the client's website dienhongfamilycare.vn
 > (page "Viện dưỡng lão", read on 18/11/2026). Colours from the Diên Hồng FamilyCare brand
@@ -90,7 +90,7 @@ changes with the width of the window, never with the role.
 
 ```
 +----------------------------------------------------------------------------+
-| [=] Diên Hồng                      (bell 2) (chat 1)  Lan · Nurse  v  top bar|
+| [=] Diên Hồng                                       Lan · Nurse  v  top bar|
 +-------------+--------------------------------------------------------------+
 | Residents   | Residents > Resident list                        breadcrumb  |
 | Alerts    2 | +----------------------------------------------------------+ |
@@ -102,13 +102,15 @@ changes with the width of the window, never with the role.
 +-------------+--------------------------------------------------------------+
 ```
 
-- **Top bar** (56px, colour/surface, bottom edge colour/border): menu button that collapses the sidebar, the "Diên Hồng" name,
-  then on the right the counters of the role (alerts not acknowledged yet, New and Escalated, for
-  nurses; unread messages for nurses and families) and the account menu with the user's name and role (Sign out lives there).
+- **Top bar** (56px, colour/surface, bottom edge colour/border): menu button that collapses the
+  sidebar, the "Diên Hồng" name, and on the right the account menu with the user's name and role
+  (Sign out lives there). The top bar has no counters: each count appears once, on its menu item.
 - **Sidebar** (colour/surface, right edge colour/border): one level, only the screens of the user's
   role (3.4). The current screen is on colour/pink-light with colour/primary text and a 3px
   colour/accent bar on its left. The reference system groups items in two levels; this app
-  has at most three destinations per role, so it needs one level only.
+  has at most three destinations per role, so it needs one level only. The Alerts item shows the
+  number of alerts not acknowledged yet (New and Escalated) and the Chat item the number of unread
+  messages; with icons only (64px) the counter sits on the corner of the icon.
 - **Content** on colour/background: breadcrumb, then one white page card per screen with the title, the
   toolbar and the content.
 - **Toolbar**: filters on the left, quick search on the right ("Search by name or resident ID"
@@ -182,7 +184,7 @@ the only check: the API Server checks the role on every request (ADR-003).
 
 | Reference pattern | In this app | Why |
 |---|---|---|
-| Dark top bar with counters and the account name | Taken: counters of unacknowledged alerts and unread messages, name and role; light surface since v3 | a nurse sees unattended alerts on every screen (FR-03-02, FR-03-03) |
+| Dark top bar with counters and the account name | Changed: name and role only, light surface since v3; the counters sit on the Alerts and Chat menu items since v3.1 | the reference's sidebar has no alert item, ours has, so counters in both places showed every count twice; where the menu is hidden (full-screen forms, dialogs) a new alert still arrives as the pop-up (FR-03-02) |
 | Dark sidebar, two levels | Changed: one level, the role's screens only, light surface since v3 | at most three destinations per role (3.4); a light shell keeps the 70–20–10 balance of 7.2 |
 | Breadcrumb, page title with an icon, reload button | Taken; title in sentence case | |
 | Toolbar with a room filter, action drop-downs and quick search | Filters and quick search taken; action drop-downs not taken | actions stay visible on the row or screen they belong to |
@@ -205,9 +207,9 @@ and ADR-005.
 
 | Component | When to use | Notes |
 |---|---|---|
-| Top bar | every web and tablet screen | 3.2; counters are links: unacknowledged alerts to S-F03-01, unread messages to the chat |
-| Sidebar | web and tablet | 3.2 and 3.4 |
-| App bar | every phone screen | title of the screen; Back on the left when the screen is not a home screen; counters on the right |
+| Top bar | every web and tablet screen | 3.2; menu button, name, account menu; no counters |
+| Sidebar | web and tablet | 3.2 and 3.4; counters on the Alerts and Chat items |
+| App bar | every phone screen | title of the screen; Back on the left when the screen is not a home screen; account button on the right of a home screen; no counters (the tab bar carries them) |
 | Tab bar | phone, roles with more than one destination | 3.4; icon and label on every tab, never an icon alone; counter on the tab; hidden on full-screen forms, where the fixed primary button takes its place |
 | Page card | the content of one web screen | colour/surface, colour/border edge, radius 8px, no shadow |
 | Toolbar | above a table or a card list | filters left, quick search right |
@@ -436,3 +438,4 @@ does not apply to inactive components.
 | v1 | 09/11/2026 | Language, formats, components, messages, accessibility, tokens | First version from the Screen List, W1 and the activity diagrams |
 | v2 | 18/11/2026 | Added section 3 (web shell, record dialog, phone layout, menu per role, screen placement, reference screens); new components, messages and tokens; required mark no longer red; website reference changed to dienhongfamilycare.vn | The team chose the reference system's layout; the app needs one convention for the web and the phone (ADR-001) |
 | v3 | 18/11/2026 | Colours replaced by the Diên Hồng FamilyCare brand palette; tokens moved to design-tokens.css as the one source for web and phone; light top bar and sidebar; colour application, interactive states and chart rules added (7.2–7.4); Acknowledged badge now colour/pending; information banners now colour/info | The client's brand identity; one token file keeps the web and phone layouts identical (ADR-001) |
+| v3.1 | 20/11/2026 | Counters removed from the top bar and the phone app bar; they stay on the Alerts and Chat menu items and tabs | Each count was shown twice on the same screen (top bar and sidebar, app bar and tab bar) |
