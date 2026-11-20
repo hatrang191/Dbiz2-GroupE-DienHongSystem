@@ -1,5 +1,5 @@
 /*
- * Dien Hong System: design tokens, v3 (18/11/2026)
+ * Dien Hong System: design tokens, v3.2 (20/11/2026)
  * One source for the web app and its phone layout (ADR-001). See ui-conventions.md, section 7.
  * Components use these variables, never hex values. Token "group/name" = variable "--group-name".
  */
@@ -35,6 +35,101 @@
   /* 7.1 Effects */
   --colour-toast: #29232A;
   --colour-scrim: rgba(41, 35, 42, 0.55);
+  --shadow-dialog: 0 12px 32px rgba(41, 35, 42, 0.18);
+
+  /* 7.5 Type, space, size, radius (unchanged from v2) */
+  --font-family: 'Be Vietnam Pro', Roboto, Arial, sans-serif;
+  --font-size-title: 22px;
+  --font-size-section: 18px;
+  --font-size-body: 16px;
+  --font-size-table: 15px;
+  --font-size-small: 14px;
+  --font-size-button: 16px;
+  --line-height: 1.5;
+  --space-unit: 4px;
+  --space-screen-phone: 16px;
+  --space-content-web: 24px;
+  --space-card-web: 20px;
+  --space-card-phone: 16px;
+  --space-list-gap: 8px;
+  --size-bar: 56px;
+  --size-sidebar: 240px;
+  --size-sidebar-collapsed: 64px;
+  --size-tab-bar: 64px;
+  --size-control: 44px;
+  --size-row: 48px;
+  --size-dialog-max: 1040px;        /* record dialog with history (S-F02-02) */
+  --size-dialog-form: 640px;        /* record dialog, form only (S-F01-03, S-F06-02, S-F06-03) */
+  --radius-button: 10px;
+  --radius-dialog: 12px;
+  --radius-card: 8px;
+  --radius-field: 6px;
+  --radius-badge: 999px;
+}
+
+/* 7.3 Interactive states. Colours of stateful controls live here, layout stays in the component. */
+
+a { color: var(--colour-primary); }
+a:hover { color: var(--colour-primary-hover); }
+a:active { color: var(--colour-primary-pressed); }
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--colour-primary);
+  outline-offset: 2px;
+}
+
+.dh-link { color: var(--colour-primary); text-decoration: none; }
+.dh-link:hover { color: var(--colour-primary-hover); text-decoration: underline; }
+.dh-link:active { color: var(--colour-primary-pressed); }
+
+.dh-btn-primary { background: var(--colour-primary); color: var(--colour-surface); border: 0; cursor: pointer; }
+.dh-btn-primary:hover { background: var(--colour-primary-hover); color: var(--colour-surface); }
+.dh-btn-primary:active { background: var(--colour-primary-pressed); color: var(--colour-surface); }
+.dh-btn-primary:disabled,
+.dh-btn-primary[aria-disabled="true"] { background: var(--colour-disabled); color: var(--colour-text-secondary); cursor: not-allowed; }
+
+.dh-btn-secondary { background: var(--colour-surface); color: var(--colour-text-primary); border: 1px solid var(--colour-border-strong); cursor: pointer; }
+.dh-btn-secondary:hover { background: var(--colour-pink-soft); color: var(--colour-text-primary); }
+.dh-btn-secondary:active { background: var(--colour-pink-light); color: var(--colour-text-primary); }
+.dh-btn-secondary:disabled { background: var(--colour-surface-secondary); color: var(--colour-text-tertiary); border-color: var(--colour-border); cursor: not-allowed; }
+
+.dh-icon-btn { background: transparent; color: var(--colour-text-secondary); border: 0; cursor: pointer; }
+.dh-icon-btn:hover { background: var(--colour-pink-soft); color: var(--colour-text-primary); }
+.dh-icon-btn:active { background: var(--colour-pink-light); color: var(--colour-text-primary); }
+
+.dh-nav-item { color: var(--colour-text-primary); background: transparent; text-decoration: none; }
+.dh-nav-item svg { color: var(--colour-text-secondary); }
+.dh-nav-item:hover { background: var(--colour-pink-soft); color: var(--colour-text-primary); }
+.dh-nav-item:active { background: var(--colour-pink-light); color: var(--colour-text-primary); }
+.dh-nav-item[aria-current="page"] { background: var(--colour-pink-light); color: var(--colour-primary); font-weight: 600; box-shadow: inset 3px 0 0 var(--colour-accent); }
+.dh-nav-item[aria-current="page"] svg { color: var(--colour-primary); }
+
+.dh-tab { color: var(--colour-text-secondary); background: var(--colour-surface); text-decoration: none; }
+.dh-tab:hover { background: var(--colour-pink-soft); color: var(--colour-text-primary); }
+.dh-tab:active { background: var(--colour-pink-light); color: var(--colour-text-primary); }
+.dh-tab[aria-current="page"] { background: var(--colour-pink-light); color: var(--colour-primary); font-weight: 600; box-shadow: inset 0 3px 0 var(--colour-accent); }
+
+.dh-row { background: var(--colour-surface); }
+.dh-row:hover { background: var(--colour-pink-soft); }
+.dh-row[aria-selected="true"],
+.dh-row.is-selected { background: var(--colour-pink-light); }
+
+.dh-history-item { background: var(--colour-surface); border: 1px solid transparent; color: var(--colour-text-primary); cursor: pointer; }
+.dh-history-item:hover { background: var(--colour-pink-soft); }
+.dh-history-item[aria-current="true"] { background: var(--colour-pink-light); border-color: var(--colour-primary); }
+
+.dh-chip { background: var(--colour-surface); color: var(--colour-text-primary); border: 1px solid var(--colour-border-strong); cursor: pointer; }
+.dh-chip:hover { background: var(--colour-pink-soft); }
+.dh-chip:active { background: var(--colour-pink-light); color: var(--colour-text-primary); }
+.dh-chip[aria-pressed="true"] { background: var(--colour-pink-light); color: var(--colour-primary); border-color: var(--colour-primary); }
+
+.dh-field { background: var(--colour-surface); color: var(--colour-text-primary); border: 1px solid var(--colour-border-strong); }
+.dh-field::placeholder { color: var(--colour-text-tertiary); }
+.dh-field:hover { border-color: var(--colour-text-secondary); }
+.dh-field:focus { outline: none; border-color: var(--colour-primary); box-shadow: 0 0 0 1px var(--colour-primary); }
+.dh-field[aria-invalid="true"] { border: 2px solid var(--colour-warning); }
+.dh-field:disabled { background: var(--colour-surface-secondary); color: var(--colour-text-tertiary); border-color: var(--colour-border); }
+.dh-field[readonly] { background: var(--colour-surface-secondary); color: var(--colour-text-primary); border-color: var(--colour-border); }  --colour-scrim: rgba(41, 35, 42, 0.55);
   --shadow-dialog: 0 12px 32px rgba(41, 35, 42, 0.18);
 
   /* 7.5 Type, space, size, radius (unchanged from v2) */
