@@ -1,9 +1,9 @@
-# Screen Spec: S-F01-02 — Resident profile (Mobile)
+# Screen Spec: S-F01-02 — Resident profile detail
 
 | Field | Value |
 |---|---|
 | Screen ID | S-F01-02 |
-| Screen name | Hồ sơ người cao tuổi (Resident profile) |
+| Screen name | Resident profile |
 | Actor | Receptionist, Nurse (role permissions to be confirmed) |
 | Priority | Must |
 | Feature | F-01 Resident Profile Management |
