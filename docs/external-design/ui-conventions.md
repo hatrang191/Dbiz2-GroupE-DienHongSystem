@@ -321,7 +321,7 @@ kept from v1, so a mistyped field never looks like an emergency. Pink never mark
 | Role outside the permitted scope (`AD-UC-12` S5) | what happened + what to do | "You cannot assign this role. Choose another role." |
 | Radar status unavailable (FR-06-11) | what happened, no old data shown | "The radar status cannot be shown right now. Try again later." |
 | Network error | what happened + retry | "Not saved yet. Check your connection and try again." |
-| Invalid report period (FR-05-01) | what is wrong + what to do | "The end date must be after the start date. Choose the period again." |
+| Invalid report period (FR-05-01) | what is wrong + what to do | "The end date must not be before the start date. Choose the period again." |
 | No alerts in the period (FR-05-01) | what exists | "No alerts in the period 01/11/2026 – 07/11/2026." |
 | Report cannot be loaded (FR-05-01) | what happened + retry | "The report cannot be loaded. Check your connection and try again." |
 | No account matches the search | what happened + what to do | "No account matches “Hùng”. Check the name or the username." |
