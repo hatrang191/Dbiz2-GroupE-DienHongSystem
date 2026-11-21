@@ -55,7 +55,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 | 4 | Update time | Text, second line of the body | "Cập nhật lúc " + the time the status was read, dd/MM/yyyy HH:mm (Updated at) (Radar Sensor, read through the Radar Gateway) | Yes (Default state) | |
 | 5 | Reload | Secondary button | label "Tải lại" (Reload) with the reload icon; asks the Radar Gateway for the status again | Yes | none |
 | 6 | View logs | Secondary button | label "Xem nhật ký" (View logs) with the list icon, next to element 5; opens S-F06-05 | Yes | none |
-| 7 | Legend | Legend, on colour/surface-secondary | "Trực tuyến" (Online) badge + "đang gửi dữ liệu" (sending data); "Ngoại tuyến" (Offline) badge + "không phản hồi quá 5 phút" (no response for more than 5 minutes); wraps onto three lines at 360px | Yes (Default state) | |
+| 7 | Legend | Legend, on colour/surface-secondary | "Trực tuyến" (Online) badge + "đang phản hồi" (responding); "Ngoại tuyến" (Offline) badge + "không phản hồi quá 5 phút" (no response for more than 5 minutes); wraps onto three lines at 360px | Yes (Default state) | |
 | 8 | Radar cards | Card list | one card per registered radar: Offline cards first, then the others in radar ID order; a card is not a link (a radar has no detail screen) | Yes (Default state) | |
 | 9 | Radar ID | Text, first line of the card | `radar.radar_id`, e.g. "R-201" | Yes | |
 | 10 | Status badge | Status badge, first line of the card | Online ("Trực tuyến", dot icon, colour/success on colour/success-bg) or Offline ("Ngoại tuyến", crossed-out signal icon, colour/warning on colour/warning-bg); Offline when the radar's last data is more than 5 minutes older than the time of the status (FR-06-09, FR-06-10) | Yes | |
