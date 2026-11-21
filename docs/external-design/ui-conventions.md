@@ -1,6 +1,6 @@
 # UI Conventions: Dien Hong System
 
-> Version 3.3 (20/11/2026). Layout taken from the reference screens of an existing nursing-home
+> Version 3.4 (21/11/2026). Layout taken from the reference screens of an existing nursing-home
 > system (EHS: the "presence in the ward" list and the vital-signs dialog) and adapted to this
 > repository. Content, wording and dates aligned with the client's website dienhongfamilycare.vn
 > (page "Viện dưỡng lão", read on 18/11/2026). Colours from the Diên Hồng FamilyCare brand
@@ -502,3 +502,4 @@ does not apply to inactive components.
 | v3.1 | 20/11/2026 | Counters removed from the top bar and the phone app bar; they stay on the Alerts and Chat menu items and tabs | Each count was shown twice on the same screen (top bar and sidebar, app bar and tab bar) |
 | v3.2 | 20/11/2026 | Section 3.3 split into the two variants of the record dialog, with history (S-F02-02) and form only (S-F01-03, S-F06-02, S-F06-03); token size/dialog-form (640px) added; tables 3.1, 3.5, 3.6, section 4 and 7.5 aligned | 3.3 showed only the S-F02-02 example, and table 3.6 said every record dialog had a history, which contradicted table 3.5 |
 | v3.3 | 20/11/2026 | Tablet layout removed: two layouts, mobile (360–767px) and desktop (768px and wider); "web" as a layout name replaced by "desktop" and "phone" by "mobile", as in the screen spec file names | The project designs for mobile and desktop only; a tablet gets the layout of its width |
+| v3.4 | 21/11/2026 | Record dialog buttons "Close" changed to "Cancel"; BOD and Admin labels added to section 1; BOD and Admin messages added to section 5 | The team chose "Cancel" (Hủy); the BOD and Admin screen specs used labels and messages not yet in the conventions |
