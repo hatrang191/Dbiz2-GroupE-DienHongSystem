@@ -31,10 +31,10 @@
 
 | State   | Image                                                                                                                                                                     |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Default | ![Default](img/S-F04-02-mobile.png) (`img/S-F04-02-mobile.png`)                                                                                                           |
-| Empty   | ![Empty](img/S-F04-02-mobile-empty.png) (`img/S-F04-02-mobile-empty.png`)                                                                                                 |
-| Loading | ![Loading](img/S-F04-02-mobile-loading.png) (`img/S-F04-02-mobile-loading.png`)                                                                                           |
-| Error   | ![Error](img/S-F04-02-mobile-error.png) (`img/S-F04-02-mobile-error.png` — condition fetch failure; access-denied outcome is a separate case under FR-04-01)              |
+| Default | `img/S-F04-02-mobile.png`                                                                                                           |
+| Empty   | `img/S-F04-02-mobile-empty.png`                                                                                                 |
+| Loading | `img/S-F04-02-mobile-loading.png`                                                                                           |
+| Error   | `img/S-F04-02-mobile-error.png` — condition fetch failure; access-denied outcome is a separate case under FR-04-01              |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens).
 
