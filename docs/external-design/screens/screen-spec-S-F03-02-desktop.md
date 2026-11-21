@@ -10,7 +10,7 @@
 | Activity diagrams | AD-UC-07 (actions **Receive first notice**, **Receive closed notice**) |
 | Mockup images | `img/S-F03-02-desktop.png` (default), `img/S-F03-02-desktop-numbered.png`, four state images (section 2), `img/S-F03-02-desktop-error-numbered.png` |
 | Frame width | `1280px` (Figma frame; exported at 1x) |
-| Figma frame | `S-F03-02-desktop` (Figma frame) |
+| Figma frame | `S-F03-02-desktop` (Figma frame (https://www.figma.com/design/aHkwiQYgPGceB6W3tMHXOE/Dien-Hong-System?node-id=0-1&p=f&m=draw)) |
 | Status | Draft |
 
 ## 1. Purpose
