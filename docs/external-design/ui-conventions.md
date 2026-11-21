@@ -46,6 +46,20 @@ Key labels:
 | Back / Close / Cancel / Back to new record | Quay lại / Đóng / Hủy / Quay lại bản ghi mới |
 | Suggestions (under a field) | Gợi ý |
 | Search by name or resident ID | Tìm theo tên hoặc mã NCT |
+| Report period / Period | Kỳ báo cáo / Kỳ |
+| Number of alerts / Average time from alert to acknowledgement / Escalated alerts | Số cảnh báo / Thời gian trung bình từ cảnh báo đến tiếp nhận / Số cảnh báo đã chuyển cấp |
+| Account list / Edit / Edit account | Danh sách tài khoản / Sửa / Sửa tài khoản |
+| Full name / Username / Phone number / Password / New password / Show password | Họ và tên / Tên đăng nhập / Số điện thoại / Mật khẩu / Mật khẩu mới / Hiện mật khẩu |
+| Role / Current role / New role / Current | Vai trò / Vai trò hiện tại / Vai trò mới / Hiện tại |
+| Linked residents | Người cao tuổi được liên kết |
+| Active / Deactivated | Đang hoạt động / Đã vô hiệu hóa |
+| Search by name or username | Tìm theo tên hoặc tên đăng nhập |
+| * required | * bắt buộc |
+| Reload / View logs | Tải lại / Xem nhật ký |
+| Online / Offline / Last data / Updated at | Trực tuyến / Ngoại tuyến / Dữ liệu gần nhất / Cập nhật lúc |
+| User / Date / Filter logs / Clear filter / Filtered by / All | Người dùng / Ngày / Lọc nhật ký / Bỏ lọc / Đang lọc / Tất cả |
+| No. / Status / Actions / Time | STT / Trạng thái / Thao tác / Thời gian |
+| Sign out / Collapse menu | Đăng xuất / Thu gọn menu |
 
 ## 2. Formats
 
@@ -131,9 +145,9 @@ Rules for both variants:
   S-F02-02, "taps Back" returns to S-F01-01). It is not the confirm modal of section 4.
 - Title row: what the screen does and for whom ("Update condition: Nguyễn Văn An · Room 204"),
   and [x] on the right.
-- Buttons at the bottom right: one secondary ("Close") then one primary that says what is saved
+- Buttons at the bottom right: one secondary ("Cancel") then one primary that says what is saved
   ("Save condition", "Save profile", "Save account", "Assign role").
-- Esc, [x] and Close ask first when there are unsaved changes (section 5).
+- Esc, [x] and Cancel ask first when there are unsaved changes (section 5).
 - On mobile the same screen is full screen (3.5).
 
 **With history** (S-F02-02), up to size/dialog-max (1040px):
@@ -145,7 +159,7 @@ Rules for both variants:
 | [ Stable                         ] | 17/11 14:00  Fever · Hoa         |
 | Suggestions: (Stable) (Fever)      | 17/11 08:00  Stable · Lan        |
 | Saved with the time and your name. | View all records                 |
-|                [Close] [Save condition]                                |
+|                [Cancel] [Save condition]                                |
 +------------------------------------------------------------------------+
 ```
 
@@ -169,7 +183,7 @@ Rules for both variants:
 | [ Nguyễn Văn An                                 ] |
 | Room *                                            |
 | [ 204                                           ] |
-|                        [Close] [Save profile]     |
+|                        [Cancel] [Save profile]     |
 +---------------------------------------------------+
 ```
 
@@ -229,7 +243,7 @@ the only check: the API Server checks the role on every request (ADR-003).
 | Required mark "*" in red | Changed: "*" in colour/text-primary and the line "* required" on top of the form | red is kept for resident alerts (section 4) |
 | Unit hint under a field ("Đơn vị mmHg") | Taken as the field hint, in colour/text-secondary | a hint in the link colour looks clickable |
 | History per month, selected record highlighted yellow with a banner | Taken; the selected record opens read-only, highlighted in colour/pink-light with an information banner | FR-02-03; selected states use the brand's light pink (7.2) |
-| Buttons Print, Chart, New, Copy, Save, Delete, Exit | Changed: "Close" and "Save condition" only | Delete and Edit would break FR-02-03; Print and Chart are not in W1; labels say what happens (section 1) |
+| Buttons Print, Chart, New, Copy, Save, Delete, Exit | Changed: "Cancel" and "Save condition" only | Delete and Edit would break FR-02-03; Print and Chart are not in W1; labels say what happens (section 1) |
 | Legend box for codes ("X = normal, L = loose...") | Taken as the Legend component for status badges | |
 | Text about 12px, light grey labels, white on light teal buttons | Not taken | below 4.5:1 (section 6) |
 | Site served over HTTP ("Not secure") | Not taken: HTTPS only | browsers allow installing the app and push notices only on HTTPS (ADR-001, ADR-005) |
@@ -249,7 +263,7 @@ and ADR-005.
 | Toolbar | above a table or a card list | filters left, quick search right |
 | Data table | lists on desktop | header row on colour/surface-secondary; rows at least 48px tall; the name is a link to the row's screen; row under the pointer on colour/pink-soft, selected row on colour/pink-light |
 | Card list item | lists on mobile | full name and room on the first line, status or last update below; the name links to the item's screen; a row action of the table (such as "Update condition") becomes one secondary button on the card |
-| Record dialog | create, edit and update screens on desktop | 3.3; with history (S-F02-02) up to 1040px, form only (S-F01-03, S-F06-02, S-F06-03) up to 640px; has its own URL; Esc and Close ask first when there are unsaved changes |
+| Record dialog | create, edit and update screens on desktop | 3.3; with history (S-F02-02) up to 1040px, form only (S-F01-03, S-F06-02, S-F06-03) up to 640px; has its own URL; Esc and Cancel ask first when there are unsaved changes |
 | History panel | right side of S-F02-02; full S-F02-01 | month picker; each record: short date and time, condition, nurse's name |
 | Field | every form | label above, field 44px tall with colour/border-strong, hint under it in colour/text-secondary; "*" in colour/text-primary for required fields; a "select or enter" field (AD-UC-05) shows suggestion buttons under it that fill the field |
 | Primary button | the one main action of a screen | one per screen, full width and fixed at the bottom on mobile, at least 44px tall |
@@ -307,6 +321,19 @@ kept from v1, so a mistyped field never looks like an emergency. Pink never mark
 | Role outside the permitted scope (`AD-UC-12` S5) | what happened + what to do | "You cannot assign this role. Choose another role." |
 | Radar status unavailable (FR-06-11) | what happened, no old data shown | "The radar status cannot be shown right now. Try again later." |
 | Network error | what happened + retry | "Not saved yet. Check your connection and try again." |
+| Invalid report period (FR-05-01) | what is wrong + what to do | "The end date must be after the start date. Choose the period again." |
+| No alerts in the period (FR-05-01) | what exists | "No alerts in the period 01/11/2026 – 07/11/2026." |
+| Report cannot be loaded (FR-05-01) | what happened + retry | "The report cannot be loaded. Check your connection and try again." |
+| No account matches the search | what happened + what to do | "No account matches “Hùng”. Check the name or the username." |
+| Account list cannot be loaded | what happened + retry | "The account list cannot be loaded. Check your connection and try again." |
+| Account created (FR-06-04) | what happened | "Account family012 created for Trần Thị Mai." |
+| Account saved (FR-06-06) | what happened | "Account family012 saved." |
+| Account deactivated (FR-06-07) | what happened | "Account nurse03 deactivated." |
+| Role replaces permissions (FR-06-02) | consequence | "The new role replaces the current role and all of its permissions." |
+| Role assigned (`AD-UC-12` S4) | what happened | "Role Receptionist assigned to nurse03." |
+| No radar registered (FR-06-11) | what exists + why | "No radar is registered, so the radar status cannot be shown." |
+| No log entries match the filter (FR-06-12) | what happened + what to do | "No log entries for nurse03 on 17/11/2026. Choose another date or user." |
+| Logs cannot be loaded (FR-06-12) | what happened + retry | "The logs cannot be loaded. Check your connection and try again." |
 
 ## 6. Accessibility minimums
 
