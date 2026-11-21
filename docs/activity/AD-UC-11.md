@@ -130,7 +130,7 @@ One row per outgoing branch of every decision. DBIZ3 turns each row into at leas
 | D2 \[Yes\] → D5 \[Yes\]                                            | the Admin has permission and submits name "Tran Thi B", role "Nurse", identifier "nurse03" (not in use)                                           | the Admin submits the information                                     | one account "nurse03" with role "Nurse" is saved with no resident link, the Account is in state Active, the action is recorded in the action log, and a confirmation is shown                                         |
 | D2 \[Yes\] → D5 \[Yes\]                                            | the resident "Nguyễn Văn An" exists and the Admin submits name "Nguyễn Thị Lan", role "Family", identifier "lan.family", resident "Nguyễn Văn An" | the Admin submits the information                                     | one account "lan.family" is saved and linked to "Nguyễn Văn An" only, the Account is in state Active, the action is recorded, and the access check in AD-UC-08 passes for that resident when she opens the mobile app |
 | D1 \[Yes\] → D4 \[Edit\] → D2 \[Yes\] → D5 \[No\]                  | the active account "nurse03" belongs to a Nurse whose phone number changed                                                                               | the Admin enters the new phone number and a new password and submits  | the changes are saved, the role and any resident links are unchanged, the account stays Active, the action is recorded, and a confirmation is shown                                                                   |
-| D4 \[Edit\] → D2 \[No\] → D3 \[Yes\] → A3 → M1 → D2                | the Admin changes the identifier of "nurse03" to "nurse01", which another account already uses                                                    | the Admin chooses to continue and changes the identifier to "nurse04" | the error "identifier already in use" is reported first and nothing is saved; the corrected submission goes from A3 through M1 back to D2, is validated again and is then saved                                       |
+| D4 \[Edit\] → D2 \[No\] → D3 \[Yes\] → A3 → M1 → D2 | the Admin clears the name of "nurse03" and submits | the Admin chooses to continue and enters the name "Lê Thị Hoa" | the error "Enter the full name." is reported and nothing is saved; the corrected submission goes from A3 through M1 back to D2, is validated again and is then saved |
 | D1 [Yes] → D4 [Deactivate] → D6 [Yes]                                     | the active account "nurse03" belongs to a Nurse who left, and has one open session                                                                       | the Admin deactivates the account                                     | the Account is in state Inactive, the open session is ended, a later sign-in or request with "nurse03" is rejected, the account data and history are kept, the action is recorded, and a confirmation is shown        |
 | D4 [Deactivate] → D6 [No]                                     | the active account “nurse03” has one open session                                                                       | the Admin selects it for deactivation and does not confirm                                     | the account stays Active, the session stays open, nothing is recorded in the action log, and the flow ends        |
 
@@ -147,15 +147,17 @@ Filled in during Lesson 8, from the Screen List.
 | Admin action | Screen ID |
 | :---- | :---- |
 | Request account management and choose an operation | S-F06-01 |
-| Provide account information (and the resident to link), Adjust account information | S-F06-02 |
-| Select an account and provide the changes | S-F06-03 |
-| Select an account to deactivate | S-F06-01 |
+| Provide account information and, for a family account, the resident or residents to link | S-F06-02 |
+| Adjust account information | S-F06-02 |
+| Select an active account and provide the changes | S-F06-01, S-F06-02 |
+| Select an active account to deactivate | S-F06-01 |
+| Admin confirm the deactivation | S-F06-01 |
 
 ## 6. Open questions
 
 | #   | Question                                                                                                          | Blocking? | Default applied                                                                                      |
 | :-- | :---------------------------------------------------------------------------------------------------------------- | :-------- | :--------------------------------------------------------------------------------------------------- |
-| 1   | [NEEDS CLARIFICATION: which identifier must be unique: the login name only, or also the email address?]           | No        | The email address only.                                                                              |
+| 1   | [NEEDS CLARIFICATION: which identifier must be unique: the login name only, or also the email address?]           | No        | The login name (Tên đăng nhập) only. Accounts have no email address in Release 1; the login name is the `account.identifier` used to sign in (FR-00-01) and checked by D2 (FR-06-04). |
 | 2   | [NEEDS CLARIFICATION: how many times may the Admin correct and resubmit in one operation?]                 | No        | No limit.                                                                                            |
 | 3   | [NEEDS CLARIFICATION: should rejected requests and invalid submissions be stored, for example in an attempt log?] | No        | No. Only `Active` and `Inactive` are stored on the account, and the diagram shows only those states. |
 | 4   | [NEEDS CLARIFICATION: can one family account be linked to more than one resident?]                                | No        | No limit.                                                                                            |
