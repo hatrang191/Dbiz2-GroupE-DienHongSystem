@@ -39,7 +39,7 @@
 | Empty   | img/S-F06-04-mobile-empty.png               |
 | Loading | img/S-F06-04-mobile-loading.png             |
 | Error   | img/S-F06-04-mobile-error.png               |
-| Success | None: this screen saves nothing (section 4) |
+| Success | Not applicable: this screen saves nothing (section 4) |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens), whose values live in [design-tokens.css](../design-tokens.css).
 
@@ -72,7 +72,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 | Empty (no data)        | The line "Trạng thái radar" and the two buttons stay; no count, no legend, no cards. The information banner (14): "Chưa có radar nào được đăng ký, nên không thể hiển thị trạng thái radar." (No radar is registered, so the radar status cannot be shown.) (new)                                                                                                                                | The status is obtained and no radar is registered (FR-06-11, SD-UC-13, AD-UC-13 `S4`)                     |
 | Loading                | The line "Đang lấy trạng thái radar…" (Getting the radar status…) and the two buttons stay; four placeholder cards on colour/surface-secondary; no legend and no old status.                                                                                                                                                                                                                     | Screen opened or "Tải lại" (AD-UC-13 `S2`)                                                                |
 | Error                  | The line "Trạng thái radar" and the two buttons stay; the warning banner (14): "Không thể hiển thị trạng thái radar lúc này. Hãy thử lại sau." (The radar status cannot be shown right now. Try again later.) (ui-conventions §5, Radar status unavailable); no count, no cards and no old status; "Tải lại" (5) stays available to try again.                                                   | The Radar Gateway cannot be reached or does not answer (FR-06-11, AD-UC-13 `S4`)                          |
-| Success / confirmation | None: this screen saves nothing; "Tải lại" only reads the status again (SD-UC-13 ends with showing the radars)                                                                                                                                                                                                                                                                                   | –                                                                                                         |
+| Success | Not applicable: this screen saves nothing; "Tải lại" only reads the status again (SD-UC-13 ends with showing the radars)                                                                                                                                                                                                                                                                                   | –                                                                                                         |
 
 **Situations described in words, not drawn:**
 
@@ -122,7 +122,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 - The banner (14) and the end of Loading are announced when they appear.
 - Text contrast is at least 4.5:1 on every background used here, including the highlighted card (ui-conventions 7.6); zoom stays allowed.
 
-## 9. Decisions and open questions
+## 9. Open questions
 
 | #   | Question                                                                                              | Blocking? | Status                                                                                                                                    |
 | --- | ----------------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
