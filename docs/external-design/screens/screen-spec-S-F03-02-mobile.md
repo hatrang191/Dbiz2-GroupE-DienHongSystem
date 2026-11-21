@@ -62,6 +62,8 @@ All colours, fonts and corners come from the design tokens in [ui-conventions.md
 | Loading | App bar remains visible. The alert list area displays three skeleton card placeholders (`colour/surface-secondary`) while the system retrieves alert notices. | Alert notices are being fetched from the system. |
 | Error | App bar remains visible. The alert list is replaced by a warning banner (`colour/warning-bg`) displaying **Chưa tải được thông báo. Kiểm tra kết nối rồi thử lại.** and a secondary **Tải lại** button. | The request to retrieve alert notices fails or times out. |
 
+**Successful outcome**: There is no separate Success state because this screen only retrieves and displays alert notices; it does not save or modify data. A successful response is reflected in the Default or Empty state, depending on whether alert notices are available.
+
 ## 5. Interactions and navigation
 
 | # | Element | User action | System response | Goes to screen |
