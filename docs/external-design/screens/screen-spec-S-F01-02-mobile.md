@@ -128,9 +128,9 @@ All colours, fonts, spacing, borders and corners come from the design tokens and
 - [x] The numbered image exists, and its numbers match the # column of the element inventory.
 - [x] Every numbered visible element in the mockup appears in the element inventory.
 - [x] The default, empty, loading, error and success state images are listed.
-- [ ] Every visible colour, font, spacing, border and corner has been checked against the current UI Convention design tokens.
+- [x] Every visible colour, font, spacing, border and corner has been checked against the current UI Convention design tokens.
 - [x] Every input element has a validation rule or an explicit statement that it is not an input.
 - [x] All five states are filled in.
-- [ ] Every navigation target is a Screen ID that exists in the Screen List.
-- [ ] Every data-displaying element is mapped to an approved field in the data model.
-- [ ] Every linked FR exists in the Function List, and every action of this screen in the Activity Diagram is covered by an interaction row.
+- [x] Every navigation target is a Screen ID that exists in the Screen List.
+- [x] Every data-displaying element is mapped to an approved field in the data model.
+- [x] Every linked FR exists in the Function List, and every action of this screen in the Activity Diagram is covered by an interaction row.
