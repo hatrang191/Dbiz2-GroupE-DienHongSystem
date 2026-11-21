@@ -319,7 +319,7 @@ kept from v1, so a mistyped field never looks like an emergency. Pink never mark
 | Notices not allowed on this phone (ADR-005) | what happens + what to do | "Alerts cannot reach this phone yet. Install the app on the home screen and allow notices." |
 | First notice to the family (FR-03-09) | what happened + what is being done | "Diên Hồng: an abnormal event was detected for cụ Nguyễn Văn An at 14:32. The nurses have been notified." |
 | Closed notice to the family (FR-03-10) | outcome | "Diên Hồng: the alert for cụ Nguyễn Văn An at 14:32 is closed. Outcome: false alarm." |
-| Identifier already in use (FR-06-04) | what happened + what to do | "This identifier is already in use. Choose another one." |
+| Username already in use (FR-06-04) | what happened + what to do | "This username is already in use. Choose another one." |
 | Family account without a resident (FR-06-04) | what to do | "Select at least one resident for a family account." |
 | Confirm deactivation (`AD-UC-11` D6) | consequence + no undo | "Deactivate nurse03? This person is signed out at once and can no longer sign in. This cannot be undone." |
 | Role outside the permitted scope (`AD-UC-12` S5) | what happened + what to do | "You cannot assign this role. Choose another role." |
