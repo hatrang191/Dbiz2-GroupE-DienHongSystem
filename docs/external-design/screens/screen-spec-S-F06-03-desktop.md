@@ -9,7 +9,7 @@
 | Feature           | F-06 Administration                                                                      |
 | Activity diagrams | AD-UC-12 (assign a role to an account)                                                   |
 | Mockup images     | `img/S-F06-03-desktop.png` (default), two numbered images, four state images (section 2) |
-| Frame width       | 1280px                                                                                   |
+| Frame width       | 1280px (exported at 1x)                                                                                  |
 | Figma frame       | page "BOD & Admin · Desktop 1280", frame `S-F06-03-desktop` ([Figma file]())             |
 | Status            | Done                                                                                     |
 
@@ -33,7 +33,7 @@
 | ------------------------------------------------------------- | --------------------------------------------------------- |
 | ![S-F06-03 desktop loading](img/S-F06-03-desktop-loading.png) | ![S-F06-03 desktop empty](img/S-F06-03-desktop-empty.png) |
 
-| Loading                                                       |
+| Success                                                     |
 | ------------------------------------------------------------- |
 | ![S-F06-03 desktop success](img/S-F06-03-desktop-success.png) |
 
@@ -120,7 +120,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 - The banner (10), the toast and the end of Loading are announced when they appear; after a success the focus moves to "Quay lại".
 - Every control shows the 2px focus ring; text contrast is at least 4.5:1 on every background used here (ui-conventions 7.6).
 
-## 9. Decisions and open questions
+## 9. Open questions
 
 | #   | Question                                                                         | Blocking? | Status                                                                                                                                                                                                                                                                                                                                                                   |
 | --- | -------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
