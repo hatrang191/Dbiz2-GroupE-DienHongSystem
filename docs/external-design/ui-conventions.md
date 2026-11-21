@@ -159,7 +159,7 @@ Rules for both variants:
 | [ Stable                         ] | 17/11 14:00  Fever · Hoa         |
 | Suggestions: (Stable) (Fever)      | 17/11 08:00  Stable · Lan        |
 | Saved with the time and your name. | View all records                 |
-|                [Cancel] [Save condition]                                |
+|               [Cancel] [Save condition]                                |
 +------------------------------------------------------------------------+
 ```
 
@@ -183,7 +183,7 @@ Rules for both variants:
 | [ Nguyễn Văn An                                 ] |
 | Room *                                            |
 | [ 204                                           ] |
-|                        [Cancel] [Save profile]     |
+|                       [Cancel] [Save profile]     |
 +---------------------------------------------------+
 ```
 
