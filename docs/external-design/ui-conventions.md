@@ -52,7 +52,7 @@ Key labels:
 | Full name / Username / Phone number / Password / New password / Show password | Họ và tên / Tên đăng nhập / Số điện thoại / Mật khẩu / Mật khẩu mới / Hiện mật khẩu |
 | Role / Current role / New role / Current | Vai trò / Vai trò hiện tại / Vai trò mới / Hiện tại |
 | Linked residents | Người cao tuổi được liên kết |
-| Active / Deactivated | Đang hoạt động / Đã vô hiệu hóa |
+| Active / Inactive | Đang hoạt động / Đã vô hiệu hóa |
 | Search by name or username | Tìm theo tên hoặc tên đăng nhập |
 | * required | * bắt buộc |
 | Reload / View logs | Tải lại / Xem nhật ký |
@@ -60,6 +60,10 @@ Key labels:
 | User / Date / Filter logs / Clear filter / Filtered by / All | Người dùng / Ngày / Lọc nhật ký / Bỏ lọc / Đang lọc / Tất cả |
 | No. / Status / Actions / Time | STT / Trạng thái / Thao tác / Thời gian |
 | Sign out / Collapse menu | Đăng xuất / Thu gọn menu |
+| Expand menu / Hide password / Choose a role | Mở rộng menu / Ẩn mật khẩu / Chọn vai trò |
+| Deactivate account? (confirm title) / Cannot sign in (inactive account) | Vô hiệu hóa tài khoản? / Không thể đăng nhập |
+| Responding / No response for more than 5 minutes (radar legend) | đang phản hồi / không phản hồi quá 5 phút |
+| n radars · m offline / n entries | n radar · m ngoại tuyến / n mục |
 
 ## 2. Formats
 
@@ -334,6 +338,12 @@ kept from v1, so a mistyped field never looks like an emergency. Pink never mark
 | No radar registered (FR-06-11) | what exists + why | "No radar is registered, so the radar status cannot be shown." |
 | No log entries match the filter (FR-06-12) | what happened + what to do | "No log entries for nurse03 on 17/11/2026. Choose another date or user." |
 | Logs cannot be loaded (FR-06-12) | what happened + retry | "The logs cannot be loaded. Check your connection and try again." |
+| Invalid period format (FR-05-01) | field + what to do | "Enter the period as dd/MM/yyyy – dd/MM/yyyy." |
+| No account matches the filters | what happened + what to do | "No account matches the filters. Change the role or the status." |
+| No log entries on a date (FR-06-12) | what happened + what to do | "No log entries on 17/11/2026. Choose another date." |
+| Invalid account details (FR-06-04) | field + what to do | "Enter the username." / "Enter a 10-digit phone number." / "Enter the password." / "Choose a role." |
+| Field that cannot change when editing (FR-06-06) | hint under the field | "The username cannot be changed." / "Change the role on the Assign role screen." |
+| Loading | what is happening, with "…" | "Loading period …", "Loading the account list…", "Loading the roles you may assign…", "Getting the radar status…" |
 
 ## 6. Accessibility minimums
 
