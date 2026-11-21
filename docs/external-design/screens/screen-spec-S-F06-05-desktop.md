@@ -10,7 +10,7 @@
 | Activity diagrams | none: UC-14 has no activity diagram (usage flow: "not needed"); the exchange is SD-UC-14  |
 | Mockup images     | `img/S-F06-05-desktop.png` (default), two numbered images, three state images (section 2) |
 | Frame width       | 1280px (exported at 1x)                                                                   |
-| Figma frame       | frame `S-F06-05-desktop` ([Figma file]())                                                 |
+| Figma frame       | page "BOD & Admin · Desktop 1280", frame S-F06-05-desktop` ([Figma file]())                                                 |
 | Status            | Done                                                                                      |
 
 ## 1. Purpose
@@ -34,7 +34,6 @@ The Admin lists the access and action entries, filtered by user and date, to tra
 | Loading                                                       | Empty                                                     |
 | ------------------------------------------------------------- | --------------------------------------------------------- |
 | ![S-F06-05-desktop-loading](img/S-F06-05-desktop-loading.png) | ![S-F06-05-desktop-empty](img/S-F06-05-desktop-empty.png) |
-desktop
 
 | State   | Image                              |
 | ------- | ---------------------------------- |
@@ -42,7 +41,7 @@ desktop
 | Empty   | `img/S-F06-05-desktop-empty.png`   |
 | Loading | `img/S-F06-05-desktop-loading.png` |
 | Error   | `img/S-F06-05-desktop-error.png`   |
-| Success | None: this screen saves nothing    |
+| Success | Not applicable: this screen saves nothing    |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens), whose values live in [design-tokens.css](../design-tokens.css).
 
@@ -78,7 +77,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 | Empty (no data) | The filters, the line "Đang lọc: nurse03 · 17/11/2026 · 0 mục" with "Bỏ lọc", the information banner (17) and no table. Banner for one user: "Không có mục nhật ký nào của nurse03 ngày 17/11/2026. Chọn ngày hoặc người dùng khác." (No log entries for nurse03 on 17/11/2026. Choose another date or user.) (new). Banner for "Tất cả" (same position and style, not drawn): "Không có mục nhật ký nào ngày 17/11/2026. Chọn ngày khác." (new) | No entry matches the applied filter (SD-UC-14 "no entry matches the filter") |
 | Loading | The filters stay; the line "Đang lọc: nurse03 · 18/11/2026" without the count and with "Bỏ lọc"; the table header "Thời gian, Người dùng, Thao tác" stays above five placeholder rows on colour/surface-secondary. No spinner. | The log is being read: screen opened, "Lọc nhật ký", "Bỏ lọc", Reload |
 | Error | The filters and the line "Đang lọc: nurse03 · 18/11/2026" without the count stay; the warning banner (17) "Chưa tải được nhật ký. Kiểm tra kết nối và thử lại." (The logs cannot be loaded. Check your connection and try again.) (new); no table; Reload (7) stays available to try again | The request failed (network or server) |
-| Success / confirmation | None: this screen saves nothing; filtering only reads entries (SD-UC-14 ends with showing the filtered list) | – |
+| Success | Not applicable: this screen saves nothing; filtering only reads entries (SD-UC-14 ends with showing the filtered list) | – |
 
 **Situations described in words, not drawn:**
 
@@ -129,7 +128,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 - Every control shows the 2px focus ring; the icon-only buttons (1, 7) have an accessible name.
 - Text contrast is at least 4.5:1 on every background used here (ui-conventions 7.6).
 
-## 9. Decisions and open questions
+## 9. Open questions
 
 | #   | Question                              | Blocking? | Status                                                                                      |
 | --- | ------------------------------------- | --------- | ------------------------------------------------------------------------------------------- |
