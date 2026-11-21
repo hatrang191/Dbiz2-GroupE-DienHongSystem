@@ -136,9 +136,9 @@ The following shell elements are visible but are not numbered in the mockup:
 - [x] The numbered image exists, and its numbers match the # column of the element inventory.
 - [x] Every numbered visible element in the mockup appears in the element inventory.
 - [x] The default, empty, loading, error and success state images are listed.
-- [ ] Every visible colour, font, spacing and corner has been checked against the current UI Convention design tokens.
+- [x] Every visible colour, font, spacing and corner has been checked against the current UI Convention design tokens.
 - [x] Every input element has a validation rule or an explicit statement that it is not an input.
 - [x] All five states are filled in.
 - [x] Every navigation target is a Screen ID that exists in the Screen List.
-- [ ] Every data-displaying element is mapped to an approved field in the data model.
+- [x] Every data-displaying element is mapped to an approved field in the data model.
 - [x] Every linked FR exists in the Function List, and the screen actions evidenced by the Screen List and Function List are covered by an interaction row.
