@@ -42,20 +42,20 @@ All colours, fonts and corners come from the design tokens in [ui-conventions.md
 
 | # | Element | Type | Content / data source | Required | Validation |
 | - | ------- | ---- | --------------------- | -------- | ---------- |
-| 1 | Sidebar toggle (`[=]`) | Icon button | Static menu icon in the top bar (`56px` height) | Yes | none |
-| 2 | Top bar brand | Brand area | Diên Hồng logo mark and brand text **Diên Hồng · Viện dưỡng lão** | Yes | none |
-| 3 | Account menu | Account menu | Signed-in family member's avatar, name (e.g., **Nguyễn Thị Lan**), role (**Người thân**) and dropdown icon | Yes | none |
-| 4 | Sidebar navigation | Navigation links | **Tình trạng**, **Cảnh báo** (active item with `colour/pink-light` background and `colour/accent` bar), and **Tin nhắn** with unread message counter (e.g., `1`) | Yes | none |
-| 5 | Breadcrumb | Page header trail | Current section label **Cảnh báo** | Yes | none |
-| 6 | Page title | Section heading | Static title **Cảnh báo** (`22px` bold) | Yes | none |
-| 7 | Alert date | Date label | Date associated with the alert notice, formatted as `dd/MM/yyyy` (e.g., `18/11/2026`) | Yes | Format: `dd/MM/yyyy` |
-| 8 | First notice status badge (**Mới**) | Status badge | Bell/status icon and label **Mới** (`colour/error` on `colour/error-bg`) | Conditional | none |
-| 9 | First notice text | Notice content | First alert notice with resident name, detection time and confirmation that nurses have been notified (e.g., **Diên Hồng: đã phát hiện sự kiện bất thường ở cụ Nguyễn Văn An lúc 14:31. Điều dưỡng đã được thông báo.**) (FR-03-09) | Yes, when first notice exists | none |
-| 10 | Closed notice divider | Divider | Separates the first notice from the closed notice within the same alert card | Conditional | none |
-| 11 | Closed notice status badge (**Đã đóng**) | Status badge | Check icon and label **Đã đóng** (`colour/text-secondary` on `colour/surface-secondary`) | Conditional | none |
-| 12 | Closed notice text | Notice content | Closed notice with resident name, original detection time and outcome (e.g., **Diên Hồng: cảnh báo về cụ Nguyễn Văn An lúc 07:45 đã được đóng. Kết quả: Báo nhầm.**) (FR-03-10) | Conditional | none |
-| 13 | Error message banner | Warning banner | Displays **Không thể tải thông báo cảnh báo. Kiểm tra kết nối và thử lại.** (`colour/warning-bg`) | Conditional | none |
-| 14 | Retry button (**Tải lại**) | Secondary button | Re-fetches the family's alert notices | Conditional | none |
+| 1 | Menu button (Sidebar toggle) | Icon button | Static menu icon in the top bar; toggles the sidebar between expanded and collapsed states. | Yes | none |
+| 2 | Brand | Brand area | Diên Hồng logo mark and brand text **Diên Hồng · Viện dưỡng lão**. | Yes | none |
+| 3 | Account menu | Account menu | Signed-in family member's avatar, name (e.g., **Nguyễn Thị Lan**), role (**Người thân**) and dropdown icon. | Yes | none |
+| 4 | Sidebar navigation | Navigation links | **Tình trạng**, **Cảnh báo** (active item), and **Tin nhắn** with unread message counter (e.g., `1`). | Yes | none |
+| 5 | Breadcrumb | Page header trail | Current section label **Cảnh báo**. | Yes | none |
+| 6 | Page title | Section heading | Static page title **Cảnh báo**. | Yes | none |
+| 7 | Alert list | List container | Container for the family's alert notice cards. The marker is positioned at the upper-left corner of the list area. | Yes, when notices are available | One list contains multiple alert cards; replaced by an empty-state or error message when applicable. |
+| 8 | Alert card | Card | Represents one alert and contains its associated date, status and notice content. The marker is positioned at the upper-right corner of the first card. | Yes, when an alert notice exists | Each card represents one alert. |
+| 9 | Alert date | Date label | Date associated with the alert notice, formatted as `dd/MM/yyyy` (e.g., `18/11/2026`). | Yes | Format: `dd/MM/yyyy` |
+| 10 | Status badge | Status badge | Displays **Mới** for an alert with a first notice, or **Đã đóng** when a closed notice is available. Each variant uses its corresponding icon, label and visual style. | Conditional | Must include both an icon and text; status must not rely on colour alone. |
+| 11 | First notice text | Notice content | Initial alert notice identifying the resident and detection time, and confirming that nurses have been notified (e.g., **Diên Hồng: đã phát hiện sự kiện bất thường ở cụ Nguyễn Văn An lúc 14:31. Điều dưỡng đã được thông báo.**) (FR-03-09) | Yes, when a first notice exists | none |
+| 12 | Closed notice text | Notice content | Closure notice identifying the resident, original detection time and outcome (e.g., **Diên Hồng: cảnh báo về cụ Nguyễn Văn An lúc 07:45 đã được đóng. Kết quả: Báo nhầm.**) (FR-03-10) | Conditional | Displayed only when the corresponding closed notice is available. |
+| 13 | Error banner | Warning banner | Displays **Không thể tải thông báo cảnh báo. Kiểm tra kết nối và thử lại.** Only visible in the Error state. | Conditional | none |
+| 14 | Retry button (**Tải lại**) | Secondary button | Re-fetches the family's alert notices. Only visible in the Error state. | Conditional | none |
 
 ## 4. States
 
@@ -65,6 +65,8 @@ All colours, fonts and corners come from the design tokens in [ui-conventions.md
 | Empty (no data) | Desktop shell, breadcrumb and page card remain visible. The alert list is replaced by an information banner indicating that there are no alert notices to display. | No first or closed alert notices are available for the signed-in family member |
 | Loading | Desktop shell, breadcrumb and page card remain visible. The alert list area displays skeleton placeholders while the system retrieves alert notices. | Alert notices are being fetched from the system |
 | Error | Desktop shell, breadcrumb and page card remain visible. The alert list is replaced by a warning banner and a **Tải lại** secondary button. | The request to retrieve alert notices fails or times out |
+
+**Successful outcome:** There is no separate Success state because this screen only retrieves and displays alert notices; it does not save or modify data. A successful response is displayed as Default or Empty, depending on whether alert notices are available.
 
 ## 5. Interactions and navigation
 
