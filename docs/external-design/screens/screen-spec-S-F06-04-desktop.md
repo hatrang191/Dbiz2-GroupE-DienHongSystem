@@ -58,7 +58,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 | 7 | Reload | Icon button | static: reload icon, accessible name "Tải lại" (Reload); asks the Radar Gateway for the status again | Yes | none |
 | 8 | View logs | Secondary button | label "Xem nhật ký" (View logs) with the list icon; opens S-F06-05 | Yes | none |
 | 9 | Summary | Text, two lines | "n radar · m ngoại tuyến" (n registered radars, m of them Offline; "0 ngoại tuyến" when none is Offline) and "Cập nhật lúc " + the time the status was read, dd/MM/yyyy HH:mm (Radar Sensor, read through the Radar Gateway). While Loading, this place holds the line "Đang lấy trạng thái radar…" | Yes (Default state) | |
-| 10 | Legend | Legend, on colour/surface-secondary | "Trực tuyến" (Online) badge + "đang gửi dữ liệu" (sending data); "Ngoại tuyến" (Offline) badge + "không phản hồi quá 5 phút" (no response for more than 5 minutes) | Yes (Default state) | |
+| 10 | Legend | Legend, on colour/surface-secondary | "Trực tuyến" (Online) badge + "đang phản hồi" (responding); "Ngoại tuyến" (Offline) badge + "không phản hồi quá 5 phút" (no response for more than 5 minutes) | Yes (Default state) | |
 | 11 | Radar table | Data table | one row per registered radar, in radar ID order; header row on colour/surface-secondary, rows at least 48px; a row is not a link (a radar has no detail screen) | Yes (Default state) | |
 | 12 | No. | Column "STT" | row number, 1, 2, 3 in the order shown | Yes | |
 | 13 | Radar | Column "Radar" | `radar.radar_id`, e.g. "R-201" | Yes | |
