@@ -4,10 +4,10 @@
 |---|---|
 | Screen ID | S-F01-02 |
 | Screen name | Resident profile |
-| Actor | Receptionist, Nurse (role permissions to be confirmed) |
+| Actor | Receptionist, Nurse |
 | Priority | Must |
 | Feature | F-01 Resident Profile Management |
-| Activity diagrams | AD-UC-01 / AD-UC-02 (profile viewing and related profile actions; exact mapping to be confirmed) |
+| Activity diagrams | AD-UC-01 (profile creation and success); AD-UC-02 (profile update and success) |
 | Mockup images | `img/S-F01-02-mobile.png` (default), `img/S-F01-02-mobile-numbered.png`, state images (section 2) |
 | Frame width | 360px (mobile mockup) |
 | Figma frame | Mobile |
