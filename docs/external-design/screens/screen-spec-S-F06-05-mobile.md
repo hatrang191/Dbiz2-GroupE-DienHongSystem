@@ -41,7 +41,7 @@ The Admin lists the access and action entries, filtered by user and date, to tra
 | Empty   | `img/S-F06-05-mobile-empty.png`   |
 | Loading | `img/S-F06-05-mobile-loading.png` |
 | Error   | `img/S-F06-05-mobile-error.png`   |
-| Success | None: this screen saves nothing   |
+| Success | Not applicable: this screen saves nothing   |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens), whose values live in [design-tokens.css](../design-tokens.css).
 
@@ -75,7 +75,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 | Empty (no data) | The filters, the line "Đang lọc: nurse03 · 17/11/2026 · 0 mục" with "Bỏ lọc", the information banner (14) and no list, no date heading. Banner for one user: "Không có mục nhật ký nào của nurse03 ngày 17/11/2026. Chọn ngày hoặc người dùng khác." (No log entries for nurse03 on 17/11/2026. Choose another date or user.) (new). Banner for "Tất cả" (same position and style, not drawn): "Không có mục nhật ký nào ngày 17/11/2026. Chọn ngày khác." (new) | No entry matches the applied filter (SD-UC-14 "no entry matches the filter") |
 | Loading | The filters stay; the line "Đang lọc: nurse03 · 18/11/2026" without the count and with "Bỏ lọc"; a card with four placeholder rows on colour/surface-secondary; no date heading. No spinner. | The log is being read: screen opened, "Lọc nhật ký", "Bỏ lọc", "Tải lại" |
 | Error | The filters and the line "Đang lọc: nurse03 · 18/11/2026" without the count stay; the warning banner (14) "Chưa tải được nhật ký. Kiểm tra kết nối và thử lại." (The logs cannot be loaded. Check your connection and try again.) (new) with the button "Tải lại" (15) under it; no list | The request failed (network or server) |
-| Success / confirmation | None: this screen saves nothing; filtering only reads entries (SD-UC-14 ends with showing the filtered list) | – |
+| Success | Not applicable: this screen saves nothing; filtering only reads entries (SD-UC-14 ends with showing the filtered list) | – |
 
 **Situations described in words, not drawn:**
 
@@ -125,7 +125,7 @@ Labels are shown as they appear in the interface (Vietnamese), with the reposito
 - Every filter field has a visible label; the applied-filter line (6), the banner (14) and the end of Loading are announced when they appear.
 - Text contrast is at least 4.5:1 on every background used here (ui-conventions 7.6); zoom stays allowed.
 
-## 9. Decisions and open questions
+## 9. Open questions
 
 | #   | Question                                                                    | Blocking?                                                                                                                                                                                 | Status                                                                                                        |
 | --- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
