@@ -9,7 +9,7 @@
 | Feature           | F-05 Reporting                                                                           |
 | Activity diagrams | none: UC-10 has no activity diagram (usage flow: "not needed")                           |
 | Mockup images     | `img/S-F05-01-mobile.png` (default), two numbered images, three state images (section 2) |
-| Frame width       | 360px                                                                                    |
+| Frame width       | 360px (exported at 3x, 1080 pixels)                                                                                   |
 | Figma frame       | page "BOD & Admin · Mobile 360", frame `S-F05-01-mobile` ([Figma file]())                |
 | Status            | Done                                                                                     |
 
