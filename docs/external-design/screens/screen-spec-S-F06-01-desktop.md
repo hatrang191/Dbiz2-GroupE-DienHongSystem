@@ -33,23 +33,23 @@
 |---|---|
 | ![S-F06-01 desktop loading](img/S-F06-01-desktop-loading.png) | ![S-F06-01 desktop empty](img/S-F06-01-desktop-empty.png) |
 
-| Success | Confirm deactivation (modal, not a state) |
-|---|---|
-| ![S-F06-01 desktop success](img/S-F06-01-desktop-success.png) | ![S-F06-01 desktop confirm](img/S-F06-01-desktop-confirm.png) |
+| Success |
+|---|
+| ![S-F06-01 desktop success](img/S-F06-01-desktop-success.png) | 
 
 | State   | Image                              |
 | ------- | ---------------------------------- |
 | Default | `img/S-F06-01-desktop.png`         |
 | Empty   | `img/S-F06-01-desktop-empty.png`   |
 | Loading | `img/S-F06-01-desktop-loading.png` |
-| Error   | `img/S-F06-01-desktop-error.png    |
+| Error   | `img/S-F06-01-desktop-error.png`    |
 | Success | `img/S-F06-01-desktop-success.png` |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens), whose values live in [design-tokens.css](../design-tokens.css).
 
 ## 3. Element inventory
 
-Labels are shown as they appear in the interface (Vietnamese), with the repository label in brackets. Messages marked (new) are not in ui-conventions §5 yet (open question 4).
+Labels are shown as they appear in the interface (Vietnamese), with the repository label in brackets.
 
 | # | Element | Type | Content / data source | Required | Validation |
 |---|---|---|---|---|---|
@@ -84,12 +84,12 @@ An Inactive account row shows "–" in column "Thao tác" instead of elements 20
 | State | What the user sees | Trigger |
 |---|---|---|
 | Default | Toolbar with both filters on "Tất cả" and an empty search field, count line "24 tài khoản · 22 đang hoạt động" and the account table; the mockup shows the first six rows. Active rows show "Sửa", "Gán vai trò" and "Vô hiệu hóa tài khoản"; the signed-in Admin's own row (Đỗ Quốc Huy) shows no "Vô hiệu hóa tài khoản"; an Inactive row shows the badge and "–". | Screen opened, accounts loaded |
-| Empty (no data) | Count line "0 tài khoản", no table, and the information banner (23): with a search text "Không có tài khoản nào khớp “Hùng”. Kiểm tra tên hoặc tên đăng nhập." (No account matches “Hùng”. Check the name or the username.) (new); with filters only "Không có tài khoản nào khớp bộ lọc. Đổi vai trò hoặc trạng thái." (No account matches the filters. Change the role or the status.) (new). Search and filters stay as typed. | No account matches the filters and the search |
+| Empty (no data) | Count line "0 tài khoản", no table, and the information banner (23): with a search text "Không có tài khoản nào khớp “Hùng”. Kiểm tra tên hoặc tên đăng nhập." (No account matches “Hùng”. Check the name or the username.); with filters only "Không có tài khoản nào khớp bộ lọc. Đổi vai trò hoặc trạng thái." (No account matches the filters. Change the role or the status.). Search and filters stay as typed. | No account matches the filters and the search |
 | Loading | Toolbar kept, "Đang tải danh sách tài khoản…" (Loading the account list…) in the place of the count line, the table header kept and five placeholder rows on colour/surface-secondary. | List being fetched (screen opened, Reload, filter or search changed) |
-| Error | Warning banner (23) "Chưa tải được danh sách tài khoản. Kiểm tra kết nối và thử lại." (The account list cannot be loaded. Check your connection and try again.) (new); no count line, no table; Reload (8) stays enabled. | The request to fetch the list failed |
-| Success / confirmation | The row of the deactivated account shows the badge "Đã vô hiệu hóa" and "Đã vô hiệu hóa lúc 18/11/2026 14:40" in column "Thao tác" instead of buttons 20–22; the count line drops by one active account (mockup: 24 tài khoản · 21 đang hoạt động); the row keeps its position; and the toast "Đã vô hiệu hóa tài khoản nurse03." (Account nurse03 deactivated.) (new) appears at the bottom of the window for 4 seconds (AD-UC-11 `S4`, FR-06-07). | Deactivation confirmed in the confirm modal and saved |
+| Error | Warning banner (23) "Chưa tải được danh sách tài khoản. Kiểm tra kết nối và thử lại." (The account list cannot be loaded. Check your connection and try again.); no count line, no table; Reload (8) stays enabled. | The request to fetch the list failed |
+| Success | The row of the deactivated account shows the badge "Đã vô hiệu hóa" and "Đã vô hiệu hóa lúc 18/11/2026 14:40" in column "Thao tác" instead of buttons 20–22; the count line drops by one active account (mockup: 24 tài khoản · 21 đang hoạt động); the row keeps its position; and the toast "Đã vô hiệu hóa tài khoản nurse03." (Account nurse03 deactivated.) appears at the bottom of the window for 4 seconds (AD-UC-11 `S4`, FR-06-07). | Deactivation confirmed in the confirm modal and saved |
 
-**Confirm modal** (drawn on `img/S-F06-01-desktop-confirm.png`, not numbered; it is a confirm modal, ui-conventions §4, and answers AD-UC-11 `D6`): title "Vô hiệu hóa tài khoản?" (Deactivate account?), text "Vô hiệu hóa nurse03? Người này bị đăng xuất ngay và không thể đăng nhập lại. Không thể hoàn tác." (ui-conventions §5, Confirm deactivation), buttons side by side: "Hủy" (Cancel, secondary) then "Vô hiệu hóa tài khoản" (primary). Esc is the same as "Hủy"; the modal keeps the keyboard focus inside and returns it to the button that opened it, or to the table when that button is gone after the deactivation (ui-conventions §6).
+**Confirm modal** (not drawn, described here only; it is a confirm modal, ui-conventions §4, and answers AD-UC-11 `D6`): title "Vô hiệu hóa tài khoản?" (Deactivate account?), text "Vô hiệu hóa nurse03? Người này bị đăng xuất ngay và không thể đăng nhập lại. Không thể hoàn tác." (ui-conventions §5, Confirm deactivation), buttons side by side: "Hủy" (Cancel, secondary) then "Vô hiệu hóa tài khoản" (primary). Esc is the same as "Hủy"; the modal keeps the keyboard focus inside and returns it to the button that opened it, or to the table when that button is gone after the deactivation (ui-conventions §6).
 
 **Situations described in words, not drawn** (Screen & Element List):
 
@@ -157,7 +157,7 @@ An Inactive account row shows "–" in column "Thao tác" instead of elements 20
 | 1   | Can the Admin reactivate an Inactive account?                                                                                                          | No.                                         | Open. Default (AD-UC-11 open question 5): no; the Admin creates a new account with a new username, and the old username stays reserved.                                             |
 | 2   | May an Admin deactivate their own account or the last active Admin?                                                                                    | Yes.                                        | Open. Default, applied until the client answers: not their own account, and the API Server refuses to deactivate the last active Admin; another Admin's account may be deactivated. |
 | 3   | In which order are accounts listed, and is the list paged? The mockup lists 6 of 24 accounts in an order that is neither by name nor by status.        | No.                                         | Open. Default: the order returned by the API Server, stable; all accounts in one scrollable list; no sorting control and no paging in Release 1.                                    |
-| 4   | The messages marked (new) (empty list by filters, load error, toast, network error, loading text, "Không thể đăng nhập") are not in ui-conventions §5. | No.                                         | Open. Default: use the text of this spec; add it to §5 and to the translation file at the next revision of the conventions.                                                         |
+| 4   | The messages marked (new) (empty list by filters, load error, toast, network error, loading text, "Không thể đăng nhập") are not in ui-conventions §5. | No.                                         | Closed. Added to ui-conventions v3.4.                                                         |
 
 ## Completion checklist
 
