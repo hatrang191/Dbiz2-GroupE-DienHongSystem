@@ -10,7 +10,7 @@
 | Activity diagrams | none: UC-14 has no activity diagram (usage flow: "not needed"); the exchange is SD-UC-14  |
 | Mockup images     | `img/S-F06-05-desktop.png` (default), two numbered images, three state images (section 2) |
 | Frame width       | 1280px (exported at 1x)                                                                   |
-| Figma frame       | page "BOD & Admin · Desktop 1280", frame S-F06-05-desktop` ([Figma file]())                                                 |
+| Figma frame       | page "BOD & Admin · Desktop 1280", frame S-F06-05-desktop`                                                |
 | Status            | Done                                                                                      |
 
 ## 1. Purpose
