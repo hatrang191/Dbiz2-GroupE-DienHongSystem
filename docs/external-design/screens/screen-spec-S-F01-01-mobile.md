@@ -10,7 +10,7 @@
 | Activity diagrams | AD-UC-02 (action `a1` "Select the resident"), AD-UC-05 (action `a1` "Select resident"); AD-UC-01 starts from here with "New resident"; UC-03 and UC-04 have no activity diagram (usage flow: "not needed") |
 | Mockup images | `img/S-F01-01-mobile.png` (default, Nurse), `img/S-F01-01-mobile-receptionist.png`, three numbered images, three state images (section 2) |
 | Frame width | 360px (exported at 3x, 1080 pixels) |
-| Figma frame | not used: drawn on the Design canvas "Diên Hồng – UI preview", artboard "Mobile · S-F01-01 Người cao tuổi" (Tweaks switch the role and the state) |
+| Figma frame | not used (drawn as an HTML wireframe) |
 | Status | Done |
 
 ## 1. Purpose
