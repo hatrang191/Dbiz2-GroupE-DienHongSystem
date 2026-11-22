@@ -23,9 +23,17 @@
 
 **Numbered:** each number is the # of the element inventory in section 3. The top warning banner and inline field error appear in the error state (shown on `S-F02-02-desktop-error-numbered.jpg`).
 
-| Default, numbered | Error, numbered | 
-| ----- | ----- | 
-|  |  | 
+| Default, numbered | Error, numbered |
+|---|---|
+| ![S-F02-02 numbered](img/S-F02-02-desktop-numbered.png) | ![S-F02-02 error numbered](img/S-F02-02-desktop-error-numbered.png) |
+
+| Loading | Empty |
+|---|---|
+| ![S-F02-02 desktop loading](img/S-F02-02-desktop-loading.png) | ![S-F02-02 desktop empty](img/S-F02-02-desktop-empty.png) |
+
+| Success |
+|---|
+| ![S-F02-02 desktop success](img/S-F02-02-desktop-success.png) |
 
 | State | Image | 
 | ----- | ----- | 
