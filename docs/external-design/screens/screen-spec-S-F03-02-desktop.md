@@ -23,11 +23,15 @@
 
 ![S-F03-02 Desktop Default](img/S-F03-02-desktop.png)
 
-**Numbered:** EEach number corresponds to the element inventory in section 3. Elements 1–12 appear in the default state; elements 13–14 identify the Error banner and its retry button.
+**Numbered:** Each number corresponds to the element inventory in section 3. Elements 1–12 appear in the default state; elements 13–14 identify the Error banner and its retry button.
 
 | Default, numbered | Error, numbered |
 | ----- | ----- |
 | ![S-F03-02 Desktop Default Numbered](img/S-F03-02-desktop-numbered.png) | ![S-F03-02 Desktop Error Numbered](img/S-F03-02-desktop-error-numbered.png) |
+
+| Loading | Empty |
+|---|---|
+| ![S-F03-02 desktop loading](img/S-F03-02-desktop-loading.png) | ![S-F03-02 desktop empty](img/S-F03-02-desktop-empty.png) |
 
 | State | Image |
 | ----- | ----- |
