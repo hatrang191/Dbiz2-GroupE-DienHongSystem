@@ -28,6 +28,12 @@
 | Default, numbered | Error, numbered |
 |---|---|
 | ![S-F01-02 numbered](img/S-F01-02-desktop-numbered.png) | ![S-F01-02 error numbered](img/S-F01-02-desktop-error-numbered.png) |
+| Loading                                                       | Empty                                                     |
+| ------------------------------------------------------------- | --------------------------------------------------------- |
+| ![S-F06-03 desktop loading](img/S-F01-02-desktop-loading.png) | ![S-F06-03 desktop empty](img/S-F01-02-desktop-empty.png) |
+| Success                                                     |
+| ------------------------------------------------------------- |
+| ![S-F06-03 desktop success](img/S-F01-02-desktop-success.png) |
 
 | State | Image |
 |---|---|
