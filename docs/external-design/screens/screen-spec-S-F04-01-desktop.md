@@ -23,9 +23,17 @@
 
 **Numbered:** each number is the # of the element inventory in section 3. Elements 1–8 match across `S-F04-01-desktop-numbered.jpg` and `S-F04-01-desktop-error-numbered.jpg`; element 9 points to the message composer bar in the default state and the send-failure warning banner in the error state.
 
-| Default, numbered | Error, numbered | 
-| ----- | ----- | 
-|  |  | 
+| Default, numbered | Error, numbered |
+|---|---|
+| ![S-F04-01 numbered](img/S-F04-01-desktop-numbered.png) | ![S-F04-01 error numbered](img/S-F04-01-desktop-error-numbered.png) |
+
+| Loading | Empty |
+|---|---|
+| ![S-F04-01 desktop loading](img/S-F04-01-desktop-loading.png) | ![S-F04-01 desktop empty](img/S-F04-01-desktop-empty.png) |
+
+| Success |
+|---|
+| ![S-F04-01 desktop success](img/S-F04-01-desktop-success.png) | 
 
 | State | Image | 
 | ----- | ----- | 
