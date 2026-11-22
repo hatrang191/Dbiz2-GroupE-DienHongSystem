@@ -23,9 +23,17 @@
 
 **Numbered:** each number is the # of the element inventory in section 3. Elements 3 and 4 (Unacknowledged and acknowledged alert cards) appear in the default and success states, while element 6 (Message area) replaces the alert cards in the error and empty states (shown on `S-F03-01-mobile-error-numbered.png`). Element 5 represents the persistent bottom tab bar across all states.
 
-| Default, numbered | Error, numbered | 
-| ----- | ----- | 
-|  |  | 
+| Default, numbered | Error, numbered |
+|---|---|
+| ![S-F03-01 numbered](img/S-F03-01-mobile-numbered.png) | ![S-F03-01 error numbered](img/S-F03-01-mobile-error-numbered.png) |
+
+| Loading | Empty |
+|---|---|
+| ![S-F03-01 mobile loading](img/S-F03-01-mobile-loading.png) | ![S-F03-01 mobile empty](img/S-F03-01-mobile-empty.png) |
+
+| Success |
+|---|
+| ![S-F03-01 mobile success](img/S-F03-01-mobile-success.png) | 
 
 | State | Image | 
 | ----- | ----- | 
