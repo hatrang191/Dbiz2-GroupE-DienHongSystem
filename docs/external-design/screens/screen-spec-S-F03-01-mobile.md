@@ -20,7 +20,9 @@
 **The user leaves this screen when:** they tap a resident's name on an alert card to view their profile (S-F01-02), tap "Đóng cảnh báo" to open the Close alert modal (S-F03-02), or switch to another tab in the bottom navigation bar ("Người cao tuổi" or "Tin nhắn").
 
 ## 2. Mockup
+
 ![S-F03-01](img/S-F03-01-mobile.png)
+
 **Numbered:** each number is the # of the element inventory in section 3. Elements 3 and 4 (Unacknowledged and acknowledged alert cards) appear in the default and success states, while element 6 (Message area) replaces the alert cards in the error and empty states (shown on `S-F03-01-mobile-error-numbered.png`). Element 5 represents the persistent bottom tab bar across all states.
 
 | Default, numbered | Error, numbered |
