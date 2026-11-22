@@ -34,7 +34,6 @@
 | Success |
 |---|
 | ![S-F03-01 desktop success](img/S-F03-01-desktop-success.png) |
-``` 
 
 | State | Image | 
 | ----- | ----- | 
