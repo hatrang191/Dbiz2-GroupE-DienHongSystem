@@ -1,0 +1,15 @@
+# AI log: where AI suggested something wrong
+
+Kept for the whole project. One entry each time an AI tool proposed something the team did not accept, with the decision and where it was recorded. Rows are only appended, never edited or removed (README, rule 8).
+
+| # | Lesson | What AI suggested | Why it was wrong for Diên Hồng | What the team did |
+|---|---|---|---|---|
+| 1 | L5 (W1) | Handle a radar alert with only "create alert" and "notify nurse" | Nothing said what happens when no nurse answers, which is the most dangerous case in a nursing home | After `AD-UC-06`: new FR-03-03 Acknowledge alert, FR-03-04 Notify nurses again after 1 minute, FR-03-05 Log failed alert after 3 notices; BR-10 |
+| 2 | L5 (W1, W4) | Treat the family alert notice as Should, and send it for every alert | Telling families fast is a main goal of the client, and a notice for every small event would flood them | FR-03-09 raised to Must (W4, R1); only dangerous alerts are sent (BR-05: severity High); FR-03-10 closed notice and FR-03-11 skip or retry added (`AD-UC-07`) |
+| 3 | L5 (W1) | Let a family member view "the resident's condition" with no check on whose resident it is | Any family account could read another resident's health data | New FR-04-01 Verify family access to resident (Must); FR-04-02 shows only the family member's linked residents; BR-12 (`AD-UC-08`) |
+| 4 | L5 (W1) | One function "Set up account" for all of the Admin's account work | Validation, linking a family account to its residents, edit, deactivate and logging the changes were missing; without the link, the family access check (row 3) cannot work | New FR-06-04 to FR-06-08 (`AD-UC-11`) |
+| 5 | L5 (W4) | Keep "Show radar status" as Must | Alerts still work without the page, and staff can check a radar in the room; Must would raise the committed cost | FR-06-09 lowered to Could (W4, R3); FR-06-10 and FR-06-11 added as Could (`AD-UC-13`) |
+| 6 | L8 (screens) | Draw an access-denied state for the BOD report screen on the phone | A user refused by their role is sent to their own home screen with a message (FR-06-03), so there is no access-denied screen to draw | Frame removed from Figma; the refusal is described in words in section 4 of `S-F05-01` |
+| 7 | L8 (screens) | Write a state that does not apply as "None: this screen saves nothing" | The Screen Spec template asks for "not applicable" with a reason | Changed to "Not applicable: …" in the Success state of `S-F05-01`, `S-F06-04` and `S-F06-05` |
+| 8 | L8 (ui-conventions) | Name the account status label "Active / Deactivated" | W1 (FR-06-07), `AD-UC-11` and ui-conventions §2 call the status Inactive | Label corrected to "Active / Inactive" in ui-conventions §1; the Vietnamese "Đã vô hiệu hóa" kept |
+| 9 | L8 (screens) | Radar legend: Online means "đang gửi dữ liệu" (sending data) | W1 FR-06-09-BE: a radar is Online when it answers the system's check, even if it sends no data | Changed to "đang phản hồi" (responding) in Figma, in the `S-F06-04` specs and in ui-conventions §1 |
