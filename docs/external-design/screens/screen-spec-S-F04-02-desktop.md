@@ -10,8 +10,8 @@
 | Activity diagrams | AD-UC-08 (actions "Select one of own linked residents", "Read the current condition", "Read the access-denied message", "Read that no condition has been recorded yet") |
 | Mockup images | `img/S-F04-02-desktop.png` (default), `img/S-F04-02-desktop-numbered.png`, four state images (section 2), `img/S-F04-02-desktop-error-numbered.png` |
 | Frame width | 1280px (Figma frame; desktop layout supports 768px and wider) |
-| Figma frame | `S-F04-02-desktop` ([Figma frame](https://www.figma.com/design/aHkwiQYgPGceB6W3tMHXOE/Dien-Hong-System?node-id=96-2)) |
-| Status | Draft |
+| Figma frame | not used (drawn as an HTML wireframe) |
+| Status | Done |
 
 ## 1. Purpose
 
