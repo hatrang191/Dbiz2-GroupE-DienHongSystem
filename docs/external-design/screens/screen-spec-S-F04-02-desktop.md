@@ -29,12 +29,17 @@
 | ----- | ----- |
 | ![S-F04-02 Desktop Default Numbered](img/S-F04-02-desktop-numbered.png) | ![S-F04-02 Desktop Error Numbered](img/S-F04-02-desktop-error-numbered.png) |
 
+| Loading | Empty |
+|---|---|
+| ![S-F04-02 desktop loading](img/S-F04-02-desktop-loading.png) | ![S-F04-02 desktop empty](img/S-F04-02-desktop-empty.png) |
+
 | State | Image |
 | ----- | ----- |
 | Default | `img/S-F04-02-desktop.png` |
 | Empty | `img/S-F04-02-desktop-empty.png` |
 | Loading | `img/S-F04-02-desktop-loading.png` |
 | Error | `img/S-F04-02-desktop-error.png` — condition fetch failure; access-denied outcome is a separate case under FR-04-01 |
+| Success | Not applicable: this screen saves nothing |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens).
 
@@ -68,8 +73,7 @@ Elements 14–15 appear only in the Error state. In the Empty state, an informat
 | Empty (no condition recorded) | The desktop shell and resident selector remain visible. In place of the condition card, an information banner (`colour/info-bg`) with an info icon says: **"Hiện chưa có thông tin cập nhật về tình trạng sức khỏe của cụ Nguyễn Văn An."** The selected resident remains visible in the chip selector. | Access is verified, but no condition has been recorded for the selected resident (FR-04-02). |
 | Loading | The desktop shell and resident selector remain visible. A condition-card-shaped placeholder appears in place of the condition details, with grey skeleton bars (`colour/surface-secondary`). | The app is retrieving the selected resident's current condition, including after the family member selects another resident. |
 | Error | The desktop shell and resident selector remain visible. A warning banner (`colour/warning-bg`) with a warning icon says **"Không thể tải thông tin tình trạng của cụ Nguyễn Văn An. Vui lòng thử lại."** A secondary **Tải lại** button appears below the message. No condition value is displayed as current while the request has failed. | The request to retrieve the selected resident's condition fails. The Figma design shows this technical fetch-error state; it is not the same as the access-denied outcome defined in FR-04-01. |
-
-**Successful outcome:** there is no separate Success state because this screen only reads data and does not save or change anything. A successful response is displayed as Default or Empty, depending on whether a condition record exists.
+| Success / confirmation | there is no separate Success state because this screen only reads data and does not save or change anything. A successful response is displayed as Default or Empty, depending on whether a condition record exists. |
 
 ## 5. Interactions and navigation
 
