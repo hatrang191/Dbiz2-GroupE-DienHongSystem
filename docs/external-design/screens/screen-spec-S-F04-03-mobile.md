@@ -10,7 +10,8 @@
 | Activity diagrams | AD-UC-09 (family action “Send message to nurses”; the thread also displays messages sent by nurses) |
 | Mockup images | `img/S-F04-03-mobile.png` (default), `img/S-F04-03-mobile-numbered.png`, four state images (section 2), `img/S-F04-03-mobile-error-numbered.png`, `img/S-F04-03-mobile-success-numbered.png` |
 | Frame width | `360px` (Figma frame; exported at 1x) |
-| Figma frame | `S-F04-03-mobile` (Figma frame) |
+| Figma frame | not used (drawn as an HTML wireframe)) |
+| Status | Donr |
 
 ## 1. Purpose
 
