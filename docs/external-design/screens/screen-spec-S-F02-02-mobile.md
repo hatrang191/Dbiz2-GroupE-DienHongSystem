@@ -20,7 +20,7 @@
 **The user leaves this screen when:** the condition record is saved with valid text (navigating to S-F02-01 or back to the triggering screen with a success toast), when they tap "Xem tất cả bản ghi →" to view the full timeline on S-F02-01, or when they tap the Back arrow button (`←`) in the app bar without saving.
 
 ## 2. Mockup
-
+![S-F02-02](img/S-F02-02-mobile.png)
 **Numbered:** each number is the # of the element inventory in section 3. The top warning banner and inline field error appear in the error state (shown on `S-F02-02-mobile-error-numbered.png`). *(Note: On `S-F02-02-mobile-numbered.png`, badge `5` marks both the audit note and the fixed bottom primary button `Lưu tình trạng`).*
 
 | Default, numbered | Error, numbered |
