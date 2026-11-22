@@ -23,9 +23,17 @@
 
 **Numbered:** each number is the # of the element inventory in section 3. The top warning banner and inline field error appear in the error state (shown on `S-F02-02-mobile-error-numbered.png`). *(Note: On `S-F02-02-mobile-numbered.png`, badge `5` marks both the audit note and the fixed bottom primary button `Lưu tình trạng`).*
 
-| Default, numbered | Error, numbered | 
-| ----- | ----- | 
-|  |  | 
+| Default, numbered | Error, numbered |
+|---|---|
+| ![S-F02-02 numbered](img/S-F02-02-mobile-numbered.png) | ![S-F02-02 error numbered](img/S-F02-02-mobile-error-numbered.png) |
+
+| Loading | Empty |
+|---|---|
+| ![S-F02-02 mobile loading](img/S-F02-02-mobile-loading.png) | ![S-F02-02 mobile empty](img/S-F02-02-mobile-empty.png) |
+
+| Success |
+|---|
+| ![S-F02-02 mobile success](img/S-F02-02-mobile-success.png) | 
 
 | State | Image | 
 | ----- | ----- | 
