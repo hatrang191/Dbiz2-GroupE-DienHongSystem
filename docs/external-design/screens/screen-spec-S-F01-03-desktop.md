@@ -29,6 +29,14 @@
 |---|---|
 | ![S-F01-03 numbered](img/S-F01-03-desktop-numbered.png) | ![S-F01-03 error numbered](img/S-F01-03-desktop-error-numbered.png) |
 
+| Loading | Empty |
+|---|---|
+| ![S-F01-03 desktop loading](img/S-F01-03-desktop-loading.png) | ![S-F01-03 desktop empty](img/S-F01-03-desktop-empty.png) |
+
+| Success |
+|---|
+| ![S-F01-03 desktop success](img/S-F01-03-desktop-success.png) |
+
 | State | Image |
 |---|---|
 | Default | `img/S-F01-03-desktop.png` |
