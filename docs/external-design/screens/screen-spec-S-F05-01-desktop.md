@@ -10,7 +10,7 @@
 | Activity diagrams | none: UC-10 has no activity diagram (usage flow: "not needed")                            |
 | Mockup images     | `img/S-F05-01-desktop.png` (default), two numbered images, three state images (section 2) |
 | Frame width       | 1280px (exported at 1x)                                                                                  |
-| Figma frame       | page "BOD & Admin · Desktop 1280", frame `S-F05-01-desktop` ([Figma file]())              |
+| Figma frame       | page "BOD & Admin · Desktop 1280", frame `S-F05-01-desktop`         |
 | Status            | Done                                                                                      |
 
 ## 1. Purpose
