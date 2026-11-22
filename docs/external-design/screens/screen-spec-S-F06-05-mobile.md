@@ -10,7 +10,7 @@
 | Activity diagrams | none: UC-14 has no activity diagram (usage flow: "not needed"); the exchange is SD-UC-14 |
 | Mockup images     | `img/S-F06-05-mobile.png` (default), two numbered images, three state images (section 2) |
 | Frame width       | 360px (exported at 3x, 1080 pixels)                                                      |
-| Figma frame       | page "BOD & Admin · Mobile 360", frame `S-F06-05-mobile` ([Figma file]())                |
+| Figma frame       | page "BOD & Admin · Mobile 360", frame `S-F06-05-mobile`                 |
 | Status            | Done                                                                                     |
 
 ## 1. Purpose
