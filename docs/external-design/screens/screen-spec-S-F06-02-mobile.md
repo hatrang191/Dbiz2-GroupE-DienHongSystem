@@ -10,7 +10,7 @@
 | Activity diagrams | AD-UC-11 (set up account)                                                                       |
 | Mockup images     | `img/S-F06-02-mobile.png` (default, create), two numbered images, four state images (section 2) |
 | Frame width       | 360px (exported at 3x, 1080 pixels)                                                                                          |
-| Figma frame       | page "BOD & Admin · Mobile 360", frame `S-F06-02-mobile` ([Figma file]())                       |
+| Figma frame       | page "BOD & Admin · Mobile 360", frame `S-F06-02-mobile`                     |
 | Status            | Done                                                                                            |
 
 ## 1. Purpose
