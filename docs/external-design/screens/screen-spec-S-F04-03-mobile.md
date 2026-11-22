@@ -11,7 +11,7 @@
 | Mockup images | `img/S-F04-03-mobile.png` (default), `img/S-F04-03-mobile-numbered.png`, four state images (section 2), `img/S-F04-03-mobile-error-numbered.png`, `img/S-F04-03-mobile-success-numbered.png` |
 | Frame width | `360px` (Figma frame; exported at 1x) |
 | Figma frame | not used (drawn as an HTML wireframe)) |
-| Status | Donr |
+| Status | Done |
 
 ## 1. Purpose
 
