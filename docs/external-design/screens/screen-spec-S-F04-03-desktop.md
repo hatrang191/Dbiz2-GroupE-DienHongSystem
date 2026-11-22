@@ -33,11 +33,11 @@ The conversation displays messages sent by both the family member and the nursin
 
 | Loading | Empty |
 |---|---|
-| ![S-F04-03 mobile loading](img/S-F04-03-mobile-loading.png) | ![S-F04-03 mobile empty](img/S-F04-03-mobile-empty.png) |
+| ![S-F04-03 desktop loading](img/S-F04-03-desktop-loading.png) | ![S-F04-03 desktop empty](img/S-F04-03-desktop-empty.png) |
 
 | Success |
 |---|
-| ![S-F04-03 mobile success](img/S-F04-03-mobile-success.png) |
+| ![S-F04-03 desktop success](img/S-F04-03-desktop-success.png) |
 
 | State | Image |
 | ----- | ----- |
