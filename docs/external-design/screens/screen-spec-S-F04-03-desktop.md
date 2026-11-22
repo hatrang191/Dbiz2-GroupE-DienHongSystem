@@ -10,8 +10,8 @@
 | Activity diagrams | AD-UC-09 (family action "Send message to nurses"; the thread also displays messages sent by nurses) |
 | Mockup images | `img/S-F04-03-desktop.png` (default), `img/S-F04-03-desktop-numbered.png`, four state images (section 2), `img/S-F04-03-desktop-error-numbered.png`, `img/S-F04-03-desktop-success-numbered.png` |
 | Frame width | `1280px` (Figma frame; exported at 1x) |
-| Figma frame | `S-F04-03-desktop` ([Figma frame](https://www.figma.com/design/aHkwiQYgPGceB6W3tMHXOE/Dien-Hong-System?node-id=0-1&p=f&m=draw)) |
-| Status | Draft |
+| Figma frame | not used (drawn as an HTML wireframe) |
+| Status | Done |
 
 ## 1. Purpose
 
