@@ -29,6 +29,14 @@
 |---|---|
 | ![S-F01-03 numbered](img/S-F01-03-mobile-numbered.png) | ![S-F01-03 error numbered](img/S-F01-03-mobile-error-numbered.png) |
 
+| Loading | Empty |
+|---|---|
+| ![S-F01-03 mobile loading](img/S-F01-03-mobile-loading.png) | ![S-F01-03 mobile empty](img/S-F01-03-mobile-empty.png) |
+
+| Success |
+|---|
+| ![S-F01-03 mobile success](img/S-F01-03-mobile-success.png) |
+
 | State | Image |
 |---|---|
 | Default | `img/S-F01-03-mobile.png` |
