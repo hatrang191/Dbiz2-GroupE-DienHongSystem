@@ -17,13 +17,8 @@ radars, and it has two jobs:
 1. **Receive abnormal events.** The gateway receives each abnormal event from a radar, checks it,
    turns it into a simple event (radar, room, event type, severity, time) and passes it to the API
    Server, which creates the alert (FR-03-01).
-2. **Check radar connections.** The gateway checks the connection of every registered radar every
-   1 minute (kept in the system settings, like the values of ADR-004) and keeps, for each radar, the time of the last successful check and of the last
-   event (FR-06-09-INT).
-The API Server never talks to a radar directly. It decides each radar's status from the times the
-gateway keeps: a radar is Offline when it has not answered a check for 5 minutes, otherwise Online
-(FR-06-09-BE). If the gateway itself cannot be reached, the API Server reports that the radar
-status cannot be shown and never shows an old status as the current one (FR-06-11).
+2. **Check radar connections.** The gateway checks the connection of every registered radar at a fixed interval and keeps, for each radar, the time of the last successful check and of the last event (FR-06-09-INT).
+The API Server never talks to a radar directly. It decides each radar's status from the times the gateway keeps: a radar is Offline when it has not answered a check for 5 minutes, otherwise Online (FR-06-09-BE). If the gateway itself cannot be reached, the API Server reports that the radar status cannot be shown and never shows an old status as the current one (FR-06-11).
    
 **Consequences.** 
 - A change in the radar's data format or radar model only touches the gateway.
