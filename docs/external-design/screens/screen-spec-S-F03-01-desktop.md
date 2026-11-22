@@ -21,6 +21,8 @@
 
 ## 2. Mockup
 
+![S-F03-01](img/S-F03-01-desktop.png)
+
 **Numbered:** each number is the # of the element inventory in section 3. Elements 10 and 11 (Alert table and row actions) appear in the default and success states, while element 9 (Message area) replaces the table in the error and empty states (shown on `S-F03-01-desktop-error-numbered.jpg`).
 
 | Default, numbered | Error, numbered |
