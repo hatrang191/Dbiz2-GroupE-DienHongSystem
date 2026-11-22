@@ -143,7 +143,7 @@ Each answer gives the decision, the reasons, and what changes in the other docum
 2. **Proposed:** nobody else is notified automatically in Release 1.
 3. **Proposed:** the failure is recorded in the Alert Log with the alert and the times of the three notices, so the Admin and the BOD can review it later. Failed family pushes go to the same log (AD-UC-07 Q8).
 
-**Why.** No use case and no FR covers notifying a manager. Doing so needs a new recipient (a head nurse is not an actor in the Use Case Diagram), a new FR and new screens, and FR-03-05 itself is only Could (W4). The base scenario already uses 197.8 of the 240 person-hours.
+**Why.** No use case and no FR covers notifying a manager. Doing so needs a new recipient (a head nurse is not an actor in the Use Case Diagram), a new FR and new screens, and FR-03-05 itself is only Should (W4). The base scenario already uses 197.8 of the 240 person-hours.
 
 **Recommendation to the client.** A dangerous alert that nobody acknowledges for 3 minutes is serious. Ask whether a head nurse or the manager on duty should get a phone call in Release 2.
 
