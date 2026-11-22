@@ -10,7 +10,7 @@
 | Activity diagrams | none: Sign in has no use case; it is the precondition "signed in" of every activity diagram (AD-UC-01, open question 4) |
 | Mockup images | `img/S-F00-01-mobile.png` (default), two numbered images, three state images (section 2) |
 | Frame width | 360px (exported at 3x, 1080 pixels) |
-| Figma frame | not used: drawn on the Design canvas "Diên Hồng – UI preview", artboard "Mobile · S-F00-01 Đăng nhập" |
+| Figma frame | not used (drawn as an HTML wireframe) |
 | Status | Done |
 
 ## 1. Purpose
