@@ -27,7 +27,7 @@
 
 | Default, numbered | Error, numbered |
 |---|---|
-| ![S-F01-03 numbered](img/S-F01-03-desktop-numbered.jpg) | ![S-F01-03 error numbered](img/S-F01-03-desktop-error-numbered.jpg) |
+| ![S-F01-03 numbered](img/S-F01-03-desktop-numbered.png) | ![S-F01-03 error numbered](img/S-F01-03-desktop-error-numbered.png) |
 
 | State | Image |
 |---|---|
