@@ -27,7 +27,7 @@
 
 | Default, numbered | Error, numbered |
 |---|---|
-| ![S-F02-01 numbered](img/S-F02-01-desktop-numbered.jpg) | ![S-F02-01 error numbered](img/S-F02-01-desktop-error-numbered.jpg) |
+| ![S-F02-01 numbered](img/S-F02-01-desktop-numbered.png) | ![S-F02-01 error numbered](img/S-F02-01-desktop-error-numbered.png) |
 
 | Loading | Empty |
 |---|---|
