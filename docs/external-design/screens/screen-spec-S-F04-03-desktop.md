@@ -31,6 +31,14 @@ The conversation displays messages sent by both the family member and the nursin
 | ----- | ----- | ----- |
 | ![S-F04-03 Desktop Default Numbered](img/S-F04-03-desktop-numbered.png) | ![S-F04-03 Desktop Error Numbered](img/S-F04-03-desktop-error-numbered.png) | ![S-F04-03 Desktop Success Numbered](img/S-F04-03-desktop-success-numbered.png) |
 
+| Loading | Empty |
+|---|---|
+| ![S-F04-03 mobile loading](img/S-F04-03-mobile-loading.png) | ![S-F04-03 mobile empty](img/S-F04-03-mobile-empty.png) |
+
+| Success |
+|---|
+| ![S-F04-03 mobile success](img/S-F04-03-mobile-success.png) |
+
 | State | Image |
 | ----- | ----- |
 | Default | `img/S-F04-03-desktop.png` |
