@@ -39,6 +39,7 @@
 | Empty | `img/S-F03-02-desktop-empty.png` |
 | Loading | `img/S-F03-02-desktop-loading.png` |
 | Error | `img/S-F03-02-desktop-error.png` (failure to retrieve alert notices) |
+| Success | Not applicable: this screen saves nothing    |
 
 All colours, fonts and corners come from the design tokens in [ui-conventions.md](../ui-conventions.md#7-design-tokens).
 
@@ -69,8 +70,7 @@ All colours, fonts and corners come from the design tokens in [ui-conventions.md
 | Empty (no data) | Desktop shell, breadcrumb and page card remain visible. The alert list is replaced by an information banner indicating that there are no alert notices to display. | No first or closed alert notices are available for the signed-in family member |
 | Loading | Desktop shell, breadcrumb and page card remain visible. The alert list area displays skeleton placeholders while the system retrieves alert notices. | Alert notices are being fetched from the system |
 | Error | Desktop shell, breadcrumb and page card remain visible. The alert list is replaced by a warning banner and a **Tải lại** secondary button. | The request to retrieve alert notices fails or times out |
-
-**Successful outcome:** There is no separate Success state because this screen only retrieves and displays alert notices; it does not save or modify data. A successful response is displayed as Default or Empty, depending on whether alert notices are available.
+| Success / confirmation | There is no separate Success state because this screen only retrieves and displays alert notices; it does not save or modify data. A successful response is displayed as Default or Empty, depending on whether alert notices are available. |  |
 
 ## 5. Interactions and navigation
 
