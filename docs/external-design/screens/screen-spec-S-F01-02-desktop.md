@@ -31,11 +31,11 @@
 
 | Loading | Empty |
 |---|---|
-| ![S-F06-03 desktop loading](img/S-F01-02-desktop-loading.png) | ![S-F06-03 desktop empty](img/S-F01-02-desktop-empty.png) |
+| ![S-F01-02 desktop loading](img/S-F01-02-desktop-loading.png) | ![S-F01-02 desktop empty](img/S-F01-02-desktop-empty.png) |
 
 | Success |
 |---|
-| ![S-F06-03 desktop success](img/S-F01-02-desktop-success.png) |
+| ![S-F01-02 desktop success](img/S-F01-02-desktop-success.png) |
 
 | State | Image |
 |---|---|
