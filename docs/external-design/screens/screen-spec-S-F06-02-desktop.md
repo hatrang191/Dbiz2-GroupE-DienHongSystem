@@ -10,7 +10,7 @@
 | Activity diagrams | AD-UC-11 (set up account)                                                                        |
 | Mockup images     | `img/S-F06-02-desktop.png` (default, create), two numbered images, four state images (section 2) |
 | Frame width       | 1280px (exported at 1x)                                                                                          |
-| Figma frame       | page "BOD & Admin · Desktop 1280", frame `S-F06-02-desktop` ([Figma file]())                     |
+| Figma frame       | page "BOD & Admin · Desktop 1280", frame `S-F06-02-desktop`                      |
 | Status            | Done                                                                                             |
 
 ## 1. Purpose
