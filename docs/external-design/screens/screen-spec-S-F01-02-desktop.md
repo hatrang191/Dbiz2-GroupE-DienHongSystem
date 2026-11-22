@@ -11,7 +11,7 @@
 | Mockup images | `img/S-F01-02-desktop.png` (default), `img/S-F01-02-desktop-numbered.png`, five state images (section 2) |
 | Frame width | 1280px (exported at 1x) |
 | Figma frame | not used (drawn as an HTML wireframe) |
-| Status | Draft |
+| Status | Done |
 
 ## 1. Purpose
 
