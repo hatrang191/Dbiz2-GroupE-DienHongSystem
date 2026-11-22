@@ -21,6 +21,8 @@
 
 ## 2. Mockup
 
+![S-F04-01](img/S-F04-01-mobile.png)
+
 **Numbered:** each number is the # of the element inventory in section 3. Elements 1–3 match across `S-F04-01-mobile-numbered.png`, `S-F04-01-mobile-error-numbered.png`, and `S-F04-01-mobile-success-numbered.png`; element 5 marks the bottom message composer in the default/success states, while element 4 marks the send-failure warning area above the composer in the error state.
 
 | Default, numbered | Error, numbered |
