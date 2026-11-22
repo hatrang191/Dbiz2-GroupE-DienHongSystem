@@ -45,7 +45,7 @@ All colours, fonts and corners come from the design tokens in [ui-conventions.md
 
 ## 3. Element inventory
 
-Labels are shown as they appear in the interface (Vietnamese), with the repository label in brackets. Messages marked (new) are not in ui-conventions §5 yet (open question 5).
+Labels are shown as they appear in the interface (Vietnamese), with the repository label in brackets.
 
 | # | Element | Type | Content / data source | Required | Validation |
 |---|---|---|---|---|---|
