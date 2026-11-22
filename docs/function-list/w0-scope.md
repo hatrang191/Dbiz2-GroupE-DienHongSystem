@@ -67,10 +67,10 @@ The rules below consolidate business constraints currently stated or assumed in 
 | BR ID | Business rule | 
 |-------|---------------|
 | BR-01 | Each saved Resident Profile shall have a unique resident ID. | 
-| BR-02 | A resident profile shall be saved or updated only when its required information is valid. The required fields and validation criteria must be defined before implementation. |
+| BR-02 | A resident profile shall be saved or updated only when its required information is valid. The required fields are full name, date of birth, room and admission date; the field rules are in W5 Q1. |
 | BR-03 | Each valid condition update shall be saved as a new record; existing condition records shall not be overwritten. | 
 | BR-04 | The current condition shown to a family member shall be the resident's most recently saved condition record. | 
-| BR-05 | An alert is dangerous when its severity is High. |
+| BR-05 | An alert is dangerous when its severity is High. High means a fall, or a person lying on the floor (not in bed); other abnormal events, such as leaving the bed at night, are lower and go to the nurses only. |
 | BR-06 | Send one first notice to residents' family for a dangerous alert, and do not send a first notice for a non-dangerous alert. |
 | BR-07 | Send one closed notice to residents' family only if the first notice for that alert was sent. | 
 | BR-08 | If the resident has no linked family member, skip the family push notice. | 
