@@ -21,6 +21,8 @@
 
 ## 2. Mockup
 
+![S-F02-02](img/S-F02-02-desktop.png)
+
 **Numbered:** each number is the # of the element inventory in section 3. The top warning banner and inline field error appear in the error state (shown on `S-F02-02-desktop-error-numbered.jpg`).
 
 | Default, numbered | Error, numbered |
