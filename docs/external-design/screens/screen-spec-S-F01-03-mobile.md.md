@@ -11,7 +11,7 @@
 | Mockup images | `img/S-F01-03-mobile.png` (default), `img/S-F01-03-mobile-numbered.png`, five state images (section 2) |
 | Frame width | 360px (exported at 3x, 1080 pixels) |
 | Figma frame | not used (drawn as an HTML wireframe) |
-| Status | Draft |
+| Status | Done |
 
 ## 1. Purpose
 
