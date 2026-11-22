@@ -21,6 +21,8 @@
 
 ## 2. Mockup
 
+![S-F04-01](img/S-F04-01-desktop.png)
+
 **Numbered:** each number is the # of the element inventory in section 3. Elements 1–8 match across `S-F04-01-desktop-numbered.jpg` and `S-F04-01-desktop-error-numbered.jpg`; element 9 points to the message composer bar in the default state and the send-failure warning banner in the error state.
 
 | Default, numbered | Error, numbered |
