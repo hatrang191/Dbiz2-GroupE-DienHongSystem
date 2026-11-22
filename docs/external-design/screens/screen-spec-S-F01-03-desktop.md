@@ -11,7 +11,7 @@
 | Mockup images | `img/S-F01-03-desktop.png` (default), `img/S-F01-03-desktop-numbered.png`, five state images (section 2) |
 | Frame width | 1280px (exported at 1x; record dialog form-only width up to 640px) |
 | Figma frame | not used (drawn as an HTML wireframe) |
-| Status | Draft |
+| Status | Done |
 
 ## 1. Purpose
 
